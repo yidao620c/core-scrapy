@@ -1,0 +1,21 @@
+---  # 爬虫网站配置列表
+
+sites:
+  - id: '001'
+    url: 'http://www.canyin.com/'
+    name: '中国餐饮网'
+  - id: '001'
+    url: 'http://www.canyin.com/'
+    name: '中国餐饮网'
+  - id: '001'
+    url: 'http://www.canyin.com/'
+    name: '中国餐饮网'
+  - id: '001'
+    url: 'http://www.canyin.com/'
+    name: '中国餐饮网'
+  - id: '001'
+    url: 'http://www.canyin.com/'
+    name: '中国餐饮网'
+  - id: '001'
+    url: 'http://www.canyin.com/'
+    name: '中国餐饮网'
