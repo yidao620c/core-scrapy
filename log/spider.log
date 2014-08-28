@@ -1,0 +1,27 @@
+2014-08-28 16:26:54+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
+2014-08-28 16:26:54+0800 [scrapy] INFO: Optional features available: ssl, http11
+2014-08-28 16:26:54+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 15, 'LOG_STDOUT': True, 'USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64; rv:7.0.1) Gecko/20100101 Firefox/7.7', 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 0.1}
+2014-08-28 16:26:54+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2014-08-28 16:26:55+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2014-08-28 16:26:55+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2014-08-28 16:26:55+0800 [scrapy] INFO: Enabled item pipelines: 
+2014-08-28 16:26:55+0800 [druglink] INFO: Spider opened
+2014-08-28 16:26:55+0800 [druglink] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2014-08-28 16:26:59+0800 [druglink] ERROR: Error downloading <GET http://drug.39.net/yjxw/yydt/index.html>: [<twisted.python.failure.Failure <class 'twisted.internet.error.ConnectionLost'>>]
+2014-08-28 16:26:59+0800 [druglink] INFO: Closing spider (finished)
+2014-08-28 16:26:59+0800 [druglink] INFO: Dumping Scrapy stats:
+	{'downloader/exception_count': 3,
+	 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 3,
+	 'downloader/request_bytes': 792,
+	 'downloader/request_count': 3,
+	 'downloader/request_method_count/GET': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2014, 8, 28, 8, 26, 59, 263000),
+	 'log_count/ERROR': 1,
+	 'log_count/INFO': 7,
+	 'scheduler/dequeued': 3,
+	 'scheduler/dequeued/memory': 3,
+	 'scheduler/enqueued': 3,
+	 'scheduler/enqueued/memory': 3,
+	 'start_time': datetime.datetime(2014, 8, 28, 8, 26, 55, 183000)}
+2014-08-28 16:26:59+0800 [druglink] INFO: Spider closed (finished)

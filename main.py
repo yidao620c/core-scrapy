@@ -11,12 +11,6 @@ class MM(object):
         self.name = u"\u4e60\u8fd1\u5e73\u66fe\u4e0b\u4e617\u5e74 \u4f4f\u7a91\u6d1e"
         self.age = 123
 
-def to_utf8(item):
-    for each_attr, each_val in item.__dict__.items():
-        if isinstance(each_val, unicode):
-            setattr(item, each_attr, each_val.encode('utf-8'))
-        elif hasattr(each_val, '__iter__'):
-            setattr(item, each_attr, [v.encode('utf-8') for v in each_val])
 
 if __name__ == '__main__':
     unicodeString = u"hello Unicode world!中文"
@@ -27,12 +21,15 @@ if __name__ == '__main__':
     aa = u"\u4e60\u8fd1\u5e73\u66fe\u4e0b\u4e617\u5e74 \u4f4f\u7a91\u6d1e"
     print(aa.encode('UTF-8'))
 
-    mm = MM()
-    to_utf8(mm)
-    print(mm.name)
-
-    from urlparse import urljoin
-    print(urljoin('http://www.wingarden.net/', '/News/products.html'))
+    s = "关于百度" # 整个文件是UTF-8编码，所以这里的字符串也是UTF-8
+    u = s.decode("utf-8") # 将utf-8的str转换为unicode
+    print(u)
+    g = u.encode('gb2312') # 将unicode转换为str，编码为GBK
+    print(g)
+    gg = g.decode('gb2312')  #将GBK的str转换为unicode
+    print(gg)
+    ggg = gg.encode('utf-8')
+    print(ggg)
 
 
 

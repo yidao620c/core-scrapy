@@ -12,6 +12,7 @@ from scrapy.selector import Selector, HtmlXPathSelector
 from scrapy.contrib.loader import ItemLoader
 from scrapy import Request
 from scrapy import log
+from scrapy.exceptions import DropItem
 from urlparse import urljoin
 import uuid
 
@@ -24,7 +25,7 @@ class MedicineCrawlSpider(CrawlSpider):
         'http://drug.39.net/yjxw/yydt/index.html',
     ]
     rules = (
-        # 提取匹配 '/Info/...' 的链接并使用spider的parse_item方法进行分析，并显式指定follow为True
+        # 提取匹配 'XXX' 的链接并使用spider的parse_item方法进行分析，并显式指定follow为True
         Rule(LinkExtractor(allow=(r'/a/\d{6}/\d+\.html', ), deny=('', )),
              callback='parse_item', follow=False),
     )
@@ -41,14 +42,12 @@ class MedicineCrawlSpider(CrawlSpider):
         return item
 
 
-class DiningXMLFeedSpider(XMLFeedSpider):
+class MedicineXMLFeedSpider(XMLFeedSpider):
     """RSS/XML源爬虫"""
-    name = 'dining_xml'
-    allowed_domains = ['baidu.com']
+    name = 'medicine_feed'
+    allowed_domains = ['http://drug.39.net/']
     start_urls = [
-        'http://news.baidu.com/',
-        'http://tieba.baidu.com/',
-        'http://home.baidu.com/',
+        'http://drug.39.net/yjxw/yydt/index.html',
     ]
     iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
     itertag = 'item'
