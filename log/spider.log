@@ -1,175 +1,246 @@
-2014-08-29 16:19:42+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
-2014-08-29 16:19:42+0800 [scrapy] INFO: Optional features available: ssl, http11
-2014-08-29 16:19:42+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
-2014-08-29 16:19:42+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
-2014-08-29 16:19:43+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
-2014-08-29 16:19:43+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
-2014-08-29 16:19:44+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
-2014-08-29 16:19:44+0800 [drug39] INFO: Spider opened
-2014-08-29 16:19:44+0800 [scrapy] INFO: open_spider[drug39]....
-2014-08-29 16:19:44+0800 [drug39] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2014-08-29 16:19:44+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 16:19:46+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 16:19:46+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140829/4457792.html
-2014-08-29 16:19:46+0800 [drug39] INFO: ########title=中国保健品当心错过黄金期
-2014-08-29 16:19:48+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 16:19:48+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140810/4445350.html
-2014-08-29 16:19:48+0800 [drug39] INFO: ########title=我国400万心衰患者存在猝死风险
-2014-08-29 16:19:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 16:19:50+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140810/4445351.html
-2014-08-29 16:19:50+0800 [drug39] INFO: ########title=中药走出国门须坚定循证医学研究之路
-2014-08-29 16:19:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 16:19:53+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4444436.html
-2014-08-29 16:19:53+0800 [drug39] INFO: ########title=吉利德天价丙肝药Sovaldi印度售价仅1%
-2014-08-29 16:19:56+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:19:56+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445679.html
-2014-08-29 16:19:56+0800 [drug39] INFO: ########title=南充：基层首诊简历分级诊疗制度
-2014-08-29 16:19:59+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:19:59+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445493.html
-2014-08-29 16:19:59+0800 [drug39] INFO: ########title=世卫拉响埃博拉警报 中国已具诊断试剂研发能力
-2014-08-29 16:20:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 16:20:06+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445521.html
-2014-08-29 16:20:06+0800 [drug39] INFO: ########title=美连锁医院股受追捧 奥巴马功不可没
-2014-08-29 16:20:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:20:07+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445565.html
-2014-08-29 16:20:07+0800 [drug39] INFO: ########title=资本青睐医疗健康产业 中科贴针灸获发展良机
-2014-08-29 16:20:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:20:09+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445574.html
-2014-08-29 16:20:09+0800 [drug39] INFO: ########title=贵州中药材全产业链持续发展面临两大难点
-2014-08-29 16:20:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 16:20:09+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445588.html
-2014-08-29 16:20:09+0800 [drug39] INFO: ########title=国家食药监局：将建婴幼儿配方乳粉企业信用档案
-2014-08-29 16:20:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:20:12+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445772.html
-2014-08-29 16:20:12+0800 [drug39] INFO: ########title=迪巧推出“星座老爸”微电影传播父子亲情
-2014-08-29 16:20:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 16:20:13+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4448813.html
-2014-08-29 16:20:13+0800 [drug39] INFO: ########title=轻中度心衰伴室性早搏治疗再现新进展
-2014-08-29 16:20:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:20:16+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140812/4446414.html
-2014-08-29 16:20:16+0800 [drug39] INFO: ########title=上海公布今年第一期基药零售价上限
-2014-08-29 16:20:18+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:20:18+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140812/4444978.html
-2014-08-29 16:20:18+0800 [drug39] INFO: ########title=药监局提醒别买“减肚子汤”类产品
-2014-08-29 16:20:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 16:20:21+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446614.html
-2014-08-29 16:20:21+0800 [drug39] INFO: ########title=日本抗流感药法匹拉韦或可尝试对付埃博拉
-2014-08-29 16:20:23+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 16:20:23+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446606.html
-2014-08-29 16:20:23+0800 [drug39] INFO: ########title=国产获批 土洋伟哥打“硬”仗
-2014-08-29 16:20:24+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:20:24+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446477.html
-2014-08-29 16:20:25+0800 [drug39] INFO: ########title=抗生素新药“难产” 恐造成全球大疫症
-2014-08-29 16:20:27+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 16:20:27+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447483.html
-2014-08-29 16:20:27+0800 [drug39] INFO: ########title=四川县医院改革方案出炉 严禁设定创收指标
-2014-08-29 16:20:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:20:30+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446686.html
-2014-08-29 16:20:30+0800 [drug39] INFO: ########title=量价齐跌 虫草产业迎来拐点？
-2014-08-29 16:20:32+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 16:20:32+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447515.html
-2014-08-29 16:20:32+0800 [drug39] INFO: ########title=药典委说明金银花、山银花分类标准
-2014-08-29 16:20:35+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:20:35+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447519.html
-2014-08-29 16:20:35+0800 [drug39] INFO: ########title=CFDA公布国产非特殊用途化妆品备案检验机构增补名单
-2014-08-29 16:20:37+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 16:20:37+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447528.html
-2014-08-29 16:20:37+0800 [drug39] INFO: ########title=食药总局：6批次核黄素磷酸钠注射液被停用 
-2014-08-29 16:20:38+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 16:20:38+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447670.html
-2014-08-29 16:20:38+0800 [drug39] INFO: ########title=WHO认可使用试验性药物治疗埃博拉
-2014-08-29 16:20:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 16:20:42+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448473.html
-2014-08-29 16:20:42+0800 [drug39] INFO: ########title=多家公司维生素D3断供 涨价或引爆概念股
-2014-08-29 16:20:44+0800 [drug39] INFO: Crawled 25 pages (at 25 pages/min), scraped 24 items (at 24 items/min)
-2014-08-29 16:20:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:20:45+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448214.html
-2014-08-29 16:20:45+0800 [drug39] INFO: ########title=食药监总局：核黄素磷酸钠注射液致严重不良反应
-2014-08-29 16:20:47+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 16:20:47+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448306.html
-2014-08-29 16:20:47+0800 [drug39] INFO: ########title=遭药企反对 安徽暂缓今年基药招投标
-2014-08-29 16:20:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 16:20:50+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4449058.html
-2014-08-29 16:20:50+0800 [drug39] INFO: ########title=吴以岭：新药上市审批速度严重滞后
-2014-08-29 16:20:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 16:20:53+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449333.html
-2014-08-29 16:20:53+0800 [drug39] INFO: ########title=埃博拉致命性爆发 治疗药物匮乏
-2014-08-29 16:20:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 16:20:55+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449373.html
-2014-08-29 16:20:55+0800 [drug39] INFO: ########title=福建基药非基药“两标合一” 企业面临价格血拼
-2014-08-29 16:20:57+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 16:20:57+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449399.html
-2014-08-29 16:20:57+0800 [drug39] INFO: ########title=重组人生长激素格局生变 本土企业创新提速
-2014-08-29 16:21:00+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 16:21:00+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449312.html
-2014-08-29 16:21:00+0800 [drug39] INFO: ########title=国产大型医疗设备上崛起 外资垄断格局或打破
-2014-08-29 16:21:03+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449425.html
-2014-08-29 16:21:03+0800 [drug39] INFO: ########title=政策导向驱动IVD 国产检验试剂或迎利好
-2014-08-29 16:21:06+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450540.html
-2014-08-29 16:21:06+0800 [drug39] INFO: ########title=福建唯低价是取再现 两协会联名反对
-2014-08-29 16:21:08+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450597.html
-2014-08-29 16:21:08+0800 [drug39] INFO: ########title=政策助力 透析行业千亿市场需求有望释放
-2014-08-29 16:21:10+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450749.html
-2014-08-29 16:21:10+0800 [drug39] INFO: ########title=湖南省儿童医院成该省首家移动医疗服务平台
-2014-08-29 16:21:12+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450770.html
-2014-08-29 16:21:12+0800 [drug39] INFO: ########title=CFDA：违法销售含特殊药品复方制剂将吊销两证
-2014-08-29 16:21:14+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4451172.html
-2014-08-29 16:21:14+0800 [drug39] INFO: ########title=首届泡腾片生产工艺及数片码片论坛将在南通召开
-2014-08-29 16:21:17+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4451666.html
-2014-08-29 16:21:17+0800 [drug39] INFO: ########title=中检院回应辽宁依生狂犬病疫苗批签发问题
-2014-08-29 16:21:19+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4451821.html
-2014-08-29 16:21:19+0800 [drug39] INFO: ########title=北大国际医院用顶级人才和学科打造“超级医院”
-2014-08-29 16:21:23+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4452041.html
-2014-08-29 16:21:23+0800 [drug39] INFO: ########title=慢严舒柠含片微电影上线遭网友集体吐槽
-2014-08-29 16:21:25+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140820/4452255.html
-2014-08-29 16:21:25+0800 [drug39] INFO: ########title=英立法限制阿比特龙使用 医生谴责法案限制治疗
-2014-08-29 16:21:28+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453100.html
-2014-08-29 16:21:28+0800 [drug39] INFO: ########title=2014蓝牙亚洲大会召开  巨头齐发力医疗智能可穿戴
-2014-08-29 16:21:29+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453534.html
-2014-08-29 16:21:29+0800 [drug39] INFO: ########title=专家呼吁全社会应关注心脑血管疾病死亡率拐点
-2014-08-29 16:21:32+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140822/4454128.html
-2014-08-29 16:21:32+0800 [drug39] INFO: ########title=盘点2014年那些被认定的孤儿药
-2014-08-29 16:21:34+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140825/4456147.html
-2014-08-29 16:21:34+0800 [drug39] INFO: ########title=“冰桶挑战”引爆全球关注 专家呼吁罕见病纳入立法
-2014-08-29 16:21:36+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458855.html
-2014-08-29 16:21:36+0800 [drug39] INFO: ########title=CFDA提示消费者勿网购低价知名品牌化妆品
-2014-08-29 16:21:38+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458433.html
-2014-08-29 16:21:38+0800 [drug39] INFO: ########title=两部委力挺国产器械行业 跨国巨头争抢基层“蛋糕”
-2014-08-29 16:21:38+0800 [drug39] INFO: Closing spider (finished)
-2014-08-29 16:21:38+0800 [drug39] INFO: Dumping Scrapy stats:
-	{'downloader/request_bytes': 16854,
-	 'downloader/request_count': 48,
-	 'downloader/request_method_count/GET': 48,
-	 'downloader/response_bytes': 1265307,
-	 'downloader/response_count': 48,
-	 'downloader/response_status_count/200': 48,
-	 'finish_reason': 'finished',
-	 'finish_time': datetime.datetime(2014, 8, 29, 8, 21, 38, 914000),
-	 'item_scraped_count': 47,
-	 'log_count/INFO': 151,
-	 'offsite/domains': 1,
-	 'offsite/filtered': 1,
-	 'request_depth_max': 1,
-	 'response_received_count': 48,
-	 'scheduler/dequeued': 48,
-	 'scheduler/dequeued/memory': 48,
-	 'scheduler/enqueued': 48,
-	 'scheduler/enqueued/memory': 48,
-	 'start_time': datetime.datetime(2014, 8, 29, 8, 19, 44, 642000)}
-2014-08-29 16:21:38+0800 [drug39] INFO: Spider closed (finished)
+2014-08-29 17:24:04+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
+2014-08-29 17:24:04+0800 [scrapy] INFO: Optional features available: ssl, http11
+2014-08-29 17:24:04+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
+2014-08-29 17:24:04+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2014-08-29 17:24:04+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2014-08-29 17:24:04+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2014-08-29 17:24:05+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
+2014-08-29 17:24:05+0800 [pharmnet] INFO: Spider opened
+2014-08-29 17:24:05+0800 [scrapy] INFO: open_spider[pharmnet]....
+2014-08-29 17:24:05+0800 [pharmnet] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2014-08-29 17:24:05+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-08-29 17:24:05+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:24:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 17:24:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:24:16+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403952.html
+2014-08-29 17:24:16+0800 [pharmnet] INFO: ########title=山东省血液中心人凝血因子等药品公开招标公告 
+2014-08-29 17:24:20+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:24:20+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403953.html
+2014-08-29 17:24:20+0800 [pharmnet] INFO: ########title=贵州省卫计委2014年抗结核病药品中标公告
+2014-08-29 17:24:26+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:24:26+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403954.html
+2014-08-29 17:24:26+0800 [pharmnet] INFO: ########title=超过35岁孕前先查甲状腺 甲状腺疾病对胎儿影响大 
+2014-08-29 17:24:33+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:24:33+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403955.html
+2014-08-29 17:24:33+0800 [pharmnet] INFO: ########title=睾酮缺乏,男人四十变残花 
+2014-08-29 17:24:40+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:24:40+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403956.html
+2014-08-29 17:24:40+0800 [pharmnet] INFO: ########title=健康提醒：防肠癌，八类人群早筛查 
+2014-08-29 17:24:46+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:24:46+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403957.html
+2014-08-29 17:24:46+0800 [pharmnet] INFO: ########title=什么是晚睡强迫症 5招告别晚睡强迫症保证好睡眠
+2014-08-29 17:24:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:24:53+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403958.html
+2014-08-29 17:24:53+0800 [pharmnet] INFO: ########title=暴饮暴食对身体十大危害 五步让你有效控制
+2014-08-29 17:25:00+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:25:00+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403959.html
+2014-08-29 17:25:00+0800 [pharmnet] INFO: ########title=保肾至重 女人保健五要五不要
+2014-08-29 17:25:05+0800 [pharmnet] INFO: Crawled 10 pages (at 10 pages/min), scraped 8 items (at 8 items/min)
+2014-08-29 17:25:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-08-29 17:25:08+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403960.html
+2014-08-29 17:25:08+0800 [pharmnet] INFO: ########title=湿疹有“干湿”之分 用药如何讲究
+2014-08-29 17:25:14+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:25:14+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403961.html
+2014-08-29 17:25:14+0800 [pharmnet] INFO: ########title=七个适合三个月宝宝的营养食谱 
+2014-08-29 17:25:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:25:19+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index5.html
+2014-08-29 17:25:23+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:25:23+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index4.html
+2014-08-29 17:25:29+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:25:29+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index3.html
+2014-08-29 17:25:34+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:25:34+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index2.html
+2014-08-29 17:25:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:25:41+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index1.html
+2014-08-29 17:25:48+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:25:48+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403910.html
+2014-08-29 17:25:48+0800 [pharmnet] INFO: ########title=贪凉腹泻导致抽搐 医生：入秋贪凉易腹泻 
+2014-08-29 17:25:52+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:25:52+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index0.html
+2014-08-29 17:25:59+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:25:59+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403850.html
+2014-08-29 17:25:59+0800 [pharmnet] INFO: ########title=承德县卫生局乡镇卫生院全自动洗胃机等设备中标公告
+2014-08-29 17:26:05+0800 [pharmnet] INFO: Crawled 20 pages (at 10 pages/min), scraped 12 items (at 4 items/min)
+2014-08-29 17:26:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:26:06+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403851.html
+2014-08-29 17:26:06+0800 [pharmnet] INFO: ########title=临沂市兰陵县人民医院全自动血凝仪等设备招标公告 
+2014-08-29 17:26:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:26:12+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403852.html
+2014-08-29 17:26:12+0800 [pharmnet] INFO: ########title=吉首市人民医院彩色多普勒超声波诊断仪询价公告 
+2014-08-29 17:26:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:26:19+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403853.html
+2014-08-29 17:26:19+0800 [pharmnet] INFO: ########title=宁夏医科大学总医院高频呼吸机采购项目成交公告
+2014-08-29 17:26:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:26:25+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403854.html
+2014-08-29 17:26:25+0800 [pharmnet] INFO: ########title=广东省第一荣军医院下肢智能反馈训练系统招标公告
+2014-08-29 17:26:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:26:30+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403855.html
+2014-08-29 17:26:30+0800 [pharmnet] INFO: ########title=江阴市疾病预防控制中心彩超采购公告
+2014-08-29 17:26:35+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 17:26:35+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403856.html
+2014-08-29 17:26:35+0800 [pharmnet] INFO: ########title=宁波市中医院C臂X光机等医疗设备采购项目补充公告 
+2014-08-29 17:26:40+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:26:40+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403857.html
+2014-08-29 17:26:40+0800 [pharmnet] INFO: ########title=江阴市疾病防控中心全自动生化分析仪等设备招标公告
+2014-08-29 17:26:47+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:26:47+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403858.html
+2014-08-29 17:26:47+0800 [pharmnet] INFO: ########title=北京同仁医院手术显微镜等设备购置项目招标公告
+2014-08-29 17:26:52+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:26:52+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403859.html
+2014-08-29 17:26:52+0800 [pharmnet] INFO: ########title=盐津县人民医院血液透析机采购项目终止招标公告 
+2014-08-29 17:26:58+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:26:58+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/26/403637.html
+2014-08-29 17:26:58+0800 [pharmnet] INFO: ########title=上海市药品经营企业GSP认证公示公告（第347号） 
+2014-08-29 17:27:05+0800 [pharmnet] INFO: Crawled 30 pages (at 10 pages/min), scraped 22 items (at 10 items/min)
+2014-08-29 17:27:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:27:06+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/26/403691.html
+2014-08-29 17:27:06+0800 [pharmnet] INFO: ########title=宁明县人民医院母乳分析仪等设备成交公告 
+2014-08-29 17:27:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:27:12+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/27/403744.html
+2014-08-29 17:27:12+0800 [pharmnet] INFO: ########title=机械手臂可“读心”渐冻人治疗有望 
+2014-08-29 17:27:18+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:27:18+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/27/403796.html
+2014-08-29 17:27:18+0800 [pharmnet] INFO: ########title=饮食清淡易消化 进食规律永远是养胃金标准
+2014-08-29 17:27:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:27:25+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403799.html
+2014-08-29 17:27:25+0800 [pharmnet] INFO: ########title=北京等7省市将试点 设立外资独资医院 
+2014-08-29 17:27:32+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:27:32+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403800.html
+2014-08-29 17:27:32+0800 [pharmnet] INFO: ########title=关于征求医疗器械监管工作意见和建议的函 
+2014-08-29 17:27:39+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:27:39+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403801.html
+2014-08-29 17:27:39+0800 [pharmnet] INFO: ########title=广东省药品经营企业GSP认证公示公告（第224号）
+2014-08-29 17:27:44+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:27:44+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403802.html
+2014-08-29 17:27:44+0800 [pharmnet] INFO: ########title=内蒙古自治区药品经营企业GSP认证公示公告（第132号） 
+2014-08-29 17:27:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:27:50+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403803.html
+2014-08-29 17:27:50+0800 [pharmnet] INFO: ########title=8月28日国内四大证券报纸头版头条内容精华摘要
+2014-08-29 17:27:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 17:27:55+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403804.html
+2014-08-29 17:27:55+0800 [pharmnet] INFO: ########title=国务院：支持商业保险参与医疗、养老服务体系
+2014-08-29 17:28:02+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:28:02+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403805.html
+2014-08-29 17:28:02+0800 [pharmnet] INFO: ########title=凤凰医疗半年报不俗 计划拓展外地市场
+2014-08-29 17:28:05+0800 [pharmnet] INFO: Crawled 40 pages (at 10 pages/min), scraped 32 items (at 10 items/min)
+2014-08-29 17:28:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:28:07+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403806.html
+2014-08-29 17:28:07+0800 [pharmnet] INFO: ########title=7省市试点外资独资医院 医药供应链或发生变化
+2014-08-29 17:28:14+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:28:14+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403807.html
+2014-08-29 17:28:14+0800 [pharmnet] INFO: ########title=山东：加大投入集群发展 推动医药行业创新升级
+2014-08-29 17:28:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:28:21+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403808.html
+2014-08-29 17:28:21+0800 [pharmnet] INFO: ########title=网售处方药政策或10月落地 壹药网抢卖处方药
+2014-08-29 17:28:29+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:28:29+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403809.html
+2014-08-29 17:28:29+0800 [pharmnet] INFO: ########title=瞄准国内基药市场 默克集团6.5亿在华建厂
+2014-08-29 17:28:36+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:28:36+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403810.html
+2014-08-29 17:28:36+0800 [pharmnet] INFO: ########title=上海出台支持医药产业发展政策 本土药企望受益
+2014-08-29 17:28:40+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2014-08-29 17:28:40+0800 [pharmnet] INFO: Closing spider (shutdown)
+2014-08-29 17:28:41+0800 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2014-08-29 17:30:41+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
+2014-08-29 17:30:41+0800 [scrapy] INFO: Optional features available: ssl, http11
+2014-08-29 17:30:41+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
+2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
+2014-08-29 17:30:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:30:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:30:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 17:30:46+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:30:48+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 17:30:48+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4452041.html
+2014-08-29 17:30:48+0800 [drug39] INFO: ########title=慢严舒柠含片微电影上线遭网友集体吐槽
+2014-08-29 17:30:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:30:50+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403948.html
+2014-08-29 17:30:50+0800 [pharmnet] INFO: ########title=中南大学湘雅医院泪膜分析仪等设备招标公告 
+2014-08-29 17:30:54+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:30:54+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140820/4452255.html
+2014-08-29 17:30:54+0800 [drug39] INFO: ########title=英立法限制阿比特龙使用 医生谴责法案限制治疗
+2014-08-29 17:30:54+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:30:54+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403949.html
+2014-08-29 17:30:54+0800 [pharmnet] INFO: ########title=海南省皮肤性病防治中心HIV-1EasyQ核酸检测试剂盒成交公告 
+2014-08-29 17:30:59+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:30:59+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453100.html
+2014-08-29 17:30:59+0800 [drug39] INFO: ########title=2014蓝牙亚洲大会召开  巨头齐发力医疗智能可穿戴
+2014-08-29 17:31:02+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 17:31:02+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403950.html
+2014-08-29 17:31:02+0800 [pharmnet] INFO: ########title=广州市公安局DNA检验试剂耗材（重招）中标公告
+2014-08-29 17:31:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 17:31:06+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403951.html
+2014-08-29 17:31:06+0800 [pharmnet] INFO: ########title=淮安市动物疫病预防控制中心猪链球菌疫苗招标公告 
+2014-08-29 17:31:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:31:07+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453534.html
+2014-08-29 17:31:07+0800 [drug39] INFO: ########title=专家呼吁全社会应关注心脑血管疾病死亡率拐点
+2014-08-29 17:31:10+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:31:10+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403952.html
+2014-08-29 17:31:10+0800 [pharmnet] INFO: ########title=山东省血液中心人凝血因子等药品公开招标公告 
+2014-08-29 17:31:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 17:31:13+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140822/4454128.html
+2014-08-29 17:31:13+0800 [drug39] INFO: ########title=盘点2014年那些被认定的孤儿药
+2014-08-29 17:31:17+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-08-29 17:31:17+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403953.html
+2014-08-29 17:31:17+0800 [pharmnet] INFO: ########title=贵州省卫计委2014年抗结核病药品中标公告
+2014-08-29 17:31:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 17:31:19+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140825/4456147.html
+2014-08-29 17:31:19+0800 [drug39] INFO: ########title=“冰桶挑战”引爆全球关注 专家呼吁罕见病纳入立法
+2014-08-29 17:31:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 17:31:25+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403954.html
+2014-08-29 17:31:25+0800 [pharmnet] INFO: ########title=超过35岁孕前先查甲状腺 甲状腺疾病对胎儿影响大 
+2014-08-29 17:31:27+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 17:31:27+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458855.html
+2014-08-29 17:31:27+0800 [drug39] INFO: ########title=CFDA提示消费者勿网购低价知名品牌化妆品
+2014-08-29 17:31:31+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 17:31:31+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403955.html
+2014-08-29 17:31:31+0800 [pharmnet] INFO: ########title=睾酮缺乏,男人四十变残花 
+2014-08-29 17:31:33+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 

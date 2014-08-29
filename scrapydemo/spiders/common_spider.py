@@ -28,9 +28,9 @@ def ltos(lst):
 
 
 # class CommonXMLFeedSpider(XMLFeedSpider):
-#     """RSS/XML源爬虫，一般都是从一个列表开始爬，然后一个个的打开网页"""
-#     name = 'xmlfeed'
-#     allowed_domains = ['http://drug.39.net/']
+# """RSS/XML源爬虫，一般都是从一个列表开始爬，然后一个个的打开网页"""
+# name = 'xmlfeed'
+# allowed_domains = ['http://drug.39.net/']
 #     start_urls = [
 #         'http://drug.39.net/yjxw/yydt/index.html',
 #     ]
@@ -49,15 +49,13 @@ def ltos(lst):
 
 class Drug39Spider(CrawlSpider):
     name = "drug39"
-    # 设置下载延时
-    download_delay = 2
     allowed_domains = ["drug.39.net"]
     start_urls = [
         "http://drug.39.net/yjxw/yydt/index.html"
     ]
     rules = (
         # LxmlLinkExtractor提取链接列表
-        Rule(LxmlLinkExtractor(allow=(r'yydt/index_\d+\.html', r'/a/\d{6}/\d+\.html'),
+        Rule(LxmlLinkExtractor(allow=(r'/yydt/index_\d+\.html', r'/a/\d{6}/\d+\.html'),
                                # restrict_xpaths=(u'//a[text()="下一页"]', '//div[@class="listbox"]')),
                                restrict_xpaths=('//div[@class="listbox"]',)),
              callback='parse_links', follow=False),
@@ -98,33 +96,50 @@ class Drug39Spider(CrawlSpider):
 
 
 class PharmnetCrawlSpider(CrawlSpider):
-    """pharmnet网页爬虫"""
+    """医药网pharmnet.com.cn"""
     name = 'pharmnet'
-    allowed_domains = ['http://news.pharmnet.com.cn/']
+    allowed_domains = ['pharmnet.com.cn']
     start_urls = [
         'http://news.pharmnet.com.cn/news/hyyw/news/index0.html',
+        'http://news.pharmnet.com.cn/news/hyyw/news/index1.html',
     ]
 
-    def parse(self, response):
-        self.log('Hi, this is an item page! %s' % response.url, log.INFO)
-        news_links = response.xpath('//div[@class="list"]/ul/li/p/a')
-        for each_link in news_links:
-            url = ltos(each_link.xpath('@href').extract())
-            yield Request(url=url, callback=self.parse_page)
+    rules = (
+        # LxmlLinkExtractor提取链接列表
+        Rule(LxmlLinkExtractor(allow=(r'/news/\d{4}/\d{2}/\d{2}/\d+\.html'
+                                      , r'/news/hyyw/news/index\d+\.html')
+                               , restrict_xpaths=('//div[@class="list"]', '//div[@class="page"]'))
+             , callback='parse_links', follow=False),
+    )
+
+    def parse_links(self, response):
+        # 如果是首页文章链接，直接处理
+        if '/hyyw/' not in response.url:
+            yield self.parse_page(response)
+        else:
+            self.log('-------------------> link_list url=%s' % response.url, log.INFO)
+            links = response.xpath('//div[@class="list"]/ul/li/p/a')
+            for link in links:
+                url = link.xpath('@href').extract()[0]
+                yield Request(url=url, callback=self.parse_page)
 
     def parse_page(self, response):
         try:
             self.log('-------------------> link_page url=%s' % response.url, log.INFO)
             item = NewsItem()
-            item['category'] = "医药资讯"
+            item['crawlkey'] = self.name
+            item['category'] = ltos(response.xpath(
+                '//div[@class="current"]/a[last()]/text()').extract())
             item['link'] = response.url
-            item['location'] = '39健康网'
-            item['pubdate'] = '2014/08/04'
+            head_line = ltos(response.xpath('//div[@class="ct01"]/text()[1]').extract())
+            item['location'] = head_line.strip().split()[1]
+            item['pubdate'] = datetime.datetime.strptime(head_line.strip().split()[0], '%Y-%m-%d')
             item['title'] = ltos(response.xpath('//h1/text()').extract())
-            item['content'] = "".join(response.xpath(
-                '//div[@class="ct02"]/font/div//text()').extract())
-            self.log('!!!!!!! title=%s' % item['title'].encode('gb2312'), log.INFO)
+            content_temp = "".join([tt.strip() for tt in response.xpath(
+                '//div[@class="ct02"]/font/div/div|//div[@class="ct02"]/font/div').extract()])
+            item['content'] = filter_tags(content_temp)
+            self.log('########title=%s' % item['title'].encode('gb2312'), log.INFO)
             return item
         except:
-            self.log('ERROR----->>>>>>>>>%s' % response.url, log.INFO)
-            return None
+            self.log('ERROR-----%s' % response.url, log.INFO)
+            raise DropItem('DropItem-----%s' % response.url)

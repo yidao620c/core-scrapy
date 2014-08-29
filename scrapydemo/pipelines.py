@@ -109,7 +109,7 @@ class PostgresPipeline(object):
         session = self.Session()
         recent_news = session.query(News).filter(
             News.crawlkey == spider.name
-            , self.nowtime - News.pubdate <= datetime.timedelta(days=3)).all()
+            , self.nowtime - News.pubdate <= datetime.timedelta(days=30)).all()
         self.recent_links = [t.link for t in recent_news]
         print(self.recent_links)
 
