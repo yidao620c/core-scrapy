@@ -59,37 +59,10 @@ class BaiduSpider(Spider):
         @scrapes name
         """
         self.log('parse.... %s' % (response.url,), log.INFO)
-        title = response.xpath(u'//a[text()="关于百度"]/text()').extract()[0].encode('gb2312')
-        self.log('========title=%s' % title, log.INFO)
+        title = response.xpath(u'//a[text()="关于百度"]/text()').extract()[0]
+        self.log('========title=%s' % title.encode('gb2312'), log.INFO)
         link = 'dddd'
         desc = 'ccccc'
         return MyItem(title=title, link=link, desc=desc)
 
-
-class DrugTestSpider(Spider):
-    name = "drugtest"
-    allowed_domains = ["drug.39.net"]
-    start_urls = [
-        "http://drug.39.net/yjxw/yydt/index.html"
-    ]
-
-    def parse(self, response):
-        """
-        The lines below is a spider contract. For more info see:
-        http://doc.scrapy.org/en/latest/topics/contracts.html
-
-        @url http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/
-        @scrapes name
-        """
-        self.log('parse.... %s' % (response.url,), log.INFO)
-        title = response.xpath(u'//a[text()="尾页"]/text()').extract()[0]
-        # 返回的是gb2312编码的unicode对象
-        self.log('========title=%s' % title.encode('gb2312').decode('utf-8'), log.INFO)
-        # str类型
-        self.log('========type=%s' % type(title.encode('gb2312')), log.INFO)
-        # 转换成utf-8编码后的unicode类型
-        self.log('========type=%s' % type(title.encode('gb2312').decode('utf-8')), log.INFO)
-        link = 'dddd'
-        desc = 'ccccc'
-        return MyItem(title=title, link=link, desc=desc)
 

@@ -57,7 +57,7 @@ class ItemLoaderSpider(Spider):
 
 class MyCrawlSpider(CrawlSpider):
     """普通网页爬虫"""
-    name = 'crawl'
+    name = 'baiducrawl'
     allowed_domains = ['baidu.com']
     start_urls = [
         'http://news.baidu.com/',
@@ -83,24 +83,3 @@ class MyCrawlSpider(CrawlSpider):
         item['desc'] = response.xpath('//td[@id="item_description"]/text()').extract()
         return item
 
-
-class MyXMLFeedSpider(XMLFeedSpider):
-    """RSS/XML源爬虫"""
-    name = 'xmlfeed'
-    allowed_domains = ['baidu.com']
-    start_urls = [
-        'http://news.baidu.com/',
-        'http://tieba.baidu.com/',
-        'http://home.baidu.com/',
-    ]
-    iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
-    itertag = 'item'
-
-    def parse_node(self, response, node):
-        self.log('Hi, this is a <%s> node!: %s' % (self.itertag, ''.join(node.extract())))
-
-        item = Item()
-        item['id'] = node.xpath('@id').extract()
-        item['name'] = node.xpath('name').extract()
-        item['description'] = node.xpath('description').extract()
-        return item

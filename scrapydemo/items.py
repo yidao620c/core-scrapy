@@ -23,7 +23,8 @@ class ProductItem(Item):
     last_updated = Field(serializer=str)
 
 
-class MedicineItem(Item):
+class NewsItem(Item):
+    crawlkey = Field()  # 爬虫key
     category = Field()  # 新闻分类
     link = Field()  # 新闻链接地址
     location = Field()  # 新闻来源

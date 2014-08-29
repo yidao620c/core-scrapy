@@ -27,20 +27,6 @@ def create_news_table(engine):
     DeclarativeBase.metadata.create_all(engine)
 
 
-# 定义已经爬过的链接
-class Urls(DeclarativeBase):
-    """Sqlalchemy deals model"""
-    __tablename__ = "urls"
-    # 主键
-    id = Column(Integer, primary_key=True)
-    # URL
-    url = Column('url', String, nullable=True)
-    # 爬虫名
-    crawl_name = Column('crawlname', String, nullable=True)
-    # 爬取时间
-    crawl_date = Column('crawldate', Date, nullable=True)
-
-
 def _get_date():
     return datetime.datetime.now()
 
@@ -51,6 +37,8 @@ class News(DeclarativeBase):
     __tablename__ = "news"
     # 主键
     id = Column(Integer, primary_key=True)
+    # 爬虫key
+    crawlkey = Column('crawlkey', String, nullable=True)
     # 新闻分类
     category = Column('category', String, nullable=True)
     # 新闻链接地址

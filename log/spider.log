@@ -1,167 +1,168 @@
-2014-08-29 11:17:07+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
-2014-08-29 11:17:07+0800 [scrapy] INFO: Optional features available: ssl, http11
-2014-08-29 11:17:07+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
-2014-08-29 11:17:07+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
-2014-08-29 11:17:07+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
-2014-08-29 11:17:07+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
-2014-08-29 11:17:07+0800 [scrapy] INFO: Enabled item pipelines: 
-2014-08-29 11:17:07+0800 [druglink] INFO: Spider opened
-2014-08-29 11:17:07+0800 [druglink] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2014-08-29 11:17:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:10+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 11:17:10+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4452041.html
-2014-08-29 11:17:10+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140819/4452041.html
-2014-08-29 11:17:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:17:12+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140820/4452255.html
-2014-08-29 11:17:12+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140820/4452255.html
-2014-08-29 11:17:14+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:14+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453100.html
-2014-08-29 11:17:14+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140821/4453100.html
-2014-08-29 11:17:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 11:17:16+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453534.html
-2014-08-29 11:17:16+0800 [druglink] INFO: ########title=专家呼吁全社会应关注心脑血管疾病死亡率拐点
-2014-08-29 11:17:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:19+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140822/4454128.html
-2014-08-29 11:17:19+0800 [druglink] INFO: ########title=盘点2014年那些被认定的孤儿药
-2014-08-29 11:17:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:21+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140825/4456147.html
-2014-08-29 11:17:21+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140825/4456147.html
-2014-08-29 11:17:24+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 11:17:24+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458855.html
-2014-08-29 11:17:24+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140828/4458855.html
-2014-08-29 11:17:27+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:27+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458433.html
-2014-08-29 11:17:27+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140828/4458433.html
-2014-08-29 11:17:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 11:17:30+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140829/4457792.html
-2014-08-29 11:17:30+0800 [druglink] INFO: ########title=中国保健品当心错过黄金期
-2014-08-29 11:17:33+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 11:17:33+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140810/4445350.html
-2014-08-29 11:17:33+0800 [druglink] INFO: ########title=我国400万心衰患者存在猝死风险
-2014-08-29 11:17:34+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 11:17:34+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140810/4445351.html
-2014-08-29 11:17:34+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140810/4445351.html
-2014-08-29 11:17:37+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 11:17:37+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4444436.html
-2014-08-29 11:17:37+0800 [druglink] INFO: ########title=吉利德天价丙肝药Sovaldi印度售价仅1%
-2014-08-29 11:17:40+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 11:17:40+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445679.html
-2014-08-29 11:17:40+0800 [druglink] INFO: ########title=南充：基层首诊简历分级诊疗制度
-2014-08-29 11:17:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 11:17:42+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445493.html
-2014-08-29 11:17:42+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140811/4445493.html
-2014-08-29 11:17:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 11:17:45+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445521.html
-2014-08-29 11:17:45+0800 [druglink] INFO: ########title=美连锁医院股受追捧 奥巴马功不可没
-2014-08-29 11:17:47+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 11:17:47+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445574.html
-2014-08-29 11:17:47+0800 [druglink] INFO: ########title=贵州中药材全产业链持续发展面临两大难点
-2014-08-29 11:17:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 11:17:50+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445565.html
-2014-08-29 11:17:50+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140811/4445565.html
-2014-08-29 11:17:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:53+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445588.html
-2014-08-29 11:17:53+0800 [druglink] INFO: ########title=国家食药监局：将建婴幼儿配方乳粉企业信用档案
-2014-08-29 11:17:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:17:55+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445772.html
-2014-08-29 11:17:55+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140811/4445772.html
-2014-08-29 11:17:58+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 11:17:58+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4448813.html
-2014-08-29 11:17:58+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140811/4448813.html
-2014-08-29 11:18:01+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:18:01+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140812/4446414.html
-2014-08-29 11:18:01+0800 [druglink] INFO: ########title=上海公布今年第一期基药零售价上限
-2014-08-29 11:18:03+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:18:03+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140812/4444978.html
-2014-08-29 11:18:03+0800 [druglink] INFO: ########title=药监局提醒别买“减肚子汤”类产品
-2014-08-29 11:18:05+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 11:18:05+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446614.html
-2014-08-29 11:18:05+0800 [druglink] INFO: ########title=日本抗流感药法匹拉韦或可尝试对付埃博拉
-2014-08-29 11:18:07+0800 [druglink] INFO: Crawled 24 pages (at 24 pages/min), scraped 12 items (at 12 items/min)
-2014-08-29 11:18:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 11:18:08+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446606.html
-2014-08-29 11:18:08+0800 [druglink] INFO: ########title=国产获批 土洋伟哥打“硬”仗
-2014-08-29 11:18:11+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 11:18:11+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446477.html
-2014-08-29 11:18:11+0800 [druglink] INFO: ########title=抗生素新药“难产” 恐造成全球大疫症
-2014-08-29 11:18:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 11:18:13+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447483.html
-2014-08-29 11:18:13+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140813/4447483.html
-2014-08-29 11:18:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 11:18:16+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446686.html
-2014-08-29 11:18:16+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140813/4446686.html
-2014-08-29 11:18:17+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 11:18:17+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447515.html
-2014-08-29 11:18:17+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140813/4447515.html
-2014-08-29 11:18:20+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 11:18:20+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447519.html
-2014-08-29 11:18:20+0800 [druglink] INFO: ########title=CFDA公布国产非特殊用途化妆品备案检验机构增补名单
-2014-08-29 11:18:23+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 11:18:23+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447528.html
-2014-08-29 11:18:23+0800 [druglink] INFO: ########title=食药总局：6批次核黄素磷酸钠注射液被停用 
-2014-08-29 11:18:26+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 11:18:26+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447670.html
-2014-08-29 11:18:26+0800 [druglink] INFO: ########title=WHO认可使用试验性药物治疗埃博拉
-2014-08-29 11:18:29+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448473.html
-2014-08-29 11:18:29+0800 [druglink] INFO: ########title=多家公司维生素D3断供 涨价或引爆概念股
-2014-08-29 11:18:32+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448214.html
-2014-08-29 11:18:32+0800 [druglink] INFO: ########title=食药监总局：核黄素磷酸钠注射液致严重不良反应
-2014-08-29 11:18:34+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448306.html
-2014-08-29 11:18:34+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140814/4448306.html
-2014-08-29 11:18:36+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4449058.html
-2014-08-29 11:18:36+0800 [druglink] INFO: ########title=吴以岭：新药上市审批速度严重滞后
-2014-08-29 11:18:39+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449333.html
-2014-08-29 11:18:39+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140815/4449333.html
-2014-08-29 11:18:41+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449373.html
-2014-08-29 11:18:41+0800 [druglink] INFO: ########title=福建基药非基药“两标合一” 企业面临价格血拼
-2014-08-29 11:18:44+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449399.html
-2014-08-29 11:18:44+0800 [druglink] INFO: ########title=重组人生长激素格局生变 本土企业创新提速
-2014-08-29 11:18:46+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449312.html
-2014-08-29 11:18:46+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140815/4449312.html
-2014-08-29 11:18:49+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449425.html
-2014-08-29 11:18:49+0800 [druglink] INFO: ########title=政策导向驱动IVD 国产检验试剂或迎利好
-2014-08-29 11:18:51+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450540.html
-2014-08-29 11:18:52+0800 [druglink] INFO: ########title=福建唯低价是取再现 两协会联名反对
-2014-08-29 11:18:53+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450597.html
-2014-08-29 11:18:53+0800 [druglink] INFO: ########title=政策助力 透析行业千亿市场需求有望释放
-2014-08-29 11:18:56+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450749.html
-2014-08-29 11:18:56+0800 [druglink] INFO: ########title=湖南省儿童医院成该省首家移动医疗服务平台
-2014-08-29 11:18:58+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450770.html
-2014-08-29 11:18:58+0800 [druglink] INFO: ########title=CFDA：违法销售含特殊药品复方制剂将吊销两证
-2014-08-29 11:19:01+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4451172.html
-2014-08-29 11:19:01+0800 [druglink] INFO: ERROR-----http://drug.39.net/a/140818/4451172.html
-2014-08-29 11:19:02+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4451666.html
-2014-08-29 11:19:02+0800 [druglink] INFO: ########title=中检院回应辽宁依生狂犬病疫苗批签发问题
-2014-08-29 11:19:04+0800 [druglink] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4451821.html
-2014-08-29 11:19:04+0800 [druglink] INFO: ########title=北大国际医院用顶级人才和学科打造“超级医院”
-2014-08-29 11:19:04+0800 [druglink] INFO: Closing spider (finished)
-2014-08-29 11:19:04+0800 [druglink] INFO: Dumping Scrapy stats:
-	{'downloader/request_bytes': 16741,
+2014-08-29 16:19:42+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
+2014-08-29 16:19:42+0800 [scrapy] INFO: Optional features available: ssl, http11
+2014-08-29 16:19:42+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
+2014-08-29 16:19:42+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2014-08-29 16:19:43+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2014-08-29 16:19:43+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2014-08-29 16:19:44+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
+2014-08-29 16:19:44+0800 [drug39] INFO: Spider opened
+2014-08-29 16:19:44+0800 [scrapy] INFO: open_spider[drug39]....
+2014-08-29 16:19:44+0800 [drug39] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2014-08-29 16:19:44+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-08-29 16:19:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 16:19:46+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 16:19:46+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140829/4457792.html
+2014-08-29 16:19:46+0800 [drug39] INFO: ########title=中国保健品当心错过黄金期
+2014-08-29 16:19:48+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-08-29 16:19:48+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140810/4445350.html
+2014-08-29 16:19:48+0800 [drug39] INFO: ########title=我国400万心衰患者存在猝死风险
+2014-08-29 16:19:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 16:19:50+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140810/4445351.html
+2014-08-29 16:19:50+0800 [drug39] INFO: ########title=中药走出国门须坚定循证医学研究之路
+2014-08-29 16:19:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 16:19:53+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4444436.html
+2014-08-29 16:19:53+0800 [drug39] INFO: ########title=吉利德天价丙肝药Sovaldi印度售价仅1%
+2014-08-29 16:19:56+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:19:56+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445679.html
+2014-08-29 16:19:56+0800 [drug39] INFO: ########title=南充：基层首诊简历分级诊疗制度
+2014-08-29 16:19:59+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:19:59+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445493.html
+2014-08-29 16:19:59+0800 [drug39] INFO: ########title=世卫拉响埃博拉警报 中国已具诊断试剂研发能力
+2014-08-29 16:20:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 16:20:06+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445521.html
+2014-08-29 16:20:06+0800 [drug39] INFO: ########title=美连锁医院股受追捧 奥巴马功不可没
+2014-08-29 16:20:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:20:07+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445565.html
+2014-08-29 16:20:07+0800 [drug39] INFO: ########title=资本青睐医疗健康产业 中科贴针灸获发展良机
+2014-08-29 16:20:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:20:09+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445574.html
+2014-08-29 16:20:09+0800 [drug39] INFO: ########title=贵州中药材全产业链持续发展面临两大难点
+2014-08-29 16:20:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 16:20:09+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445588.html
+2014-08-29 16:20:09+0800 [drug39] INFO: ########title=国家食药监局：将建婴幼儿配方乳粉企业信用档案
+2014-08-29 16:20:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:20:12+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4445772.html
+2014-08-29 16:20:12+0800 [drug39] INFO: ########title=迪巧推出“星座老爸”微电影传播父子亲情
+2014-08-29 16:20:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
+2014-08-29 16:20:13+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140811/4448813.html
+2014-08-29 16:20:13+0800 [drug39] INFO: ########title=轻中度心衰伴室性早搏治疗再现新进展
+2014-08-29 16:20:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:20:16+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140812/4446414.html
+2014-08-29 16:20:16+0800 [drug39] INFO: ########title=上海公布今年第一期基药零售价上限
+2014-08-29 16:20:18+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:20:18+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140812/4444978.html
+2014-08-29 16:20:18+0800 [drug39] INFO: ########title=药监局提醒别买“减肚子汤”类产品
+2014-08-29 16:20:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 16:20:21+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446614.html
+2014-08-29 16:20:21+0800 [drug39] INFO: ########title=日本抗流感药法匹拉韦或可尝试对付埃博拉
+2014-08-29 16:20:23+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 16:20:23+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446606.html
+2014-08-29 16:20:23+0800 [drug39] INFO: ########title=国产获批 土洋伟哥打“硬”仗
+2014-08-29 16:20:24+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:20:24+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446477.html
+2014-08-29 16:20:25+0800 [drug39] INFO: ########title=抗生素新药“难产” 恐造成全球大疫症
+2014-08-29 16:20:27+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-08-29 16:20:27+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447483.html
+2014-08-29 16:20:27+0800 [drug39] INFO: ########title=四川县医院改革方案出炉 严禁设定创收指标
+2014-08-29 16:20:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:20:30+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4446686.html
+2014-08-29 16:20:30+0800 [drug39] INFO: ########title=量价齐跌 虫草产业迎来拐点？
+2014-08-29 16:20:32+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-08-29 16:20:32+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447515.html
+2014-08-29 16:20:32+0800 [drug39] INFO: ########title=药典委说明金银花、山银花分类标准
+2014-08-29 16:20:35+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:20:35+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447519.html
+2014-08-29 16:20:35+0800 [drug39] INFO: ########title=CFDA公布国产非特殊用途化妆品备案检验机构增补名单
+2014-08-29 16:20:37+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 16:20:37+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447528.html
+2014-08-29 16:20:37+0800 [drug39] INFO: ########title=食药总局：6批次核黄素磷酸钠注射液被停用 
+2014-08-29 16:20:38+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 16:20:38+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140813/4447670.html
+2014-08-29 16:20:38+0800 [drug39] INFO: ########title=WHO认可使用试验性药物治疗埃博拉
+2014-08-29 16:20:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-08-29 16:20:42+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448473.html
+2014-08-29 16:20:42+0800 [drug39] INFO: ########title=多家公司维生素D3断供 涨价或引爆概念股
+2014-08-29 16:20:44+0800 [drug39] INFO: Crawled 25 pages (at 25 pages/min), scraped 24 items (at 24 items/min)
+2014-08-29 16:20:45+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:20:45+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448214.html
+2014-08-29 16:20:45+0800 [drug39] INFO: ########title=食药监总局：核黄素磷酸钠注射液致严重不良反应
+2014-08-29 16:20:47+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-08-29 16:20:47+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4448306.html
+2014-08-29 16:20:47+0800 [drug39] INFO: ########title=遭药企反对 安徽暂缓今年基药招投标
+2014-08-29 16:20:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-08-29 16:20:50+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140814/4449058.html
+2014-08-29 16:20:50+0800 [drug39] INFO: ########title=吴以岭：新药上市审批速度严重滞后
+2014-08-29 16:20:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-08-29 16:20:53+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449333.html
+2014-08-29 16:20:53+0800 [drug39] INFO: ########title=埃博拉致命性爆发 治疗药物匮乏
+2014-08-29 16:20:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-08-29 16:20:55+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449373.html
+2014-08-29 16:20:55+0800 [drug39] INFO: ########title=福建基药非基药“两标合一” 企业面临价格血拼
+2014-08-29 16:20:57+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-08-29 16:20:57+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449399.html
+2014-08-29 16:20:57+0800 [drug39] INFO: ########title=重组人生长激素格局生变 本土企业创新提速
+2014-08-29 16:21:00+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-08-29 16:21:00+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449312.html
+2014-08-29 16:21:00+0800 [drug39] INFO: ########title=国产大型医疗设备上崛起 外资垄断格局或打破
+2014-08-29 16:21:03+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140815/4449425.html
+2014-08-29 16:21:03+0800 [drug39] INFO: ########title=政策导向驱动IVD 国产检验试剂或迎利好
+2014-08-29 16:21:06+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450540.html
+2014-08-29 16:21:06+0800 [drug39] INFO: ########title=福建唯低价是取再现 两协会联名反对
+2014-08-29 16:21:08+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450597.html
+2014-08-29 16:21:08+0800 [drug39] INFO: ########title=政策助力 透析行业千亿市场需求有望释放
+2014-08-29 16:21:10+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450749.html
+2014-08-29 16:21:10+0800 [drug39] INFO: ########title=湖南省儿童医院成该省首家移动医疗服务平台
+2014-08-29 16:21:12+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4450770.html
+2014-08-29 16:21:12+0800 [drug39] INFO: ########title=CFDA：违法销售含特殊药品复方制剂将吊销两证
+2014-08-29 16:21:14+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140818/4451172.html
+2014-08-29 16:21:14+0800 [drug39] INFO: ########title=首届泡腾片生产工艺及数片码片论坛将在南通召开
+2014-08-29 16:21:17+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4451666.html
+2014-08-29 16:21:17+0800 [drug39] INFO: ########title=中检院回应辽宁依生狂犬病疫苗批签发问题
+2014-08-29 16:21:19+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4451821.html
+2014-08-29 16:21:19+0800 [drug39] INFO: ########title=北大国际医院用顶级人才和学科打造“超级医院”
+2014-08-29 16:21:23+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4452041.html
+2014-08-29 16:21:23+0800 [drug39] INFO: ########title=慢严舒柠含片微电影上线遭网友集体吐槽
+2014-08-29 16:21:25+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140820/4452255.html
+2014-08-29 16:21:25+0800 [drug39] INFO: ########title=英立法限制阿比特龙使用 医生谴责法案限制治疗
+2014-08-29 16:21:28+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453100.html
+2014-08-29 16:21:28+0800 [drug39] INFO: ########title=2014蓝牙亚洲大会召开  巨头齐发力医疗智能可穿戴
+2014-08-29 16:21:29+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453534.html
+2014-08-29 16:21:29+0800 [drug39] INFO: ########title=专家呼吁全社会应关注心脑血管疾病死亡率拐点
+2014-08-29 16:21:32+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140822/4454128.html
+2014-08-29 16:21:32+0800 [drug39] INFO: ########title=盘点2014年那些被认定的孤儿药
+2014-08-29 16:21:34+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140825/4456147.html
+2014-08-29 16:21:34+0800 [drug39] INFO: ########title=“冰桶挑战”引爆全球关注 专家呼吁罕见病纳入立法
+2014-08-29 16:21:36+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458855.html
+2014-08-29 16:21:36+0800 [drug39] INFO: ########title=CFDA提示消费者勿网购低价知名品牌化妆品
+2014-08-29 16:21:38+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458433.html
+2014-08-29 16:21:38+0800 [drug39] INFO: ########title=两部委力挺国产器械行业 跨国巨头争抢基层“蛋糕”
+2014-08-29 16:21:38+0800 [drug39] INFO: Closing spider (finished)
+2014-08-29 16:21:38+0800 [drug39] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 16854,
 	 'downloader/request_count': 48,
 	 'downloader/request_method_count/GET': 48,
-	 'downloader/response_bytes': 1265474,
+	 'downloader/response_bytes': 1265307,
 	 'downloader/response_count': 48,
 	 'downloader/response_status_count/200': 48,
 	 'finish_reason': 'finished',
-	 'finish_time': datetime.datetime(2014, 8, 29, 3, 19, 4, 845000),
-	 'item_scraped_count': 29,
-	 'log_count/INFO': 150,
+	 'finish_time': datetime.datetime(2014, 8, 29, 8, 21, 38, 914000),
+	 'item_scraped_count': 47,
+	 'log_count/INFO': 151,
 	 'offsite/domains': 1,
 	 'offsite/filtered': 1,
 	 'request_depth_max': 1,
@@ -170,5 +171,5 @@
 	 'scheduler/dequeued/memory': 48,
 	 'scheduler/enqueued': 48,
 	 'scheduler/enqueued/memory': 48,
-	 'start_time': datetime.datetime(2014, 8, 29, 3, 17, 7, 866000)}
-2014-08-29 11:19:04+0800 [druglink] INFO: Spider closed (finished)
+	 'start_time': datetime.datetime(2014, 8, 29, 8, 19, 44, 642000)}
+2014-08-29 16:21:38+0800 [drug39] INFO: Spider closed (finished)
