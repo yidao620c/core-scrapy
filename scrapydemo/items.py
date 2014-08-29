@@ -24,9 +24,9 @@ class ProductItem(Item):
 
 
 class MedicineItem(Item):
-    id = Field()  # 主键
     category = Field()  # 新闻分类
     link = Field()  # 新闻链接地址
     location = Field()  # 新闻来源
+    pubdate = Field()  # 发布时间
     title = Field()  # 新闻标题
     content = Field()  # 正文

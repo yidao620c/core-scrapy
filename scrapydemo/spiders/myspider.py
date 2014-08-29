@@ -42,7 +42,7 @@ class ItemLoaderSpider(Spider):
     def parse(self, response):
         items = []
         for everyday in response.xpath('//ul/li/strong/a'):
-            loader = XPathItemLoader(ProductItem(), everyday)
+            loader = ItemLoader(ProductItem(), everyday)
             loader.default_input_processor = MapCompose(unicode.strip)
             loader.default_output_processor = Join()
             loader.add_xpath('name', 'text()')
@@ -50,7 +50,7 @@ class ItemLoaderSpider(Spider):
             loader.add_xpath('stock', '@mon')
             loader.add_value('last_updated', 'today')  # you can also use literal values
             item = self.to_utf8(loader.load_item(), *['name', 'price', 'stock', 'last_updated'])
-            self.log(item['name'], log.ERROR)
+            self.log(item['name'], log.INFO)
             items.append(item)
         return items
 
@@ -103,26 +103,4 @@ class MyXMLFeedSpider(XMLFeedSpider):
         item['id'] = node.xpath('@id').extract()
         item['name'] = node.xpath('name').extract()
         item['description'] = node.xpath('description').extract()
-        return item
-
-
-class MyCSVFeedSpider(CSVFeedSpider):
-    """CSV源爬虫"""
-    name = 'csvfeed'
-    allowed_domains = ['baidu.com']
-    start_urls = [
-        'http://news.baidu.com/',
-        'http://tieba.baidu.com/',
-        'http://home.baidu.com/',
-    ]
-    delimiter = ';'
-    headers = ['id', 'name', 'description']
-
-    def parse_row(self, response, row):
-        self.log('Hi, this is a row!: %r' % row, log.INFO)
-
-        item = Item()
-        item['id'] = row['id']
-        item['name'] = row['name']
-        item['description'] = row['description']
         return item
