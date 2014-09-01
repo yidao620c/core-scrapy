@@ -1,246 +1,270 @@
-2014-08-29 17:24:04+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
-2014-08-29 17:24:04+0800 [scrapy] INFO: Optional features available: ssl, http11
-2014-08-29 17:24:04+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
-2014-08-29 17:24:04+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
-2014-08-29 17:24:04+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
-2014-08-29 17:24:04+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
-2014-08-29 17:24:05+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
-2014-08-29 17:24:05+0800 [pharmnet] INFO: Spider opened
-2014-08-29 17:24:05+0800 [scrapy] INFO: open_spider[pharmnet]....
-2014-08-29 17:24:05+0800 [pharmnet] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2014-08-29 17:24:05+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 17:24:05+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:24:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:24:09+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:24:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 17:24:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:24:16+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403952.html
-2014-08-29 17:24:16+0800 [pharmnet] INFO: ########title=É½¶«Ê¡ÑªÒºÖÐÐÄÈËÄýÑªÒò×ÓµÈÒ©Æ·¹«¿ªÕÐ±ê¹«¸æ 
-2014-08-29 17:24:20+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:24:20+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403953.html
-2014-08-29 17:24:20+0800 [pharmnet] INFO: ########title=¹óÖÝÊ¡ÎÀ¼ÆÎ¯2014Äê¿¹½áºË²¡Ò©Æ·ÖÐ±ê¹«¸æ
-2014-08-29 17:24:26+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:24:26+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403954.html
-2014-08-29 17:24:26+0800 [pharmnet] INFO: ########title=³¬¹ý35ËêÔÐÇ°ÏÈ²é¼××´ÏÙ ¼××´ÏÙ¼²²¡¶ÔÌ¥¶ùÓ°Ïì´ó 
-2014-08-29 17:24:33+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:24:33+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403955.html
-2014-08-29 17:24:33+0800 [pharmnet] INFO: ########title=ØºÍªÈ±·¦,ÄÐÈËËÄÊ®±ä²Ð»¨ 
-2014-08-29 17:24:40+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:24:40+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403956.html
-2014-08-29 17:24:40+0800 [pharmnet] INFO: ########title=½¡¿µÌáÐÑ£º·À³¦°©£¬°ËÀàÈËÈºÔçÉ¸²é 
-2014-08-29 17:24:46+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:24:46+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403957.html
-2014-08-29 17:24:46+0800 [pharmnet] INFO: ########title=Ê²Ã´ÊÇÍíË¯Ç¿ÆÈÖ¢ 5ÕÐ¸æ±ðÍíË¯Ç¿ÆÈÖ¢±£Ö¤ºÃË¯Ãß
-2014-08-29 17:24:53+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:24:53+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403958.html
-2014-08-29 17:24:53+0800 [pharmnet] INFO: ########title=±©Òû±©Ê³¶ÔÉíÌåÊ®´óÎ£º¦ Îå²½ÈÃÄãÓÐÐ§¿ØÖÆ
-2014-08-29 17:25:00+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:25:00+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403959.html
-2014-08-29 17:25:00+0800 [pharmnet] INFO: ########title=±£ÉöÖÁÖØ Å®ÈË±£½¡ÎåÒªÎå²»Òª
-2014-08-29 17:25:05+0800 [pharmnet] INFO: Crawled 10 pages (at 10 pages/min), scraped 8 items (at 8 items/min)
-2014-08-29 17:25:08+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 17:25:08+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403960.html
-2014-08-29 17:25:08+0800 [pharmnet] INFO: ########title=ÊªÕîÓÐ¡°¸ÉÊª¡±Ö®·Ö ÓÃÒ©ÈçºÎ½²¾¿
-2014-08-29 17:25:14+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:25:14+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403961.html
-2014-08-29 17:25:14+0800 [pharmnet] INFO: ########title=Æß¸öÊÊºÏÈý¸öÔÂ±¦±¦µÄÓªÑøÊ³Æ× 
-2014-08-29 17:25:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:25:19+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index5.html
-2014-08-29 17:25:23+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:25:23+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index4.html
-2014-08-29 17:25:29+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:25:29+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index3.html
-2014-08-29 17:25:34+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:25:34+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index2.html
-2014-08-29 17:25:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:25:41+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index1.html
-2014-08-29 17:25:48+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:25:48+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403910.html
-2014-08-29 17:25:48+0800 [pharmnet] INFO: ########title=Ì°Á¹¸¹Ðºµ¼ÖÂ³é´¤ Ò½Éú£ºÈëÇïÌ°Á¹Ò×¸¹Ðº 
-2014-08-29 17:25:52+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:25:52+0800 [pharmnet] INFO: -------------------> link_list url=http://news.pharmnet.com.cn/news/hyyw/news/index0.html
-2014-08-29 17:25:59+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:25:59+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403850.html
-2014-08-29 17:25:59+0800 [pharmnet] INFO: ########title=³ÐµÂÏØÎÀÉú¾ÖÏçÕòÎÀÉúÔºÈ«×Ô¶¯Ï´Î¸»úµÈÉè±¸ÖÐ±ê¹«¸æ
-2014-08-29 17:26:05+0800 [pharmnet] INFO: Crawled 20 pages (at 10 pages/min), scraped 12 items (at 4 items/min)
-2014-08-29 17:26:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:26:06+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403851.html
-2014-08-29 17:26:06+0800 [pharmnet] INFO: ########title=ÁÙÒÊÊÐÀ¼ÁêÏØÈËÃñÒ½ÔºÈ«×Ô¶¯ÑªÄýÒÇµÈÉè±¸ÕÐ±ê¹«¸æ 
-2014-08-29 17:26:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:26:12+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403852.html
-2014-08-29 17:26:12+0800 [pharmnet] INFO: ########title=¼ªÊ×ÊÐÈËÃñÒ½Ôº²ÊÉ«¶àÆÕÀÕ³¬Éù²¨Õï¶ÏÒÇÑ¯¼Û¹«¸æ 
-2014-08-29 17:26:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:26:19+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403853.html
-2014-08-29 17:26:19+0800 [pharmnet] INFO: ########title=ÄþÏÄÒ½¿Æ´óÑ§×ÜÒ½Ôº¸ßÆµºôÎü»ú²É¹ºÏîÄ¿³É½»¹«¸æ
-2014-08-29 17:26:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:26:25+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403854.html
-2014-08-29 17:26:25+0800 [pharmnet] INFO: ########title=¹ã¶«Ê¡µÚÒ»ÈÙ¾üÒ½ÔºÏÂÖ«ÖÇÄÜ·´À¡ÑµÁ·ÏµÍ³ÕÐ±ê¹«¸æ
-2014-08-29 17:26:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:26:30+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403855.html
-2014-08-29 17:26:30+0800 [pharmnet] INFO: ########title=½­ÒõÊÐ¼²²¡Ô¤·À¿ØÖÆÖÐÐÄ²Ê³¬²É¹º¹«¸æ
-2014-08-29 17:26:35+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 17:26:35+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403856.html
-2014-08-29 17:26:35+0800 [pharmnet] INFO: ########title=Äþ²¨ÊÐÖÐÒ½ÔºC±ÛX¹â»úµÈÒ½ÁÆÉè±¸²É¹ºÏîÄ¿²¹³ä¹«¸æ 
-2014-08-29 17:26:40+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:26:40+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403857.html
-2014-08-29 17:26:40+0800 [pharmnet] INFO: ########title=½­ÒõÊÐ¼²²¡·À¿ØÖÐÐÄÈ«×Ô¶¯Éú»¯·ÖÎöÒÇµÈÉè±¸ÕÐ±ê¹«¸æ
-2014-08-29 17:26:47+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:26:47+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403858.html
-2014-08-29 17:26:47+0800 [pharmnet] INFO: ########title=±±¾©Í¬ÈÊÒ½ÔºÊÖÊõÏÔÎ¢¾µµÈÉè±¸¹ºÖÃÏîÄ¿ÕÐ±ê¹«¸æ
-2014-08-29 17:26:52+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:26:52+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403859.html
-2014-08-29 17:26:52+0800 [pharmnet] INFO: ########title=ÑÎ½òÏØÈËÃñÒ½ÔºÑªÒºÍ¸Îö»ú²É¹ºÏîÄ¿ÖÕÖ¹ÕÐ±ê¹«¸æ 
-2014-08-29 17:26:58+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:26:58+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/26/403637.html
-2014-08-29 17:26:58+0800 [pharmnet] INFO: ########title=ÉÏº£ÊÐÒ©Æ·¾­ÓªÆóÒµGSPÈÏÖ¤¹«Ê¾¹«¸æ£¨µÚ347ºÅ£© 
-2014-08-29 17:27:05+0800 [pharmnet] INFO: Crawled 30 pages (at 10 pages/min), scraped 22 items (at 10 items/min)
-2014-08-29 17:27:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:27:06+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/26/403691.html
-2014-08-29 17:27:06+0800 [pharmnet] INFO: ########title=ÄþÃ÷ÏØÈËÃñÒ½ÔºÄ¸Èé·ÖÎöÒÇµÈÉè±¸³É½»¹«¸æ 
-2014-08-29 17:27:12+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:27:12+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/27/403744.html
-2014-08-29 17:27:12+0800 [pharmnet] INFO: ########title=»úÐµÊÖ±Û¿É¡°¶ÁÐÄ¡±½¥¶³ÈËÖÎÁÆÓÐÍû 
-2014-08-29 17:27:18+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:27:18+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/27/403796.html
-2014-08-29 17:27:18+0800 [pharmnet] INFO: ########title=ÒûÊ³Çåµ­Ò×Ïû»¯ ½øÊ³¹æÂÉÓÀÔ¶ÊÇÑøÎ¸½ð±ê×¼
-2014-08-29 17:27:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:27:25+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403799.html
-2014-08-29 17:27:25+0800 [pharmnet] INFO: ########title=±±¾©µÈ7Ê¡ÊÐ½«ÊÔµã ÉèÁ¢Íâ×Ê¶À×ÊÒ½Ôº 
-2014-08-29 17:27:32+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:27:32+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403800.html
-2014-08-29 17:27:32+0800 [pharmnet] INFO: ########title=¹ØÓÚÕ÷ÇóÒ½ÁÆÆ÷Ðµ¼à¹Ü¹¤×÷Òâ¼ûºÍ½¨ÒéµÄº¯ 
-2014-08-29 17:27:39+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:27:39+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403801.html
-2014-08-29 17:27:39+0800 [pharmnet] INFO: ########title=¹ã¶«Ê¡Ò©Æ·¾­ÓªÆóÒµGSPÈÏÖ¤¹«Ê¾¹«¸æ£¨µÚ224ºÅ£©
-2014-08-29 17:27:44+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:27:44+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403802.html
-2014-08-29 17:27:44+0800 [pharmnet] INFO: ########title=ÄÚÃÉ¹Å×ÔÖÎÇøÒ©Æ·¾­ÓªÆóÒµGSPÈÏÖ¤¹«Ê¾¹«¸æ£¨µÚ132ºÅ£© 
-2014-08-29 17:27:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:27:50+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403803.html
-2014-08-29 17:27:50+0800 [pharmnet] INFO: ########title=8ÔÂ28ÈÕ¹úÄÚËÄ´óÖ¤È¯±¨Ö½Í·°æÍ·ÌõÄÚÈÝ¾«»ªÕªÒª
-2014-08-29 17:27:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 17:27:55+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403804.html
-2014-08-29 17:27:55+0800 [pharmnet] INFO: ########title=¹úÎñÔº£ºÖ§³ÖÉÌÒµ±£ÏÕ²ÎÓëÒ½ÁÆ¡¢ÑøÀÏ·þÎñÌåÏµ
-2014-08-29 17:28:02+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:28:02+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403805.html
-2014-08-29 17:28:02+0800 [pharmnet] INFO: ########title=·ï»ËÒ½ÁÆ°ëÄê±¨²»Ë× ¼Æ»®ÍØÕ¹ÍâµØÊÐ³¡
-2014-08-29 17:28:05+0800 [pharmnet] INFO: Crawled 40 pages (at 10 pages/min), scraped 32 items (at 10 items/min)
-2014-08-29 17:28:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:28:07+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403806.html
-2014-08-29 17:28:07+0800 [pharmnet] INFO: ########title=7Ê¡ÊÐÊÔµãÍâ×Ê¶À×ÊÒ½Ôº Ò½Ò©¹©Ó¦Á´»ò·¢Éú±ä»¯
-2014-08-29 17:28:14+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:28:14+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403807.html
-2014-08-29 17:28:14+0800 [pharmnet] INFO: ########title=É½¶«£º¼Ó´óÍ¶Èë¼¯Èº·¢Õ¹ ÍÆ¶¯Ò½Ò©ÐÐÒµ´´ÐÂÉý¼¶
-2014-08-29 17:28:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:28:21+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403808.html
-2014-08-29 17:28:21+0800 [pharmnet] INFO: ########title=ÍøÊÛ´¦·½Ò©Õþ²ß»ò10ÔÂÂäµØ Ò¼Ò©ÍøÇÀÂô´¦·½Ò©
-2014-08-29 17:28:29+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:28:29+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403809.html
-2014-08-29 17:28:29+0800 [pharmnet] INFO: ########title=Ãé×¼¹úÄÚ»ùÒ©ÊÐ³¡ Ä¬¿Ë¼¯ÍÅ6.5ÒÚÔÚ»ª½¨³§
-2014-08-29 17:28:36+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:28:36+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/28/403810.html
-2014-08-29 17:28:36+0800 [pharmnet] INFO: ########title=ÉÏº£³öÌ¨Ö§³ÖÒ½Ò©²úÒµ·¢Õ¹Õþ²ß ±¾ÍÁÒ©ÆóÍûÊÜÒæ
-2014-08-29 17:28:40+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
-2014-08-29 17:28:40+0800 [pharmnet] INFO: Closing spider (shutdown)
-2014-08-29 17:28:41+0800 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
-2014-08-29 17:30:41+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
-2014-08-29 17:30:41+0800 [scrapy] INFO: Optional features available: ssl, http11
-2014-08-29 17:30:41+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
-2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
-2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
-2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
-2014-08-29 17:30:41+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
-2014-08-29 17:30:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:30:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:30:41+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:30:42+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-08-29 17:30:46+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:30:48+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-08-29 17:30:48+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140819/4452041.html
-2014-08-29 17:30:48+0800 [drug39] INFO: ########title=ÂýÑÏÊæÄûº¬Æ¬Î¢µçÓ°ÉÏÏßÔâÍøÓÑ¼¯ÌåÍÂ²Û
-2014-08-29 17:30:50+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:30:50+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403948.html
-2014-08-29 17:30:50+0800 [pharmnet] INFO: ########title=ÖÐÄÏ´óÑ§ÏæÑÅÒ½ÔºÀáÄ¤·ÖÎöÒÇµÈÉè±¸ÕÐ±ê¹«¸æ 
-2014-08-29 17:30:54+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:30:54+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140820/4452255.html
-2014-08-29 17:30:54+0800 [drug39] INFO: ########title=Ó¢Á¢·¨ÏÞÖÆ°¢±ÈÌØÁúÊ¹ÓÃ Ò½ÉúÇ´Ôð·¨°¸ÏÞÖÆÖÎÁÆ
-2014-08-29 17:30:54+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:30:54+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403949.html
-2014-08-29 17:30:54+0800 [pharmnet] INFO: ########title=º£ÄÏÊ¡Æ¤·ôÐÔ²¡·ÀÖÎÖÐÐÄHIV-1EasyQºËËá¼ì²âÊÔ¼ÁºÐ³É½»¹«¸æ 
-2014-08-29 17:30:59+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:30:59+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453100.html
-2014-08-29 17:30:59+0800 [drug39] INFO: ########title=2014À¶ÑÀÑÇÖÞ´ó»áÕÙ¿ª  ¾ÞÍ·Æë·¢Á¦Ò½ÁÆÖÇÄÜ¿É´©´÷
-2014-08-29 17:31:02+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-08-29 17:31:02+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403950.html
-2014-08-29 17:31:02+0800 [pharmnet] INFO: ########title=¹ãÖÝÊÐ¹«°²¾ÖDNA¼ìÑéÊÔ¼ÁºÄ²Ä£¨ÖØÕÐ£©ÖÐ±ê¹«¸æ
-2014-08-29 17:31:06+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-08-29 17:31:06+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403951.html
-2014-08-29 17:31:06+0800 [pharmnet] INFO: ########title=»´°²ÊÐ¶¯ÎïÒß²¡Ô¤·À¿ØÖÆÖÐÐÄÖíÁ´Çò¾úÒßÃçÕÐ±ê¹«¸æ 
-2014-08-29 17:31:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:31:07+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140821/4453534.html
-2014-08-29 17:31:07+0800 [drug39] INFO: ########title=×¨¼ÒºôÓõÈ«Éç»áÓ¦¹Ø×¢ÐÄÄÔÑª¹Ü¼²²¡ËÀÍöÂÊ¹Õµã
-2014-08-29 17:31:10+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:31:10+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403952.html
-2014-08-29 17:31:10+0800 [pharmnet] INFO: ########title=É½¶«Ê¡ÑªÒºÖÐÐÄÈËÄýÑªÒò×ÓµÈÒ©Æ·¹«¿ªÕÐ±ê¹«¸æ 
-2014-08-29 17:31:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-08-29 17:31:13+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140822/4454128.html
-2014-08-29 17:31:13+0800 [drug39] INFO: ########title=ÅÌµã2014ÄêÄÇÐ©±»ÈÏ¶¨µÄ¹Â¶ùÒ©
-2014-08-29 17:31:17+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-08-29 17:31:17+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403953.html
-2014-08-29 17:31:17+0800 [pharmnet] INFO: ########title=¹óÖÝÊ¡ÎÀ¼ÆÎ¯2014Äê¿¹½áºË²¡Ò©Æ·ÖÐ±ê¹«¸æ
-2014-08-29 17:31:19+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-08-29 17:31:19+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140825/4456147.html
-2014-08-29 17:31:19+0800 [drug39] INFO: ########title=¡°±ùÍ°ÌôÕ½¡±Òý±¬È«Çò¹Ø×¢ ×¨¼ÒºôÓõº±¼û²¡ÄÉÈëÁ¢·¨
-2014-08-29 17:31:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-08-29 17:31:25+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403954.html
-2014-08-29 17:31:25+0800 [pharmnet] INFO: ########title=³¬¹ý35ËêÔÐÇ°ÏÈ²é¼××´ÏÙ ¼××´ÏÙ¼²²¡¶ÔÌ¥¶ùÓ°Ïì´ó 
-2014-08-29 17:31:27+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11
-2014-08-29 17:31:27+0800 [drug39] INFO: -------------------> link_page url=http://drug.39.net/a/140828/4458855.html
-2014-08-29 17:31:27+0800 [drug39] INFO: ########title=CFDAÌáÊ¾Ïû·ÑÕßÎðÍø¹ºµÍ¼ÛÖªÃûÆ·ÅÆ»¯×±Æ·
-2014-08-29 17:31:31+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-08-29 17:31:31+0800 [pharmnet] INFO: -------------------> link_page url=http://news.pharmnet.com.cn/news/2014/08/29/403955.html
-2014-08-29 17:31:31+0800 [pharmnet] INFO: ########title=ØºÍªÈ±·¦,ÄÐÈËËÄÊ®±ä²Ð»¨ 
-2014-08-29 17:31:33+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2014-09-01 16:01:14+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
+2014-09-01 16:01:14+0800 [scrapy] INFO: Optional features available: ssl, http11
+2014-09-01 16:01:14+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
+2014-09-01 16:01:14+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2014-09-01 16:01:15+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2014-09-01 16:01:15+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2014-09-01 16:01:16+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: Spider opened
+2014-09-01 16:01:16+0800 [scrapy] INFO: open_spider[cnyywfeed]....
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=CFDAå‘å¸ƒå…äºŽè¿›è¡Œä¸´åºŠè¯•éªŒçš„ç¬¬äºŒç±»åŒ»ç–—å™¨æ¢°ç›®å½•
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2090
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=æµ™æ±ŸåŒ»æ”¹ äº«å—çœçº§å¤§åŒ»é™¢å¾…é‡è¶Šæ¥è¶Šæ–¹ä¾¿
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2089
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŠå¹´2.2äº¿åˆ©æ¶¦è—çŽ„æœº çº¢æ—¥è¯ä¸šåŠ ç åƒäº¿å¸‚åœº
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2088
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å›½äº§åŒ»ç–—å™¨æ¢°æ–°æ”¿éš¾æ’¼å¤–èµ„è”ç›Ÿï¼Ÿ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2087
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸“å®¶ç§°å®‰å¾½é™åˆ¶è¾“æ¶²æ˜¯åˆç†â€œçœ‹å¾—è§çš„æ‰‹â€
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2086
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=æˆ‘å›½ç”ŸåŒ–è¯å¤–è´¸å»¶ç»­ç¨³å¢žä¹‹åŠ¿
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2085
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å«è®¡å§”é‡ç”³ä½Žä»·è¯ç›´æŽ¥æŒ‚ç½‘ 9æœˆå°†å…¨å›½ç£æŸ¥
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2084
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—äº¬ä¸¥æ‰“ä¼¤åŒ»ç­‰4ç±»åŒ»é—¹è¡Œä¸º
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2083
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸­å›½é¦–ä¸ªä¼Ÿå“¥ç™½äº‘å±±â€œé‡‘æˆˆâ€å®ŒæˆåŽŸæ–™å®¡æ‰¹ ä¸Šå¸‚å€’è®¡æ—¶
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2082
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸¤éƒ¨å§”åŠ›æŽ¨å›½äº§åŒ»ç–—è®¾å¤‡ ä¸‰å·¨å¤´åž„æ–­æ ¼å±€å¾…ç ´
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2081
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å›½äº§åŸƒåšæ‹‰æ£€æµ‹è¯•å‰‚èŽ·æ‰¹ç”Ÿäº§ å‡ å°æ—¶å¯æµ‹å‡ºç—…æ¯’
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2080
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å²³é˜³ç«‹æ¡ˆè°ƒæŸ¥åŒ»ç”Ÿè¢«æ‰“äº‹ä»¶ å®˜æ–¹å®šæ€§ä¸ºåŒ»é—¹äº‹ä»¶
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2079
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å¥åº·æœåŠ¡ä¸šæ”¿ç­–æ‹¾é—è¡¥ç¼º å„åœ°æƒ æ”¿æ¿€æ´»æ–°äº§ä¸š
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2078
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—äº¬ä¸¥æ‰“éžæ³•è¡ŒåŒ» çž„å‡†â€œåŒ…æ²»ç™¾ç—…â€ç­‰è¿æ³•å¹¿å‘Š
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2077
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å›½äº§åŒ»ç–—è®¾å¤‡â€œé•¿ä¸å¤§â€ ç¼ºä¹å…¬å¹³ç«žäº‰çŽ¯å¢ƒæ˜¯ä¸»å› 
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2076
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—äº¬å¯¹æŠ—ç”Ÿç´ ä½¿ç”¨å·²å¸¸æ€ç®¡ç†
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2075
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=8æœˆ15æ—¥èµ·å¸ƒæ‰˜å•¡è¯ºç­‰53ç§è¯å“æ‰§è¡Œæœ€é«˜é›¶å”®ä»·
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2074
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å—åŒ—é‡‘é“¶èŠ±ä¹‹äº‰èƒŒåŽï¼šè¯ç‰©è¿›è¯å…¸å¸¦æ¥ä¸Šäº¿äº§å‡º
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2073
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸¤éƒ¨å§”åŠ›æŒºå›½å†…åŒ»ç–—è®¾å¤‡ å¤–èµ„ååž„æ–­æ–°ç›®æ ‡ï¼Ÿ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2072
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ALSå†°æ¡¶æŒ‘æˆ˜æŽ€ç½‘ç»œç‹‚æ¬¢ ä¸šå†…å‘¼åå‡ºå°ç½•è§ç—…æ”¿ç­–
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2071
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
+2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=è¯ä¼å·¨å¤´å¤§ä¸¾è¿›å†›äº’è”ç½‘ åŒ»è¯ç”µå•†è°ä¸»æ²‰æµ®
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2070
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ç¦å»ºå…¬å¸ƒ18æ‰¹æ¬¡ä¸åˆæ ¼è¯å“ é˜¿èŽ«è¥¿æž—é¢—ç²’ä¸Šé»‘æ¦œ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2069
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=CFDAå…³äºŽå‘å¸ƒè¯å“å§”æ‰˜ç”Ÿäº§ç›‘ç£ç®¡ç†è§„å®šçš„å…¬å‘Š
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2068
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=é£Ÿè¯ç›‘æ€»å±€ï¼šè¾½å®ä¾ç”Ÿç”Ÿç‰©åˆ¶è¯ç”Ÿäº§å­˜ä¸¥é‡é—®é¢˜
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2067
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—äº¬å…»è€é™¢æ˜Žå¹´å°†å…¨å…·å¤‡åŒ»ç–—æ¡ä»¶ æ°‘æ”¿ï¼šä¸ä¼šæ¶¨ä»·
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2066
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=äº‘å—åŸºå±‚åŒ»ç–—æœºæž„â€œä¸€èˆ¬è¯Šç–—è´¹â€ä»Ž9å…ƒè°ƒè‡³6å…ƒ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2065
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—äº¬æ˜Žå¹´å…¨å¸‚å…»è€æœºæž„å‡å¯çœ‹ç—…å®žçŽ°â€œåŒ»å…»ç»“åˆâ€
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2064
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=2015å¤§é‡è¯ç‰©ä¸“åˆ©åˆ°æœŸ é€†è¢­è‰¯æœºé™ä¸´
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2063
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ»ç–—çº çº·ä¸ºä½•éš¾ä¸Šâ€œåŒ»å¼ºé™©â€ï¼ˆæ°‘ç”Ÿè§‚ï¼‰
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2062
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=çŸ³å®¶åº„ï¼šåŒ»é™¢å°±è¯ŠåŽ åœ¨å“ªå„¿ä¹°è¯ä¸å†å—é™
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2061
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸­å›½åŒ»ç–—æ—…æ¸¸å¸‚åœºè§„æ¨¡å°†è¾¾600äº¿å…ƒ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2060
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=æ–°æ”¿ç»™ä¸­å›½åŒ»ç–—å™¨æ¢°è¡Œä¸šåˆ›é€ å‡ºæ–°çš„æœºé‡
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2059
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å«è®¡å§”ï¼šæŽ¨åŠ¨ä¸‰ç”²åŒ»é™¢ç”¨å›½äº§è®¾å¤‡ å°†æ¿€åŠ±ä¸»åŠ¨ä½¿ç”¨
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2058
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ç§»åŠ¨åŒ»ç–—å¹´å¢žé•¿çŽ‡è¿‘30% å¥åº·å‘å±•éœ€è¿‡ä¸¤å…³
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2057
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸­å›½å°†ä¸¥æŸ¥è¿æ³•ç§ä¸‹åˆ†é…ã€ç§»æ¤æ­»å›šå™¨å®˜ç­‰è¡Œä¸º
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2056
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—äº¬å¸‚åŒ»ç®¡å±€å¼ºè°ƒï¼šäº”çŽ¯å†…ä¸å†æ–°å»ºå¤§åž‹åŒ»é™¢
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2055
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=æŠ—ç”Ÿç´ æ–°è¯â€œéš¾äº§â€ æé€ æˆå…¨çƒå¤§ç–«ç—‡
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2054
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=æ¹˜æ½­é™¢æ–¹å›žåº”äº§å¦‡äº‹ä»¶ï¼šåŒ»ç”Ÿæ€•å†²çªè„±ä¸‹æ‰‹æœ¯æœ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2053
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=2014å¹´â€œå…¨å›½å®‰å…¨ç”¨è¯æœˆâ€æ´»åŠ¨å°†äºŽ9æœˆå¯åŠ¨
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2052
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å±±ä¸œä»Šå¹´å¯åŠ¨ç¬¬äºŒæ‰¹åŽ¿çº§å…¬ç«‹åŒ»é™¢ç»¼åˆæ”¹é©
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2051
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=èƒ¶å·žèŽ±è¥¿å¹³åº¦10æœˆå¯åŠ¨åŒ»æ”¹ å…¬ç«‹åŒ»é™¢å–æ¶ˆè¯å“åŠ æˆ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2050
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åª’ä½“è§£è¯»ç¾Šæ°´æ “å¡žï¼šäº§å¦‡é¬¼é—¨å…³ ç—…å‘æ­»äº¡çŽ‡æžé«˜
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2049
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ä¸Šæµ·é…é…¿ä½Žä»·è¯é‡‡è´­æ”¿ç­– ä¿æŠ¤åŽŸä¸­æ ‡ä¼ä¸šæŠ‘æ¶¨ä»·
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2048
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=è¾¾å®‰åŸºå› ç§°åŸƒåšæ‹‰ç—…æ¯’æ£€æµ‹è¯•å‰‚ç›’ç ”åˆ¶æˆåŠŸ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2047
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å¹¿è¯å†æ‹¼å‡‰èŒ¶å¸‚åœº æŽ¨â€œé’»çŸ³è£…â€ç»¿ç›’çŽ‹è€å‰
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2046
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=é£Ÿè¯æ€»å±€ï¼š6æ‰¹æ¬¡æ ¸é»„ç´ ç£·é…¸é’ æ³¨å°„æ¶²è¢«åœç”¨
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2045
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ç§»åŠ¨åŒ»ç–—APPèƒ½å¦ç¼“è§£â€œçœ‹ç—…éš¾ã€çœ‹ç—…è´µâ€ï¼Ÿ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2044
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=åŒ—ç”Ÿè¯ä¸šä¿å£³å‘½æ‚¬ä¸€çº¿ ä¸ŠåŠå¹´æ‹¼åŠ›èµš3ä¸‡å…ƒ
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2043
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=è°ƒæŸ¥æ˜¾ç¤ºï¼šè¿‘å››æˆå‡ºé™¢æ‚£è€…æ›¾â€œæƒ³è¿‡â€é€çº¢åŒ…
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2042
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=å¹¿ä¸œå¹´åº•å‰å…¨é¢å®žæ–½å¤§ç—…åŒ»ä¿ æœ€å¤šå¯æŠ¥é”€43ä¸‡
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2041
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
+2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
+2014-09-01 16:01:24+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:01:24+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2084
+2014-09-01 16:01:24+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2084
+2014-09-01 16:01:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
+2014-09-01 16:01:30+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2085
+2014-09-01 16:01:30+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2085
+2014-09-01 16:01:36+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-01 16:01:36+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2086
+2014-09-01 16:01:36+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2086
+2014-09-01 16:01:43+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-01 16:01:43+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2087
+2014-09-01 16:01:43+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2087
+2014-09-01 16:01:49+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-09-01 16:01:49+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2088
+2014-09-01 16:01:49+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2088
+2014-09-01 16:01:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
+2014-09-01 16:01:55+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2089
+2014-09-01 16:01:56+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2089
+2014-09-01 16:02:01+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
+2014-09-01 16:02:01+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2090
+2014-09-01 16:02:01+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2090
+2014-09-01 16:02:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
+2014-09-01 16:02:07+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2071
+2014-09-01 16:02:07+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2071
+2014-09-01 16:02:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-01 16:02:13+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2072
+2014-09-01 16:02:13+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2072
+2014-09-01 16:02:16+0800 [cnyywfeed] INFO: Crawled 10 pages (at 10 pages/min), scraped 9 items (at 9 items/min)
+2014-09-01 16:02:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
+2014-09-01 16:02:21+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2073
+2014-09-01 16:02:21+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2073
+2014-09-01 16:02:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
+2014-09-01 16:02:25+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2074
+2014-09-01 16:02:25+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2074
+2014-09-01 16:02:29+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
+2014-09-01 16:02:29+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2075
+2014-09-01 16:02:29+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2075
+2014-09-01 16:02:35+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
+2014-09-01 16:02:35+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2076
+2014-09-01 16:02:35+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2076
+2014-09-01 16:02:40+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2014-09-01 16:02:40+0800 [cnyywfeed] INFO: Closing spider (shutdown)
+2014-09-01 16:02:40+0800 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown

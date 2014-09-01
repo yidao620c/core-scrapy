@@ -118,6 +118,7 @@ class PostgresPipeline(object):
         This method is called for every item pipeline component.
         """
         # 每次获取到Item调用这个callable，获得一个新的session
+        log.msg('postgresql->%s' % item['link'], log.INFO)
         if item['link'] not in self.recent_links:
             session = self.Session()
             news = News(**item)

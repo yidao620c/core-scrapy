@@ -17,6 +17,7 @@ from scrapy.exceptions import DropItem
 from urlparse import urljoin
 from scrapydemo.utils import filter_tags
 import datetime
+import re
 
 
 def ltos(lst):
@@ -27,24 +28,50 @@ def ltos(lst):
     return ''
 
 
-# class CommonXMLFeedSpider(XMLFeedSpider):
-# """RSS/XML源爬虫，一般都是从一个列表开始爬，然后一个个的打开网页"""
-# name = 'xmlfeed'
-# allowed_domains = ['http://drug.39.net/']
-#     start_urls = [
-#         'http://drug.39.net/yjxw/yydt/index.html',
-#     ]
-#     iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
-#     itertag = 'item'
-#
-#     def parse_node(self, response, node):
-#         self.log('Hi, this is a <%s> node!: %s' % (self.itertag, ''.join(node.extract())))
-#
-#         item = Item()
-#         item['id'] = node.xpath('@id').extract()
-#         item['name'] = node.xpath('name').extract()
-#         item['description'] = node.xpath('description').extract()
-#         return item
+class CnyywXMLFeedSpider(CrawlSpider):
+    """RSS/XML源爬虫，从医药网cn-yyw.cn上面订阅行业资讯"""
+    name = 'cnyywfeed'
+    allowed_domains = ['cn-yyw.cn']
+    start_urls = [
+        'http://www.cn-yyw.cn/feed/rss.php?mid=21',
+    ]
+
+    def parse(self, response):
+        item_xpaths = response.xpath('//channel/item')
+        for i_xpath in item_xpaths:
+            xitem = NewsItem()
+            xitem['crawlkey'] = self.name
+            xitem['title'] = ltos(i_xpath.xpath('title/text()').extract())
+            self.log('title=%s' % xitem['title'].encode('utf-8'), log.INFO)
+            xitem['link'] = ltos(i_xpath.xpath('link/text()').extract())
+            self.log('link=%s' % xitem['link'], log.INFO)
+            pubdate_temp = ltos(i_xpath.xpath('pubDate/text()').extract()).split(r' ')[0]
+            self.log('pubdate=%s' % pubdate_temp, log.INFO)
+            xitem['pubdate'] = datetime.datetime.strptime(pubdate_temp, '%Y-%m-%d')
+            self.log('((((^_^))))'.center(50, '-'), log.INFO)
+            yield Request(url=xitem['link'], meta={'item': xitem}, callback=self.parse_item_page)
+
+    def parse_item_page(self, response):
+        page_item = response.meta['item']
+        try:
+            self.log('-------------------> link_page url=%s' % page_item['link'], log.INFO)
+            page_item['category'] = ltos(response.xpath(
+                '//div[@class="pos"]/a[last()]/text()').extract())
+            page_item['location'] = ltos(response.xpath(
+                '//div[@class="info"]/a/text()').extract())
+            content_temp = "".join([tt.strip() for tt in response.xpath(
+                '//div[@id="article"]').extract()])
+            re_con_strong = re.compile(r'</strong>(\s*)<strong>')
+            content_temp = re_con_strong.sub(r'\1', content_temp)
+            re_start_strong = re.compile(r'<strong>', re.I)
+            content_temp = re_start_strong.sub('<p>', content_temp)
+            re_end_strong = re.compile(r'</strong>', re.I)
+            content_temp = re_end_strong.sub('</p>', content_temp)
+            page_item['content'] = filter_tags(content_temp)
+            return page_item
+        except:
+            self.log('ERROR-----%s' % response.url, log.INFO)
+            return None
 
 
 class Drug39Spider(CrawlSpider):
@@ -81,7 +108,8 @@ class Drug39Spider(CrawlSpider):
                 '//span[@class="art_location"]/a[last()]/text()').extract())
             item['link'] = response.url
             item['location'] = ltos(response.xpath(
-                '//div[@class="date"]/em[2]/a/text()|//div[@class="date"]/em[2]/text()').extract())
+                '//div[@class="date"]/em[2]/a/text()'
+                '|//div[@class="date"]/em[2]/text()').extract())
             pubdate_temp = ltos(response.xpath('//div[@class="date"]/em[1]/text()').extract())
             item['pubdate'] = datetime.datetime.strptime(pubdate_temp, '%Y-%m-%d')
             item['title'] = ltos(response.xpath('//h1/text()').extract())
