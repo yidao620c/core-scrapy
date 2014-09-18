@@ -13,13 +13,14 @@ BOT_NAME = 'scrapydemo'
 SPIDER_MODULES = ['scrapydemo.spiders']
 NEWSPIDER_MODULE = 'scrapydemo.spiders'
 COMMANDS_MODULE = 'scrapydemo.commands'
-DEFAULT_ITEM_CLASS = 'scrapydemo.items.MyItem'
+# DEFAULT_ITEM_CLASS = 'scrapydemo.items.MyItem'
 
 ITEM_PIPELINES = {
     # 'scrapydemo.pipelines.FilterWordsPipeline': 1,
     # 'scrapydemo.pipelines.JsonWriterPipeline': 2,
     # 'scrapydemo.pipelines.JsonExportPipeline': 3,
-    'scrapydemo.pipelines.PostgresPipeline': 4,
+    # 'scrapydemo.pipelines.PostgresPipeline': 4,
+    # 'scrapydemo.pipelines.MyImagesPipeline': 5,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
@@ -50,3 +51,8 @@ DATABASE = {'drivername': 'postgres',
             'username': 'root',
             'password': 'changeme',
             'database': 'scrapy'}
+
+# 图片下载设置
+IMAGES_STORE = 'D:/work'
+IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
+

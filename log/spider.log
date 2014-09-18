@@ -1,270 +1,31 @@
-2014-09-01 16:01:14+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
-2014-09-01 16:01:14+0800 [scrapy] INFO: Optional features available: ssl, http11
-2014-09-01 16:01:14+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'DEFAULT_ITEM_CLASS': 'scrapydemo.items.MyItem', 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
-2014-09-01 16:01:14+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
-2014-09-01 16:01:15+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
-2014-09-01 16:01:15+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
-2014-09-01 16:01:16+0800 [scrapy] INFO: Enabled item pipelines: PostgresPipeline
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: Spider opened
-2014-09-01 16:01:16+0800 [scrapy] INFO: open_spider[cnyywfeed]....
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=CFDA发布免于进行临床试验的第二类医疗器械目录
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2090
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=浙江医改 享受省级大医院待遇越来越方便
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2089
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=半年2.2亿利润藏玄机 红日药业加码千亿市场
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2088
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=国产医疗器械新政难撼外资联盟？
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2087
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=专家称安徽限制输液是合理“看得见的手”
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2086
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-09-01
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=我国生化药外贸延续稳增之势
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2085
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=卫计委重申低价药直接挂网 9月将全国督查
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2084
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北京严打伤医等4类医闹行为
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2083
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=中国首个伟哥白云山“金戈”完成原料审批 上市倒计时
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2082
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=两部委力推国产医疗设备 三巨头垄断格局待破
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2081
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-29
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=国产埃博拉检测试剂获批生产 几小时可测出病毒
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2080
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=岳阳立案调查医生被打事件 官方定性为医闹事件
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2079
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=健康服务业政策拾遗补缺 各地惠政激活新产业
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2078
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北京严打非法行医 瞄准“包治百病”等违法广告
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2077
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=国产医疗设备“长不大” 缺乏公平竞争环境是主因
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2076
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-28
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北京对抗生素使用已常态管理
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2075
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=8月15日起布托啡诺等53种药品执行最高零售价
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2074
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=南北金银花之争背后：药物进药典带来上亿产出
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2073
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=两部委力挺国内医疗设备 外资反垄断新目标？
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2072
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=ALS冰桶挑战掀网络狂欢 业内呼吁出台罕见病政策
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2071
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-27
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/535.24 (KHTML, like Gecko) Chrome/19.0.1055.1 Safari/535.24
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1090.0 Safari/536.6
-2014-09-01 16:01:16+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=药企巨头大举进军互联网 医药电商谁主沉浮
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2070
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=福建公布18批次不合格药品 阿莫西林颗粒上黑榜
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2069
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=CFDA关于发布药品委托生产监督管理规定的公告
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2068
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=食药监总局：辽宁依生生物制药生产存严重问题
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2067
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北京养老院明年将全具备医疗条件 民政：不会涨价
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2066
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-26
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=云南基层医疗机构“一般诊疗费”从9元调至6元
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2065
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北京明年全市养老机构均可看病实现“医养结合”
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2064
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=2015大量药物专利到期 逆袭良机降临
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2063
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=医疗纠纷为何难上“医强险”（民生观）
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2062
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=石家庄：医院就诊后 在哪儿买药不再受限
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2061
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-25
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=中国医疗旅游市场规模将达600亿元
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2060
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=新政给中国医疗器械行业创造出新的机遇
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2059
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=卫计委：推动三甲医院用国产设备 将激励主动使用
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2058
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=移动医疗年增长率近30% 健康发展需过两关
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2057
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=中国将严查违法私下分配、移植死囚器官等行为
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2056
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-22
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北京市医管局强调：五环内不再新建大型医院
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2055
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=抗生素新药“难产” 恐造成全球大疫症
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2054
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=湘潭院方回应产妇事件：医生怕冲突脱下手术服
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2053
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=2014年“全国安全用药月”活动将于9月启动
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2052
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=山东今年启动第二批县级公立医院综合改革
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2051
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-21
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=胶州莱西平度10月启动医改 公立医院取消药品加成
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2050
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=媒体解读羊水栓塞：产妇鬼门关 病发死亡率极高
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2049
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=上海酝酿低价药采购政策 保护原中标企业抑涨价
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2048
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=达安基因称埃博拉病毒检测试剂盒研制成功
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2047
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=广药再拼凉茶市场 推“钻石装”绿盒王老吉
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2046
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-20
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=食药总局：6批次核黄素磷酸钠注射液被停用
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2045
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=移动医疗APP能否缓解“看病难、看病贵”？
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2044
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=北生药业保壳命悬一线 上半年拼力赚3万元
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2043
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=调查显示：近四成出院患者曾“想过”送红包
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2042
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: title=广东年底前全面实施大病医保 最多可报销43万
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: link=http://www.cn-yyw.cn/news/show.php?itemid=2041
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: pubdate=2014-08-19
-2014-09-01 16:01:16+0800 [cnyywfeed] INFO: -------------------((((^_^))))--------------------
-2014-09-01 16:01:24+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:01:24+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2084
-2014-09-01 16:01:24+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2084
-2014-09-01 16:01:30+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.9 Safari/536.5
-2014-09-01 16:01:30+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2085
-2014-09-01 16:01:30+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2085
-2014-09-01 16:01:36+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-09-01 16:01:36+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2086
-2014-09-01 16:01:36+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2086
-2014-09-01 16:01:43+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-09-01 16:01:43+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2087
-2014-09-01 16:01:43+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2087
-2014-09-01 16:01:49+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-09-01 16:01:49+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2088
-2014-09-01 16:01:49+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2088
-2014-09-01 16:01:55+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6
-2014-09-01 16:01:55+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2089
-2014-09-01 16:01:56+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2089
-2014-09-01 16:02:01+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3
-2014-09-01 16:02:01+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2090
-2014-09-01 16:02:01+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2090
-2014-09-01 16:02:07+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3
-2014-09-01 16:02:07+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2071
-2014-09-01 16:02:07+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2071
-2014-09-01 16:02:13+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
-2014-09-01 16:02:13+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2072
-2014-09-01 16:02:13+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2072
-2014-09-01 16:02:16+0800 [cnyywfeed] INFO: Crawled 10 pages (at 10 pages/min), scraped 9 items (at 9 items/min)
-2014-09-01 16:02:21+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1
-2014-09-01 16:02:21+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2073
-2014-09-01 16:02:21+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2073
-2014-09-01 16:02:25+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1
-2014-09-01 16:02:25+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2074
-2014-09-01 16:02:25+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2074
-2014-09-01 16:02:29+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_0) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3
-2014-09-01 16:02:29+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2075
-2014-09-01 16:02:29+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2075
-2014-09-01 16:02:35+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5
-2014-09-01 16:02:35+0800 [cnyywfeed] INFO: -------------------> link_page url=http://www.cn-yyw.cn/news/show.php?itemid=2076
-2014-09-01 16:02:35+0800 [scrapy] INFO: postgresql->http://www.cn-yyw.cn/news/show.php?itemid=2076
-2014-09-01 16:02:40+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
-2014-09-01 16:02:40+0800 [cnyywfeed] INFO: Closing spider (shutdown)
-2014-09-01 16:02:40+0800 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2014-09-18 17:45:32+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2014-09-18 17:45:36+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: scrapydemo)
+2014-09-18 17:45:36+0800 [scrapy] INFO: Optional features available: ssl, http11
+2014-09-18 17:45:36+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapydemo.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['scrapydemo.spiders'], 'BOT_NAME': 'scrapydemo', 'DOWNLOAD_TIMEOUT': 20, 'LOG_STDOUT': True, 'COMMANDS_MODULE': 'scrapydemo.commands', 'LOG_FILE': 'log/spider.log', 'DOWNLOAD_DELAY': 5}
+2014-09-18 17:45:36+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2014-09-18 17:45:36+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, RotateUserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2014-09-18 17:45:36+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2014-09-18 17:45:36+0800 [scrapy] INFO: Enabled item pipelines: 
+2014-09-18 17:45:36+0800 [scrapy] NOLEVEL: Current UserAgent: Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3
+2014-09-18 17:45:36+0800 [scrapy] INFO: -------------http://pic.qiushibaike.com/system/pictures/8821/88218787/medium/88218787.jpg
+2014-09-18 17:45:36+0800 [scrapy] INFO: -------------http://pic.qiushibaike.com/system/pictures/8821/88211379/medium/app88211379.jpg
+2014-09-18 17:45:36+0800 [scrapy] INFO: -------------http://pic.qiushibaike.com/system/pictures/8823/88237053/medium/app88237053.jpg
+2014-09-18 17:45:36+0800 [joker] INFO: Closing spider (finished)
+2014-09-18 17:45:36+0800 [joker] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 286,
+	 'downloader/request_count': 1,
+	 'downloader/request_method_count/GET': 1,
+	 'downloader/response_bytes': 13243,
+	 'downloader/response_count': 1,
+	 'downloader/response_status_count/200': 1,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2014, 9, 18, 9, 45, 36, 600000),
+	 'item_scraped_count': 5,
+	 'response_received_count': 1,
+	 'scheduler/dequeued': 1,
+	 'scheduler/dequeued/memory': 1,
+	 'scheduler/enqueued': 1,
+	 'scheduler/enqueued/memory': 1,
+	 'start_time': datetime.datetime(2014, 9, 18, 9, 45, 36, 371000)}
+2014-09-18 17:45:36+0800 [joker] INFO: Spider closed (finished)
+2014-09-18 17:46:16+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 

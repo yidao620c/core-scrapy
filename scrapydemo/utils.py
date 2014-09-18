@@ -5,7 +5,10 @@ Topic: 一些工具类
 Desc : 
 """
 import re
-
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
 
 def filter_tags(htmlstr):
     """更深层次的过滤，类似instapaper或者readitlater这种服务，很有意思的研究课题
@@ -68,7 +71,37 @@ def repalce(s, re_exp, repl_string):
     return re_exp.sub(repl_string, s)
 
 
+def ltos(lst):
+    """列表取第一个值"""
+    if lst is not None and isinstance(lst, list):
+        if len(lst) > 0:
+            return lst[0]
+    return ''
+
+
+def send_main():
+    sender = 'yidao817'
+    receiver = 'yidao620@163.com'
+    subject = 'python email test'
+    smtpserver = 'smtp.163.com'
+    username = 'yidao817@163.com'
+    password = 'vs_620817'
+    msgRoot = MIMEMultipart('related')
+    msgRoot['Subject'] = subject
+    msgText = MIMEText(
+        '<b>Some <i>HTML</i> text</b> and an image.<br>'
+        '<img src="cid:image1"><br>good!','html','utf-8')
+    msgRoot.attach(msgText)
+    fp = open('D:/work/88218787.jpg', 'rb')
+    msgImage = MIMEImage(fp.read())
+    fp.close()
+    msgImage.add_header('Content-ID', '<image1>')
+    msgRoot.attach(msgImage)
+    smtp = smtplib.SMTP()
+    smtp.connect(smtpserver)
+    smtp.login(username, password)
+    smtp.sendmail(sender, receiver, msgRoot.as_string())
+    smtp.quit()
+
 if __name__ == '__main__':
-    dd = file(r'D:\work\projects\gitprojects\scrapydemo\log\Noname1.html').read()
-    news = filter_tags(dd)
-    print news
+    send_main()

@@ -31,3 +31,9 @@ class NewsItem(Item):
     pubdate = Field()  # 发布时间
     title = Field()  # 新闻标题
     content = Field()  # 正文
+
+
+class JokeItem(Item):
+    content = Field()
+    image_urls = Field()
+    images = Field()

@@ -15,17 +15,9 @@ from scrapy import Request
 from scrapy import log
 from scrapy.exceptions import DropItem
 from urlparse import urljoin
-from scrapydemo.utils import filter_tags
+from scrapydemo.utils import *
 import datetime
 import re
-
-
-def ltos(lst):
-    """列表取第一个值"""
-    if lst is not None and isinstance(lst, list):
-        if len(lst) > 0:
-            return lst[0]
-    return ''
 
 
 class CnyywXMLFeedSpider(CrawlSpider):

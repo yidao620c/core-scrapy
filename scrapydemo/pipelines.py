@@ -6,6 +6,7 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 from scrapy.exceptions import DropItem
+from scrapy import Request
 from scrapy import signals
 from scrapy.contrib.exporter import JsonItemExporter
 from scrapy import log
@@ -13,6 +14,7 @@ import json
 import datetime
 from sqlalchemy.orm import sessionmaker
 from models import News, db_connect, create_news_table
+from scrapy.contrib.pipeline.images import ImagesPipeline
 
 
 class FilterWordsPipeline(object):
@@ -131,4 +133,13 @@ class PostgresPipeline(object):
                 raise
             finally:
                 session.close()
+        return item
+
+
+class MyImagesPipeline(ImagesPipeline):
+    """先安装：pip install Pillow"""
+    def item_completed(self, results, item, info):
+        image_paths = [x['path'] for ok, x in results if ok]
+        if not image_paths:
+            raise DropItem("Item contains no images")
         return item
