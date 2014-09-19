@@ -84,12 +84,12 @@ def ltos(lst):
 
 def send_mail(jokes):
     sender = 'xiongneng@gzhdi.com'
-    receiver = ['xiongneng@gzhdi.com']
-    # receiver = ['xiongneng@gzhdi.com', 'xiadan@gzhdi.com']
+    # receiver = ['xiongneng@gzhdi.com']
+    receiver = ['xiadan@gzhdi.com']
     subject = '糗事百科最新笑话-祝你开心每一天'
     smtpserver = 'smtp.263.net'
     username = 'xiongneng@gzhdi.com'
-    password = '620817'
+    password = '******'
     msg_root = MIMEMultipart('related')
     msg_root['Subject'] = subject
 
