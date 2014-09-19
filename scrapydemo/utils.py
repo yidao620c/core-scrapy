@@ -9,6 +9,9 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
+import os.path
+from scrapydemo.settings import IMAGES_STORE
+
 
 def filter_tags(htmlstr):
     """更深层次的过滤，类似instapaper或者readitlater这种服务，很有意思的研究课题
@@ -79,29 +82,45 @@ def ltos(lst):
     return ''
 
 
-def send_main():
-    sender = 'yidao817'
-    receiver = 'yidao620@163.com'
-    subject = 'python email test'
-    smtpserver = 'smtp.163.com'
-    username = 'yidao817@163.com'
-    password = 'vs_620817'
-    msgRoot = MIMEMultipart('related')
-    msgRoot['Subject'] = subject
-    msgText = MIMEText(
-        '<b>Some <i>HTML</i> text</b> and an image.<br>'
-        '<img src="cid:image1"><br>good!','html','utf-8')
-    msgRoot.attach(msgText)
-    fp = open('D:/work/88218787.jpg', 'rb')
-    msgImage = MIMEImage(fp.read())
-    fp.close()
-    msgImage.add_header('Content-ID', '<image1>')
-    msgRoot.attach(msgImage)
+def send_mail(jokes):
+    sender = 'xiongneng@gzhdi.com'
+    receiver = ['xiongneng@gzhdi.com', '']
+    subject = '糗事百科最新笑话-祝你开心每一天'
+    smtpserver = 'smtp.263.net'
+    username = 'xiongneng@gzhdi.com'
+    password = '620817'
+    msg_root = MIMEMultipart('related')
+    msg_root['Subject'] = subject
+
+    msg_text_str = """
+        <h1>糗事百科，祝君笑口常开。</h1>
+        <div class="listbox">
+            <ul>
+        """
+    for idx, (content, img_url) in enumerate(jokes, 1):
+        msg_text_str = "\n".join([msg_text_str, '<li>'])
+        msg_text_str = "\n".join([msg_text_str, '<p>%s</p>' % content])
+        if img_url:
+            msg_text_str = "\n".join([msg_text_str, '<p><img src="cid:image%s"/></p>' % idx])
+        msg_text_str = "\n".join([msg_text_str, '</li>'])
+    msg_text_str = "\n".join([msg_text_str, '</ul>'])
+    msg_text_str = "\n".join([msg_text_str, '</div>'])
+
+    msg_text = MIMEText(msg_text_str, 'html', 'utf-8')
+    msg_root.attach(msg_text)
+
+    for idx, (_, img_url) in enumerate(jokes, 1):
+        if img_url:
+            with open(os.path.join(IMAGES_STORE, os.path.basename(img_url)), 'rb') as fp:
+                msg_image = MIMEImage(fp.read())
+                msg_image.add_header('Content-ID', '<image%s>' % idx)
+                msg_root.attach(msg_image)
     smtp = smtplib.SMTP()
     smtp.connect(smtpserver)
     smtp.login(username, password)
-    smtp.sendmail(sender, receiver, msgRoot.as_string())
+    smtp.sendmail(sender, receiver, msg_root.as_string())
     smtp.quit()
 
+
 if __name__ == '__main__':
-    send_main()
+    print('呜呜呜仍无法发干撒发斯蒂芬,\nadfasdfsa')

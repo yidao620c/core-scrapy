@@ -53,6 +53,6 @@ DATABASE = {'drivername': 'postgres',
             'database': 'scrapy'}
 
 # 图片下载设置
-IMAGES_STORE = 'D:/work'
+IMAGES_STORE = 'D:/work/zpics'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 
