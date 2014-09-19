@@ -84,7 +84,8 @@ def ltos(lst):
 
 def send_mail(jokes):
     sender = 'xiongneng@gzhdi.com'
-    receiver = ['xiongneng@gzhdi.com', '']
+    receiver = ['xiongneng@gzhdi.com']
+    # receiver = ['xiongneng@gzhdi.com', 'xiadan@gzhdi.com']
     subject = '糗事百科最新笑话-祝你开心每一天'
     smtpserver = 'smtp.263.net'
     username = 'xiongneng@gzhdi.com'
@@ -123,4 +124,5 @@ def send_mail(jokes):
 
 
 if __name__ == '__main__':
+    print('<br/>'.join(['aaa', 'bbb']))
     print('呜呜呜仍无法发干撒发斯蒂芬,\nadfasdfsa')

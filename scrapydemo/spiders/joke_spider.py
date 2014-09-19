@@ -12,7 +12,7 @@ import contextlib
 from scrapy import Spider
 from scrapy import log
 
-from scrapydemo.utils import *
+from scrapydemo.utils import send_mail
 from scrapydemo.items import *
 from scrapydemo.settings import IMAGES_STORE
 
@@ -31,13 +31,13 @@ class JokerSpider(Spider):
     ]
 
     def parse(self, response):
-        # 抓取前6个笑话
+        # 抓取最新笑话
         items = []
         jokelist = []
-        for i in range(1, 7):
+        for i in range(1, 11):
             i_xpath = response.xpath('//div[@id="content-left"]/div[%d]' % (i,))
             item = JokeItem()
-            item['content'] = ltos(i_xpath.xpath(
+            item['content'] = '<br/>'.join(i_xpath.xpath(
                 'div[@class="content"]/text()').extract()).encode('utf-8')
             img_src = None
             if i_xpath.xpath('div[@class="thumb"]'):
