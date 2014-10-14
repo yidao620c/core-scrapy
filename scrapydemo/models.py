@@ -68,7 +68,7 @@ class MysqlNews(DeclarativeBase):
     # 新闻来源
     location = Column('location', String(60), nullable=True)
     # 发布时间
-    pubdate = Column('pubdate', String(20), default=_get_date)
+    pubdate = Column('pubdate', Date, default=_get_date)
     # 新闻标题
     title = Column('title', String(120), nullable=True)
     # 正文

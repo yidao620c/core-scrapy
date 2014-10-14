@@ -156,8 +156,8 @@ class MysqlPipeline(object):
         log.msg('open_spider[%s]....' % spider.name, level=log.INFO)
         session = self.Session()
         recent_news = session.query(MysqlNews).filter(
-            MysqlNews.crawlkey == spider.name
-            , self.nowtime - MysqlNews.pubdate <= datetime.timedelta(days=30)).all()
+            MysqlNews.crawlkey == spider.name ,
+            self.nowtime - MysqlNews.pubdate <= datetime.timedelta(days=30)).all()
         self.recent_links = [t.link for t in recent_news]
         print(self.recent_links)
 

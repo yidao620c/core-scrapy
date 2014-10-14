@@ -39,7 +39,7 @@ class CnyywXMLFeedSpider(CrawlSpider):
             self.log('link=%s' % xitem['link'], log.INFO)
             pubdate_temp = ltos(i_xpath.xpath('pubDate/text()').extract()).split(r' ')[0]
             self.log('pubdate=%s' % pubdate_temp, log.INFO)
-            xitem['pubdate'] = pubdate_temp
+            xitem['pubdate'] = datetime.datetime.strptime(pubdate_temp, '%Y-%m-%d %H:%M:%S')
             self.log('((((^_^))))'.center(50, '-'), log.INFO)
             yield Request(url=xitem['link'], meta={'item': xitem}, callback=self.parse_item_page)
 
@@ -83,15 +83,21 @@ class Drug39Spider(CrawlSpider):
     def parse_links(self, response):
         # 如果是首页文章链接，直接处理
         if '/a/' in response.url:
-            yield self.parse_page(response)
+            yield self.parse_item_page(response)
         else:
             self.log('-------------------> link_list url=%s' % response.url, log.INFO)
-            links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li/span/a')
+            links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li')
             for link in links:
-                url = link.xpath('@href').extract()[0]
-                yield Request(url=url, callback=self.parse_page)
+                url = link.xpath('span[1]/a/@href').extract()[0]
+                date_str = link.xpath('span[2]/text()').extract()[0]
+                date_str = date_str.split(' ')[1] + ':00'
+                self.log('+++++++++++' + date_str, log.INFO)
+                yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
 
-    def parse_page(self, response):
+    def parse_item_page(self, response):
+        date_str = ''
+        if 'ds' in response.meta:
+            date_str = response.meta['ds']
         try:
             self.log('-------------------> link_page url=%s' % response.url, log.INFO)
             item = NewsItem()
@@ -103,26 +109,18 @@ class Drug39Spider(CrawlSpider):
                 '//div[@class="date"]/em[2]/a/text()'
                 '|//div[@class="date"]/em[2]/text()').extract())
             pubdate_temp = ltos(response.xpath('//div[@class="date"]/em[1]/text()').extract())
-            item['pubdate'] = pubdate_temp
+            item['pubdate'] = datetime.datetime.strptime(
+                pubdate_temp + ' ' + date_str, '%Y-%m-%d %H:%M:%S')
             item['title'] = ltos(response.xpath('//h1/text()').extract())
             content_temp = "".join([tt.strip() for tt in response.xpath(
                 '//div[@id="contentText"]/p').extract()])
             item['content'] = filter_tags(content_temp)
             self.log('########title=%s' % item['title'].encode('utf-8'), log.INFO)
             return item
-        except:
+        except Exception as e:
             self.log('ERROR-----%s' % response.url, log.INFO)
+            self.log('ERROR-----%s' % e.message, log.ERROR)
             return None
-
-
-def convert(item):
-    item['crawlkey'] = item['crawlkey'].encode('utf-8')
-    item['category'] = item['category'].encode('utf-8')
-    item['link'] = item['link'].encode('utf-8')
-    item['location'] = item['location'].encode('utf-8')
-    item['pubdate'] = item['pubdate'].encode('utf-8')
-    item['title'] = item['title'].encode('utf-8')
-    item['content'] = item['content'].encode('utf-8')
 
 
 class PharmnetCrawlSpider(CrawlSpider):
@@ -163,13 +161,13 @@ class PharmnetCrawlSpider(CrawlSpider):
             item['link'] = response.url
             head_line = ltos(response.xpath('//div[@class="ct01"]/text()[1]').extract())
             item['location'] = head_line.strip().split()[1]
-            item['pubdate'] = head_line.strip().split()[0]
+            item['pubdate'] = datetime.datetime.strptime(
+                head_line.strip().split()[0], '%Y-%m-%d %H:%M:%S')
             item['title'] = ltos(response.xpath('//h1/text()').extract())
             content_temp = "".join([tt.strip() for tt in response.xpath(
                 '//div[@class="ct02"]/font/div/div|//div[@class="ct02"]/font/div').extract()])
             item['content'] = filter_tags(content_temp)
             self.log('########title=%s' % item['title'].encode('utf-8'), log.INFO)
-            convert(item)
             return item
         except:
             self.log('ERROR-----%s' % response.url, log.INFO)
