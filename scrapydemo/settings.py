@@ -19,8 +19,9 @@ ITEM_PIPELINES = {
     # 'scrapydemo.pipelines.FilterWordsPipeline': 1,
     # 'scrapydemo.pipelines.JsonWriterPipeline': 2,
     # 'scrapydemo.pipelines.JsonExportPipeline': 3,
-    # 'scrapydemo.pipelines.PostgresPipeline': 4,
-    # 'scrapydemo.pipelines.MyImagesPipeline': 5,
+    # 'scrapydemo.pipelines.PostgresqlPipeline': 4,
+    'scrapydemo.pipelines.MysqlPipeline': 5,
+    # 'scrapydemo.pipelines.MyImagesPipeline': 6,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
@@ -45,12 +46,22 @@ LOG_LEVEL = "INFO"
 LOG_STDOUT = True
 LOG_FILE = "log/spider.log"
 
-DATABASE = {'drivername': 'postgres',
-            'host': '10.0.0.154',
-            'port': '5432',
+# DATABASE = {'drivername': 'postgres',
+#             'host': '10.0.0.154',
+#             'port': '5432',
+#             'username': 'root',
+#             'password': 'changeme',
+#             'database': 'scrapy'}
+
+# windows install http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
+# linux pip install MySQL-python
+DATABASE = {'drivername': 'mysql',
+            'host': '10.0.0.175',
+            'port': '3306',
             'username': 'root',
-            'password': 'changeme',
-            'database': 'scrapy'}
+            'password': 'mysql',
+            'database': 'weiqiye',
+            'query': {'charset': 'utf8'}}
 
 # 图片下载设置
 IMAGES_STORE = 'D:/work/zpics'

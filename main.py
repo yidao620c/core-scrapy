@@ -15,6 +15,7 @@ class MM(object):
 
 
 if __name__ == '__main__':
-    pass
+    aa = u'PhRMA\uff1a2013\u5e74\u65b0\u836f\u7814\u53d1\u6295\u8d44\u8d85511\u4ebf\u7f8e\u5143'
+    print(aa.encode('utf-8'))
 
 
