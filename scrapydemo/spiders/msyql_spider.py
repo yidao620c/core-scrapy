@@ -16,7 +16,7 @@ from scrapy import log
 from scrapy.exceptions import DropItem
 from urlparse import urljoin
 from scrapydemo.utils import *
-import datetime
+from datetime import datetime
 import re
 
 
@@ -37,9 +37,9 @@ class CnyywXMLFeedSpider(CrawlSpider):
             self.log('title=%s' % xitem['title'].encode('utf-8'), log.INFO)
             xitem['link'] = ltos(i_xpath.xpath('link/text()').extract())
             self.log('link=%s' % xitem['link'], log.INFO)
-            pubdate_temp = ltos(i_xpath.xpath('pubDate/text()').extract()).split(r' ')[0]
+            pubdate_temp = ltos(i_xpath.xpath('pubDate/text()').extract())
             self.log('pubdate=%s' % pubdate_temp, log.INFO)
-            xitem['pubdate'] = datetime.datetime.strptime(pubdate_temp, '%Y-%m-%d %H:%M:%S')
+            xitem['pubdate'] = datetime.strptime(pubdate_temp, '%Y-%m-%d %H:%M:%S')
             self.log('((((^_^))))'.center(50, '-'), log.INFO)
             yield Request(url=xitem['link'], meta={'item': xitem}, callback=self.parse_item_page)
 
@@ -66,38 +66,33 @@ class CnyywXMLFeedSpider(CrawlSpider):
             return None
 
 
-class Drug39Spider(CrawlSpider):
+class Drug39Spider(Spider):
     name = "drug39"
     allowed_domains = ["drug.39.net"]
     start_urls = [
         "http://drug.39.net/yjxw/yydt/index.html"
     ]
-    rules = (
-        # LxmlLinkExtractor提取链接列表
-        Rule(LxmlLinkExtractor(allow=(r'/yydt/index_\d+\.html', r'/a/\d{6}/\d+\.html'),
-                               # restrict_xpaths=(u'//a[text()="下一页"]', '//div[@class="listbox"]')),
-                               restrict_xpaths=('//div[@class="listbox"]',)),
-             callback='parse_links', follow=False),
-    )
+    # rules = (
+    #     # LxmlLinkExtractor提取链接列表
+    #     Rule(LxmlLinkExtractor(allow=(r'/yydt/index_\d+\.html',),
+    #                            # restrict_xpaths=(u'//a[text()="下一页"]',
+    #                           '//div[@class="listbox"]')),
+    #                            restrict_xpaths=('//div[@class="listbox"]',)),
+    #          callback='parse_links', follow=False),
+    # )
 
-    def parse_links(self, response):
-        # 如果是首页文章链接，直接处理
-        if '/a/' in response.url:
-            yield self.parse_item_page(response)
-        else:
-            self.log('-------------------> link_list url=%s' % response.url, log.INFO)
-            links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li')
-            for link in links:
-                url = link.xpath('span[1]/a/@href').extract()[0]
-                date_str = link.xpath('span[2]/text()').extract()[0]
-                date_str = date_str.split(' ')[1] + ':00'
-                self.log('+++++++++++' + date_str, log.INFO)
-                yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
+    def parse(self, response):
+        self.log('-------------------> link_list url=%s' % response.url, log.INFO)
+        links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li')
+        for link in links:
+            url = link.xpath('span[1]/a/@href').extract()[0]
+            date_str = link.xpath('span[2]/text()').extract()[0]
+            date_str = date_str.split(' ')[1] + ':00'
+            self.log('+++++++++++' + date_str, log.INFO)
+            yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
 
     def parse_item_page(self, response):
-        date_str = ''
-        if 'ds' in response.meta:
-            date_str = response.meta['ds']
+        dstr = response.meta['ds']
         try:
             self.log('-------------------> link_page url=%s' % response.url, log.INFO)
             item = NewsItem()
@@ -109,8 +104,7 @@ class Drug39Spider(CrawlSpider):
                 '//div[@class="date"]/em[2]/a/text()'
                 '|//div[@class="date"]/em[2]/text()').extract())
             pubdate_temp = ltos(response.xpath('//div[@class="date"]/em[1]/text()').extract())
-            item['pubdate'] = datetime.datetime.strptime(
-                pubdate_temp + ' ' + date_str, '%Y-%m-%d %H:%M:%S')
+            item['pubdate'] = datetime.strptime(pubdate_temp + ' ' + dstr, '%Y-%m-%d %H:%M:%S')
             item['title'] = ltos(response.xpath('//h1/text()').extract())
             content_temp = "".join([tt.strip() for tt in response.xpath(
                 '//div[@id="contentText"]/p').extract()])
@@ -161,8 +155,7 @@ class PharmnetCrawlSpider(CrawlSpider):
             item['link'] = response.url
             head_line = ltos(response.xpath('//div[@class="ct01"]/text()[1]').extract())
             item['location'] = head_line.strip().split()[1]
-            item['pubdate'] = datetime.datetime.strptime(
-                head_line.strip().split()[0], '%Y-%m-%d %H:%M:%S')
+            item['pubdate'] = datetime.strptime( head_line.strip().split()[0], '%Y-%m-%d')
             item['title'] = ltos(response.xpath('//h1/text()').extract())
             content_temp = "".join([tt.strip() for tt in response.xpath(
                 '//div[@class="ct02"]/font/div/div|//div[@class="ct02"]/font/div').extract()])

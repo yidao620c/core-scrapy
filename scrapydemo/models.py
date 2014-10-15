@@ -7,7 +7,7 @@ Desc :
 
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, Column, Integer, String, Text, Date
+from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
 from settings import DATABASE
 import datetime
 
@@ -46,7 +46,7 @@ def _get_date():
 #     # 新闻来源
 #     location = Column('location', String, nullable=True)
 #     # 发布时间
-#     pubdate = Column('pubdate', Date, default=_get_date)
+#     pubdate = Column('pubdate', DateTime, default=_get_date)
 #     # 新闻标题
 #     title = Column('title', String, nullable=True)
 #     # 正文
@@ -68,7 +68,7 @@ class MysqlNews(DeclarativeBase):
     # 新闻来源
     location = Column('location', String(60), nullable=True)
     # 发布时间
-    pubdate = Column('pubdate', Date, default=_get_date)
+    pubdate = Column('pubdate', DateTime, default=_get_date)
     # 新闻标题
     title = Column('title', String(120), nullable=True)
     # 正文
