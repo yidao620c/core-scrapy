@@ -32,29 +32,7 @@ def _get_date():
 
 
 # 定义新闻实体
-# class News(DeclarativeBase):
-#     """Sqlalchemy deals model"""
-#     __tablename__ = "news"
-#     # 主键
-#     id = Column(Integer, primary_key=True)
-#     # 爬虫key
-#     crawlkey = Column('crawlkey', String, nullable=True)
-#     # 新闻分类
-#     category = Column('category', String, nullable=True)
-#     # 新闻链接地址
-#     link = Column('link', String, nullable=True)
-#     # 新闻来源
-#     location = Column('location', String, nullable=True)
-#     # 发布时间
-#     pubdate = Column('pubdate', DateTime, default=_get_date)
-#     # 新闻标题
-#     title = Column('title', String, nullable=True)
-#     # 正文
-#     content = Column('content', Text, nullable=True)
-
-
-# 定义新闻实体
-class MysqlNews(DeclarativeBase):
+class News(DeclarativeBase):
     """Sqlalchemy deals model"""
     __tablename__ = "wqy_push_essay"
     # 主键
@@ -73,5 +51,6 @@ class MysqlNews(DeclarativeBase):
     title = Column('title', String(120), nullable=True)
     # 正文
     content = Column('content', Text, nullable=True)
-
+    # 带html标签的正文
+    htmlcontent = Column('htmlcontent', Text, nullable=True)
 

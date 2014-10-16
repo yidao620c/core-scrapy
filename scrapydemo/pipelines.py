@@ -13,7 +13,7 @@ from scrapy import log
 import json
 import datetime
 from sqlalchemy.orm import sessionmaker
-from models import MysqlNews, db_connect, create_news_table
+from models import News, db_connect, create_news_table
 from scrapy.contrib.pipeline.images import ImagesPipeline
 
 
@@ -90,54 +90,8 @@ class JsonExportPipeline(object):
         return item
 
 
-# class PostgresqlPipeline(object):
-#     """保存到Postgresql数据库管道"""
-#
-#     def __init__(self):
-#         """
-#         Initializes database connection and sessionmaker.
-#         Creates deals table.
-#         """
-#         engine = db_connect()
-#         create_news_table(engine)
-#         # 初始化对象属性Session为可调用对象
-#         self.Session = sessionmaker(bind=engine)
-#         self.recent_links = None
-#         self.nowtime = datetime.datetime.now()
-#
-#     def open_spider(self, spider):
-#         """This method is called when the spider is opened."""
-#         log.msg('open_spider[%s]....' % spider.name, level=log.INFO)
-#         session = self.Session()
-#         recent_news = session.query(News).filter(
-#             News.crawlkey == spider.name
-#             , self.nowtime - News.pubdate <= datetime.timedelta(days=30)).all()
-#         self.recent_links = [t.link for t in recent_news]
-#         print(self.recent_links)
-#
-#     def process_item(self, item, spider):
-#         """Save deals in the database.
-#         This method is called for every item pipeline component.
-#         """
-#         # 每次获取到Item调用这个callable，获得一个新的session
-#         log.msg('postgresql->%s' % item['link'], log.INFO)
-#         if item['link'] not in self.recent_links:
-#             session = self.Session()
-#             news = News(**item)
-#             try:
-#                 session.add(news)
-#                 session.commit()
-#                 self.recent_links.append(item['link'])
-#             except:
-#                 session.rollback()
-#                 raise
-#             finally:
-#                 session.close()
-#         return item
-
-
-class MysqlPipeline(object):
-    """保存到Mysql数据库管道"""
+class MyDatabasePipeline(object):
+    """抓取数据保存到数据库管道"""
 
     def __init__(self):
         """
@@ -155,9 +109,9 @@ class MysqlPipeline(object):
         """This method is called when the spider is opened."""
         log.msg('open_spider[%s]....' % spider.name, level=log.INFO)
         session = self.Session()
-        recent_news = session.query(MysqlNews).filter(
-            MysqlNews.crawlkey == spider.name ,
-            self.nowtime - MysqlNews.pubdate <= datetime.timedelta(days=30)).all()
+        recent_news = session.query(News).filter(
+            News.crawlkey == spider.name ,
+            self.nowtime - News.pubdate <= datetime.timedelta(days=30)).all()
         self.recent_links = [t.link for t in recent_news]
         print(self.recent_links)
 
@@ -169,7 +123,7 @@ class MysqlPipeline(object):
         log.msg('mysql->%s' % item['link'], log.INFO)
         if item['link'] not in self.recent_links:
             session = self.Session()
-            news = MysqlNews(**item)
+            news = News(**item)
             try:
                 session.add(news)
                 session.commit()

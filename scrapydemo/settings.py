@@ -19,9 +19,8 @@ ITEM_PIPELINES = {
     # 'scrapydemo.pipelines.FilterWordsPipeline': 1,
     # 'scrapydemo.pipelines.JsonWriterPipeline': 2,
     # 'scrapydemo.pipelines.JsonExportPipeline': 3,
-    # 'scrapydemo.pipelines.PostgresqlPipeline': 4,
-    'scrapydemo.pipelines.MysqlPipeline': 5,
-    # 'scrapydemo.pipelines.MyImagesPipeline': 6,
+    'scrapydemo.pipelines.MyDatabasePipeline': 4,
+    # 'scrapydemo.pipelines.MyImagesPipeline': 5,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
@@ -46,6 +45,7 @@ LOG_LEVEL = "INFO"
 LOG_STDOUT = True
 LOG_FILE = "log/spider.log"
 
+# Postgresql配置，居然不支持charset参数
 # DATABASE = {'drivername': 'postgres',
 #             'host': '10.0.0.154',
 #             'port': '5432',

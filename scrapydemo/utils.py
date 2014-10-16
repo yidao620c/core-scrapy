@@ -70,6 +70,17 @@ def replace_charentity(htmlstr):
     return htmlstr
 
 
+pat1 = re.compile(r'<div class="hzh_botleft">(?:.|\n)*?</div>')
+pat2 = re.compile(r'<script (?:.|\n)*?</script>')
+
+
+def clean_html(p_str):
+    """html标签清理"""
+    p_str = pat1.sub('', p_str)
+    p_str = pat2.sub('', p_str)
+    return '\n'.join(s for s in p_str.split('\n') if len(s.strip()) != 0)
+
+
 def repalce(s, re_exp, repl_string):
     return re_exp.sub(repl_string, s)
 
