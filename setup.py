@@ -15,3 +15,10 @@ setup(
     description='A simple spider',
     requires=['scrapy', 'sqlalchemy', 'redis', 'psycopg2', 'MySQL-python', 'Pillow']
 )
+
+# centos上面安装MySQL-python
+# easy_install -i http://pypi.douban.com/simple pip ~~python2.7版本更改时的安装pip
+# sudo yum  install mysql-devel
+# pip install MySQL-python/ easy_install MySQL-python
+
+# easy_install scrapy   # scrapy使用pip安装会出错
