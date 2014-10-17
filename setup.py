@@ -13,5 +13,5 @@ setup(
     author_email='hfpython@headfirstlabs.com',
     url='http://www.headfirstlibs.com',
     description='A simple spider',
-    requires=['scrapy', 'sqlalchemy', 'redis', 'psycopg2', 'MySQL-python']
+    requires=['scrapy', 'sqlalchemy', 'redis', 'psycopg2', 'MySQL-python', 'Pillow']
 )
