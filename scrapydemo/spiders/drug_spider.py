@@ -133,53 +133,6 @@ class Drug39Spider(Spider):
             return None
 
 
-class FootballSpider(Spider):
-    """抓取图文网页"""
-    name = "football"
-    allowed_domains = ["sports.sina.com.cn"]
-    start_urls = [
-        "http://sports.sina.com.cn/g/laliga/2014-10-17/00417372814.shtml"
-    ]
-
-    def parse(self, response):
-        try:
-            self.log('-------------------> link_page url=%s' % response.url, log.INFO)
-            item = NewsItem()
-            item['crawlkey'] = self.name
-            item['category'] = '足球'
-            item['link'] = response.url
-            item['location'] = '新浪体育'
-            pubdate_temp = '2014-10-17 12:12:12'
-            item['pubdate'] = datetime.strptime(pubdate_temp, '%Y-%m-%d %H:%M:%S')
-            item['title'] = ltos(response.xpath('//h1[@id="artibodyTitle"]/text()').extract())
-            content_temp = "".join([tt.strip() for tt in response.xpath(
-                '//div[@id="artibody"]/p').extract()])
-            item['content'] = filter_tags(content_temp)
-            htmlcontent = clean_html(ltos(response.xpath('//div[@id="artibody"]').extract()))
-            # 特殊构造，不作为分组
-            # (?=...)之后的字符串需要匹配表达式才能成功匹配
-            # (?<=...)之前的字符串需要匹配表达式才能成功匹配
-            pat_img = re.compile(r'(<img (?:.|\n)*?src=")((.|\n)*?)(?=")')
-            uuids = []
-            for i, m in enumerate(pat_img.finditer(htmlcontent)):
-                full_path = m.group(2)
-                suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
-                uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
-                uuids.append(uuid_name)
-                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
-                with contextlib.closing(urllib2.urlopen(full_path)) as f:
-                    with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
-                        bfile.write(f.read())
-            for indx, val in enumerate(uuids):
-                htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
-            item['htmlcontent'] = htmlcontent
-            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
-            return item
-        except:
-            self.log('ERROR-----%s' % response.url, log.ERROR)
-            return None
-
-
 class PharmnetCrawlSpider(CrawlSpider):
     """医药网pharmnet.com.cn"""
     name = 'pharmnet'
@@ -260,12 +213,13 @@ class HaoyaoCrawlSpider(Spider):
 
     def parse(self, response):
         self.log('-------------------> link_list url=%s' % response.url, log.INFO)
-        links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li')
+        links = response.xpath('//div[@class="list"]')
         for link in links:
-            url = link.xpath('span[1]/a/@href').extract()[0]
-            date_str = link.xpath('span[2]/text()').extract()[0]
-            date_str = date_str.split(' ')[1] + ':00'
-            self.log('+++++++++++' + date_str, log.INFO)
+            url = link.xpath('div[1]/a/@href').extract()[0]
+            url = 'http://www.haoyao.net/news/' + url.split('/')[-1]
+            self.log('+++++++++++url=' + url, log.INFO)
+            date_str = (link.xpath('div[2]/text()').extract()[0]).strip() + ' 00:00:00'
+            self.log('+++++++++++date_str=' + date_str, log.INFO)
             yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
 
     def parse_item_page(self, response):
@@ -274,19 +228,15 @@ class HaoyaoCrawlSpider(Spider):
             self.log('-------------------> link_page url=%s' % response.url, log.INFO)
             item = NewsItem()
             item['crawlkey'] = self.name
-            item['category'] = ltos(response.xpath(
-                '//span[@class="art_location"]/a[last()]/text()').extract())
+            item['category'] = '医药新闻'
             item['link'] = response.url
-            item['location'] = ltos(response.xpath(
-                '//div[@class="date"]/em[2]/a/text()'
-                '|//div[@class="date"]/em[2]/text()').extract())
-            pubdate_temp = ltos(response.xpath('//div[@class="date"]/em[1]/text()').extract())
-            item['pubdate'] = datetime.strptime(pubdate_temp + ' ' + dstr, '%Y-%m-%d %H:%M:%S')
-            item['title'] = ltos(response.xpath('//h1/text()').extract())
+            item['location'] = ltos(response.xpath('//font[@color="#666666"]/a/text()').extract())
+            item['pubdate'] = datetime.strptime(dstr, '%Y-%m-%d %H:%M:%S')
+            item['title'] = ltos(response.xpath('//span[@id="lblTitle"]/text()').extract())
             content_temp = "".join([tt.strip() for tt in response.xpath(
-                '//div[@id="contentText"]/p').extract()])
+                '//span[@id="spContent"]/p').extract()])
             item['content'] = filter_tags(content_temp)
-            htmlcontent = ltos(response.xpath('//div[@id="contentText"]').extract())
+            htmlcontent = ltos(response.xpath('//div[@id="divContent"]').extract())
             item['htmlcontent'] = clean_html(htmlcontent)
             # 特殊构造，不作为分组
             # (?=...)之后的字符串需要匹配表达式才能成功匹配
@@ -294,7 +244,7 @@ class HaoyaoCrawlSpider(Spider):
             pat_img = re.compile(r'(<img (?:.|\n)*?src=")((.|\n)*?)(?=")')
             uuids = []
             for i, m in enumerate(pat_img.finditer(htmlcontent)):
-                full_path = m.group(2)
+                full_path = 'http://www.haoyao.net' + m.group(2)
                 suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
                 uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
                 uuids.append(uuid_name)

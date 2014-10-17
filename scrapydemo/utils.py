@@ -89,7 +89,7 @@ def ltos(lst):
     """列表取第一个值"""
     if lst is not None and isinstance(lst, list):
         if len(lst) > 0:
-            return lst[0]
+            return lst[0].strip()
     return ''
 
 
