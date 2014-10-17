@@ -66,4 +66,7 @@ DATABASE = {'drivername': 'mysql',
 # 图片下载设置
 IMAGES_STORE = 'D:/work/zpics'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
+# 图片链接前缀
+URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
+
 

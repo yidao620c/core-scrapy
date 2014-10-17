@@ -72,12 +72,12 @@ def replace_charentity(htmlstr):
 
 pat1 = re.compile(r'<div class="hzh_botleft">(?:.|\n)*?</div>')
 pat2 = re.compile(r'<script (?:.|\n)*?</script>')
-
-
+pat3 = re.compile(r'<a href="javascript:"(?:.|\n)*?</a>')
 def clean_html(p_str):
     """html标签清理"""
     p_str = pat1.sub('', p_str)
     p_str = pat2.sub('', p_str)
+    p_str = pat3.sub('', p_str)
     return '\n'.join(s for s in p_str.split('\n') if len(s.strip()) != 0)
 
 

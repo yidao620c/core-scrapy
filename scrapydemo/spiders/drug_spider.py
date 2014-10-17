@@ -17,7 +17,12 @@ from scrapy.exceptions import DropItem
 from urlparse import urljoin
 from scrapydemo.utils import *
 from datetime import datetime
+import scrapydemo.settings as setting
 import re
+import uuid
+import urllib2
+import contextlib
+import os
 
 
 class CnyywXMLFeedSpider(CrawlSpider):
@@ -63,7 +68,7 @@ class CnyywXMLFeedSpider(CrawlSpider):
             page_item['htmlcontent'] = page_item['content']
             return page_item
         except:
-            self.log('ERROR-----%s' % response.url, log.INFO)
+            self.log('ERROR-----%s' % response.url, log.ERROR)
             return None
 
 
@@ -104,10 +109,74 @@ class Drug39Spider(Spider):
             item['content'] = filter_tags(content_temp)
             htmlcontent = ltos(response.xpath('//div[@id="contentText"]').extract())
             item['htmlcontent'] = clean_html(htmlcontent)
+            # 特殊构造，不作为分组
+            # (?=...)之后的字符串需要匹配表达式才能成功匹配
+            # (?<=...)之前的字符串需要匹配表达式才能成功匹配
+            pat_img = re.compile(r'(<img (?:.|\n)*?src=")((.|\n)*?)(?=")')
+            uuids = []
+            for i, m in enumerate(pat_img.finditer(htmlcontent)):
+                full_path = m.group(2)
+                suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
+                uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
+                uuids.append(uuid_name)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                with contextlib.closing(urllib2.urlopen(full_path)) as f:
+                    with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
+                        bfile.write(f.read())
+            for indx, val in enumerate(uuids):
+                htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
+            item['htmlcontent'] = htmlcontent
             self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
             return item
         except:
-            self.log('ERROR-----%s' % response.url, log.INFO)
+            self.log('ERROR-----%s' % response.url, log.ERROR)
+            return None
+
+
+class FootballSpider(Spider):
+    """抓取图文网页"""
+    name = "football"
+    allowed_domains = ["sports.sina.com.cn"]
+    start_urls = [
+        "http://sports.sina.com.cn/g/laliga/2014-10-17/00417372814.shtml"
+    ]
+
+    def parse(self, response):
+        try:
+            self.log('-------------------> link_page url=%s' % response.url, log.INFO)
+            item = NewsItem()
+            item['crawlkey'] = self.name
+            item['category'] = '足球'
+            item['link'] = response.url
+            item['location'] = '新浪体育'
+            pubdate_temp = '2014-10-17 12:12:12'
+            item['pubdate'] = datetime.strptime(pubdate_temp, '%Y-%m-%d %H:%M:%S')
+            item['title'] = ltos(response.xpath('//h1[@id="artibodyTitle"]/text()').extract())
+            content_temp = "".join([tt.strip() for tt in response.xpath(
+                '//div[@id="artibody"]/p').extract()])
+            item['content'] = filter_tags(content_temp)
+            htmlcontent = clean_html(ltos(response.xpath('//div[@id="artibody"]').extract()))
+            # 特殊构造，不作为分组
+            # (?=...)之后的字符串需要匹配表达式才能成功匹配
+            # (?<=...)之前的字符串需要匹配表达式才能成功匹配
+            pat_img = re.compile(r'(<img (?:.|\n)*?src=")((.|\n)*?)(?=")')
+            uuids = []
+            for i, m in enumerate(pat_img.finditer(htmlcontent)):
+                full_path = m.group(2)
+                suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
+                uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
+                uuids.append(uuid_name)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                with contextlib.closing(urllib2.urlopen(full_path)) as f:
+                    with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
+                        bfile.write(f.read())
+            for indx, val in enumerate(uuids):
+                htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
+            item['htmlcontent'] = htmlcontent
+            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
+            return item
+        except:
+            self.log('ERROR-----%s' % response.url, log.ERROR)
             return None
 
 
@@ -156,9 +225,107 @@ class PharmnetCrawlSpider(CrawlSpider):
                 '//div[@class="ct02"]/font/div/div|//div[@class="ct02"]/font/div').extract()])
             item['content'] = filter_tags(content_temp)
             hc = ltos(response.xpath('//div[@class="ct02"]').extract())
-            item['htmlcontent'] = '\n'.join(s for s in hc.split('\n') if len(s.strip()) != 0)
+            htmlcontent = clean_html(hc)
+            # 特殊构造，不作为分组
+            # (?=...)之后的字符串需要匹配表达式才能成功匹配
+            # (?<=...)之前的字符串需要匹配表达式才能成功匹配
+            pat_img = re.compile(r'(<img (?:.|\n)*?src=")((.|\n)*?)(?=")')
+            uuids = []
+            for i, m in enumerate(pat_img.finditer(htmlcontent)):
+                full_path = m.group(2)
+                suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
+                uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
+                uuids.append(uuid_name)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                with contextlib.closing(urllib2.urlopen(full_path)) as f:
+                    with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
+                        bfile.write(f.read())
+            for indx, val in enumerate(uuids):
+                htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
+            item['htmlcontent'] = htmlcontent
             self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
             return item
         except:
-            self.log('ERROR-----%s' % response.url, log.INFO)
+            self.log('ERROR-----%s' % response.url, log.ERROR)
             raise DropItem('DropItem-----%s' % response.url)
+
+
+class HaoyaoCrawlSpider(Spider):
+    """医药咨询网http://www.haoyao.net/"""
+    name = 'haoyao'
+    allowed_domains = ['haoyao.net']
+    start_urls = [
+        'http://www.haoyao.net/news/cate----0----index.htm',
+    ]
+
+    def parse(self, response):
+        self.log('-------------------> link_list url=%s' % response.url, log.INFO)
+        links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li')
+        for link in links:
+            url = link.xpath('span[1]/a/@href').extract()[0]
+            date_str = link.xpath('span[2]/text()').extract()[0]
+            date_str = date_str.split(' ')[1] + ':00'
+            self.log('+++++++++++' + date_str, log.INFO)
+            yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
+
+    def parse_item_page(self, response):
+        dstr = response.meta['ds']
+        try:
+            self.log('-------------------> link_page url=%s' % response.url, log.INFO)
+            item = NewsItem()
+            item['crawlkey'] = self.name
+            item['category'] = ltos(response.xpath(
+                '//span[@class="art_location"]/a[last()]/text()').extract())
+            item['link'] = response.url
+            item['location'] = ltos(response.xpath(
+                '//div[@class="date"]/em[2]/a/text()'
+                '|//div[@class="date"]/em[2]/text()').extract())
+            pubdate_temp = ltos(response.xpath('//div[@class="date"]/em[1]/text()').extract())
+            item['pubdate'] = datetime.strptime(pubdate_temp + ' ' + dstr, '%Y-%m-%d %H:%M:%S')
+            item['title'] = ltos(response.xpath('//h1/text()').extract())
+            content_temp = "".join([tt.strip() for tt in response.xpath(
+                '//div[@id="contentText"]/p').extract()])
+            item['content'] = filter_tags(content_temp)
+            htmlcontent = ltos(response.xpath('//div[@id="contentText"]').extract())
+            item['htmlcontent'] = clean_html(htmlcontent)
+            # 特殊构造，不作为分组
+            # (?=...)之后的字符串需要匹配表达式才能成功匹配
+            # (?<=...)之前的字符串需要匹配表达式才能成功匹配
+            pat_img = re.compile(r'(<img (?:.|\n)*?src=")((.|\n)*?)(?=")')
+            uuids = []
+            for i, m in enumerate(pat_img.finditer(htmlcontent)):
+                full_path = m.group(2)
+                suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
+                uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
+                uuids.append(uuid_name)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                with contextlib.closing(urllib2.urlopen(full_path)) as f:
+                    with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
+                        bfile.write(f.read())
+            for indx, val in enumerate(uuids):
+                htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
+            item['htmlcontent'] = htmlcontent
+            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
+            return item
+        except:
+            self.log('ERROR-----%s' % response.url, log.ERROR)
+            return None
+
+
+class Nth(object):
+    """
+    如果 sub 函数的第二个参数是个函数，则每次匹配到的时候都会执行这个函数。
+    函数接受匹配到的那个 match object 作为参数，返回用来替换的字符串。
+    利用这个特性就可以只在第 N 次匹配的时候返回要替换成的字符串，其他时候原样返回不做替换即可。
+    """
+
+    def __init__(self, nth, replacement):
+        self.nth = nth
+        self.replacement = replacement
+        self.calls = 0
+
+    def __call__(self, matchobj):
+        self.calls += 1
+        if self.calls == self.nth:
+            return matchobj.group(1) + self.replacement
+        return matchobj.group(0)
