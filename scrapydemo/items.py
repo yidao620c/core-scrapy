@@ -6,9 +6,12 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 from scrapy.item import Item, Field
-from scrapy.contrib.loader import XPathItemLoader
-from scrapy.contrib.loader.processor import MapCompose, TakeFirst, Join
 
+
+class HuxiuItem(Item):
+    title = Field()
+    link = Field()
+    desc = Field()
 
 class MyItem(Item):
     title = Field()
