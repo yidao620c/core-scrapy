@@ -5,11 +5,10 @@ Topic: sample
 Desc : 
 """
 from scrapydemo.items import HuxiuItem
-from scrapy.spider import Spider
-from scrapy import Request
+import scrapy
 
 
-class HuxiuSpider(Spider):
+class HuxiuSpider(scrapy.Spider):
     name = "huxiu"
     allowed_domains = ["huxiu.com"]
     start_urls = [
