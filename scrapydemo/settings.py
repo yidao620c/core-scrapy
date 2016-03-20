@@ -12,7 +12,7 @@ BOT_NAME = 'scrapydemo'
 
 SPIDER_MODULES = ['scrapydemo.spiders']
 NEWSPIDER_MODULE = 'scrapydemo.spiders'
-COMMANDS_MODULE = 'scrapydemo.commands'
+# COMMANDS_MODULE = 'scrapydemo.commands'
 # DEFAULT_ITEM_CLASS = 'scrapydemo.items.MyItem'
 
 ITEM_PIPELINES = {
