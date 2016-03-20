@@ -19,7 +19,7 @@ ITEM_PIPELINES = {
     # 'scrapydemo.pipelines.FilterWordsPipeline': 1,
     # 'scrapydemo.pipelines.JsonWriterPipeline': 2,
     # 'scrapydemo.pipelines.JsonExportPipeline': 3,
-    'scrapydemo.pipelines.MyDatabasePipeline': 4,
+    # 'scrapydemo.pipelines.MyDatabasePipeline': 4,
     # 'scrapydemo.pipelines.MyImagesPipeline': 5,
 }
 DOWNLOADER_MIDDLEWARES = {
@@ -56,7 +56,7 @@ LOG_FILE = "log/spider.log"
 # windows install http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
 # linux pip install MySQL-python
 DATABASE = {'drivername': 'mysql',
-            'host': '10.0.0.175',
+            'host': '192.168.203.95',
             'port': '3306',
             'username': 'root',
             'password': 'mysql',
@@ -68,5 +68,4 @@ IMAGES_STORE = 'D:/work/zpics'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 # 图片链接前缀
 URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
-
 
