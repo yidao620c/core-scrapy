@@ -17,6 +17,7 @@ class HuxiuSpider(scrapy.Spider):
 
     def parse(self, response):
         for sel in response.xpath('//div[@class="mod-info-flow"]/div/div[@class="mob-ctt"]'):
+            print("huxiu link..")
             item = HuxiuItem()
             item['title'] = sel.xpath('//h3/a/text()').extract()
             item['link'] = sel.xpath('//h3/a/@href').extract()
