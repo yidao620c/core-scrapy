@@ -20,7 +20,7 @@ class XMLSpider(XMLFeedSpider):
     itertag = 'atom:entry'
 
     def parse_node(self, response, node):
-        self.logger.info('Hi, this is a <%s> node!', self.itertag)
+        # self.logger.info('Hi, this is a <%s> node!', self.itertag)
         item = BlogItem()
         item['title'] = node.xpath('title/text()')[0].extract()
         item['link'] = node.xpath('link/@href')[0].extract()
