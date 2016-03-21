@@ -7,7 +7,7 @@
 #
 # http://doc.scrapy.org/en/latest/topics/settings.html
 #
-
+import logging
 BOT_NAME = 'scrapydemo'
 
 SPIDER_MODULES = ['scrapydemo.spiders']
@@ -41,7 +41,7 @@ DOWNLOAD_DELAY = 5
 # 禁用Cookie
 COOKIES_ENABLES = False
 
-LOG_LEVEL = "INFO"
+LOG_LEVEL = logging.DEBUG
 LOG_STDOUT = True
 LOG_FILE = "log/spider.log"
 
