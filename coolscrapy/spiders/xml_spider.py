@@ -16,12 +16,11 @@ class XMLSpider(XMLFeedSpider):
     start_urls = [
         "http://yidao620c.github.io/atom.xml"
     ]
-    iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
+    iterator = 'xml'  # default iternodes
     itertag = 'atom:entry'
 
     def parse_node(self, response, node):
-        self.logger.info('Hi, this is a <%s> node!: %s', self.itertag, ''.join(node.extract()))
-
+        self.logger.info('Hi, this is a <%s> node!', self.itertag)
         item = BlogItem()
         item['title'] = node.xpath('title').extract()
         item['link'] = node.xpath('link/@href').extract()
