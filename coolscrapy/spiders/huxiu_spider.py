@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 """
-Topic: sample
+Topic: 爬取虎嗅网首页
 Desc : 
 """
 from coolscrapy.items import HuxiuItem
@@ -17,7 +17,6 @@ class HuxiuSpider(scrapy.Spider):
 
     def parse(self, response):
         for sel in response.xpath('//div[@class="mod-info-flow"]/div/div[@class="mob-ctt"]'):
-            print("huxiu link..")
             item = HuxiuItem()
             item['title'] = sel.xpath('h3/a/text()')[0].extract()
             item['link'] = sel.xpath('h3/a/@href')[0].extract()
