@@ -27,6 +27,6 @@ class XMLSpider(XMLFeedSpider):
         item['id'] = node.xpath('atom:id/text()')[0].extract()
         item['published'] = node.xpath('atom:published/text()')[0].extract()
         item['updated'] = node.xpath('atom:updated/text()')[0].extract()
-        self.logger.info(item['title'],item['link'],item['id'],item['published'])
+        self.logger.info(''.join([item['title'],item['link'],item['id'],item['published']]))
         return item
 
