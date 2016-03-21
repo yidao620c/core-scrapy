@@ -18,11 +18,11 @@ class LinkSpider(CrawlSpider):
     ]
 
     rules = (
-        # Extract links matching 'category.php' (but not matching 'subsection.php')
+        # Extract links matching '/group?f=index_grou' (but not matching 'deny.php')
         # and follow links from them (since no callback means follow=True by default).
-        Rule(LinkExtractor(allow=('/group?f=index_group', ), deny=('subsection\.php', ))),
-        # Extract links matching 'item.php' and parse them with the spider's method parse_item
-        Rule(LinkExtractor(allow=('/article/\d+/\d+.html?f=index_feed_article', )), callback='parse_item'),
+        Rule(LinkExtractor(allow=('/group?f=index_group', ), deny=('deny\.php', ))),
+        # Extract links matching '/article/\d+/\d+.html' and parse them with parse_item
+        Rule(LinkExtractor(allow=('/article/\d+/\d+\.html', )), callback='parse_item'),
     )
 
     def parse_item(self, response):
