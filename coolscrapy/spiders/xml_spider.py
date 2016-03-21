@@ -11,7 +11,7 @@ from scrapy.spiders import XMLFeedSpider
 
 class XMLSpider(XMLFeedSpider):
     name = "xml"
-    allowed_domains = ["yidao620c.github.io"]
+    # allowed_domains = ["yidao620c.github.io"]
     start_urls = [
         "http://yidao620c.github.io/atom.xml"
     ]
