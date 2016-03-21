@@ -16,7 +16,7 @@ class XMLSpider(XMLFeedSpider):
     start_urls = [
         "http://yidao620c.github.io/atom.xml"
     ]
-    iterator = 'iternodes'  # default iternodes
+    iterator = 'xml'  # 缺省的iternodes，貌似对于有namespace的xml不行
     itertag = 'atom:entry'
 
     def parse_node(self, response, node):
