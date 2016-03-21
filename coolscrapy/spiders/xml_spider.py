@@ -22,11 +22,11 @@ class XMLSpider(XMLFeedSpider):
     def parse_node(self, response, node):
         # self.logger.info('Hi, this is a <%s> node!', self.itertag)
         item = BlogItem()
-        item['title'] = node.xpath('atom:title').extract()
-        item['link'] = node.xpath('atom:link/@href').extract()
-        item['id'] = node.xpath('atom:id').extract()
-        item['published'] = node.xpath('atom:published').extract()
-        item['updated'] = node.xpath('atom:updated').extract()
-        print(item['title'],item['link'])
+        item['title'] = node.xpath('atom:title/text()')[0].extract()
+        item['link'] = node.xpath('atom:link/@href')[0].extract()
+        item['id'] = node.xpath('atom:id/text()')[0].extract()
+        item['published'] = node.xpath('atom:published/text()')[0].extract()
+        item['updated'] = node.xpath('atom:updated/text()')[0].extract()
+        self.logger.info(item['title'],item['link'],item['id'],item['published'])
         return item
 
