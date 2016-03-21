@@ -16,7 +16,7 @@ class XMLSpider(XMLFeedSpider):
     start_urls = [
         "http://yidao620c.github.io/atom.xml"
     ]
-    iterator = 'xml'  # default iternodes
+    iterator = 'iternodes'  # default iternodes
     itertag = 'atom:entry'
 
     def parse_node(self, response, node):
@@ -27,6 +27,6 @@ class XMLSpider(XMLFeedSpider):
         item['id'] = node.xpath('atom:id/text()')[0].extract()
         item['published'] = node.xpath('atom:published/text()')[0].extract()
         item['updated'] = node.xpath('atom:updated/text()')[0].extract()
-        self.logger.info(''.join([item['title'],item['link'],item['id'],item['published']]))
+        self.logger.info('|'.join([item['title'],item['link'],item['id'],item['published']]))
         return item
 
