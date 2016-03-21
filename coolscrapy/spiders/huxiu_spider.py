@@ -4,7 +4,7 @@
 Topic: sample
 Desc : 
 """
-from scrapydemo.items import HuxiuItem
+from coolscrapy.items import HuxiuItem
 import scrapy
 
 
@@ -24,9 +24,9 @@ class HuxiuSpider(scrapy.Spider):
             url = response.urljoin(item['link'])
             item['desc'] = sel.xpath('div[@class="mob-sub"]/text()').extract()
             print(item['title'],item['link'],item['desc'])
-            yield scrapy.Request(url, callback=self.parse_dir_contents)
+            yield scrapy.Request(url, callback=self.parse_article)
 
-    def parse_dir_contents(self, response):
+    def parse_article(self, response):
         detail = response.xpath('//div[@class="article-wrap"]')
         item = HuxiuItem()
         item['title'] = detail.xpath('h1/text()')[0].extract()
