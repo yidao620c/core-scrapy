@@ -9,7 +9,17 @@ import scrapy
 
 
 class HuxiuItem(scrapy.Item):
-    title = scrapy.Field()    # 标题
-    link = scrapy.Field()     # 链接
-    desc = scrapy.Field()     # 简述
-    posttime = scrapy.Field() # 发布时间
+    title = scrapy.Field()      # 标题
+    link = scrapy.Field()       # 链接
+    desc = scrapy.Field()       # 简述
+    published = scrapy.Field()  # 发布时间
+
+
+class BlogItem(scrapy.Item):
+    title = scrapy.Field()      # 标题
+    link = scrapy.Field()       # 链接
+    id = scrapy.Field()         # ID号
+    published = scrapy.Field()  # 发布时间
+    updated = scrapy.Field()    # 更新时间
+
+

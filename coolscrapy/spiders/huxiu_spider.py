@@ -30,7 +30,7 @@ class HuxiuSpider(scrapy.Spider):
         item = HuxiuItem()
         item['title'] = detail.xpath('h1/text()')[0].extract()
         item['link'] = response.url
-        item['posttime'] = detail.xpath(
+        item['published'] = detail.xpath(
             'div[@class="article-author"]/span[@class="article-time"]/text()')[0].extract()
-        print(item['title'],item['link'],item['posttime'])
+        print(item['title'],item['link'],item['published'])
         yield item
