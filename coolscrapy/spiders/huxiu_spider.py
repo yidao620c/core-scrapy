@@ -19,11 +19,11 @@ class HuxiuSpider(scrapy.Spider):
         for sel in response.xpath('//div[@class="mod-info-flow"]/div/div[@class="mob-ctt"]'):
             print("huxiu link..")
             item = HuxiuItem()
-            item['title'] = sel.xpath('//h3/a/text()').extract()
-            item['link'] = sel.xpath('//h3/a/@href').extract()
+            item['title'] = sel.xpath('h3/a/text()')[0].extract()
+            item['link'] = sel.xpath('h3/a/@href')[0].extract()
             url = response.urljoin(item['link'])
-            item['desc'] = sel.xpath('div[@class="mob-sub"]/text()').extract()
-            print(item['title'],item['link'],item['desc'])
+            item['desc'] = sel.xpath('div[@class="mob-sub"]/text()')[0].extract()
+            # print(item['title'],item['link'],item['desc'])
             yield scrapy.Request(url, callback=self.parse_article)
 
     def parse_article(self, response):
@@ -32,5 +32,6 @@ class HuxiuSpider(scrapy.Spider):
         item['title'] = detail.xpath('h1/text()')[0].extract()
         item['link'] = response.url
         item['posttime'] = detail.xpath(
-            'div[@class="article-author"]/span[@class="article-time"]/text()').extract()
+            'div[@class="article-author"]/span[@class="article-time"]/text()')[0].extract()
+        print(item['title'],item['link'],item['posttime'])
         yield item
