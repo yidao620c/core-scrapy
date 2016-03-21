@@ -11,12 +11,13 @@ from scrapy.spiders import XMLFeedSpider
 
 class XMLSpider(XMLFeedSpider):
     name = "xml"
-    # allowed_domains = ["yidao620c.github.io"]
+    namespaces = [('atom', 'http://www.w3.org/2005/Atom')]
+    allowed_domains = ["github.io"]
     start_urls = [
         "http://yidao620c.github.io/atom.xml"
     ]
     iterator = 'iternodes'  # This is actually unnecessary, since it's the default value
-    itertag = 'entry'
+    itertag = 'atom:entry'
 
     def parse_node(self, response, node):
         self.logger.info('Hi, this is a <%s> node!: %s', self.itertag, ''.join(node.extract()))
