@@ -8,7 +8,21 @@
 import scrapy
 
 
+class NewsItem(scrapy.Item):
+    """医药网新闻Item"""
+    crawlkey = scrapy.Field()      # 关键字
+    title = scrapy.Field()         # 标题
+    link = scrapy.Field()          # 链接
+    desc = scrapy.Field()          # 简述
+    pubdate = scrapy.Field()       # 发布时间
+    category = scrapy.Field()      # 分类
+    location = scrapy.Field()      # 来源
+    content = scrapy.Field()       # 内容
+    htmlcontent = scrapy.Field()   # html内容
+
+
 class HuxiuItem(scrapy.Item):
+    """虎嗅网新闻Item"""
     title = scrapy.Field()      # 标题
     link = scrapy.Field()       # 链接
     desc = scrapy.Field()       # 简述
@@ -16,6 +30,7 @@ class HuxiuItem(scrapy.Item):
 
 
 class BlogItem(scrapy.Item):
+    """博客Item"""
     title = scrapy.Field()      # 标题
     link = scrapy.Field()       # 链接
     id = scrapy.Field()         # ID号
@@ -23,3 +38,7 @@ class BlogItem(scrapy.Item):
     updated = scrapy.Field()    # 更新时间
 
 
+class JokeItem(scrapy.Item):
+    """糗事百科笑话Item"""
+    content = scrapy.Field()
+    image_urls = scrapy.Field()

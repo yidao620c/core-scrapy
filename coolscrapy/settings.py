@@ -15,6 +15,49 @@ BOT_NAME = 'coolscrapy'
 SPIDER_MODULES = ['coolscrapy.spiders']
 NEWSPIDER_MODULE = 'coolscrapy.spiders'
 
+ITEM_PIPELINES = {
+    'coolscrapy.pipelines.FilterWordsPipeline': 1,
+    'coolscrapy.pipelines.JsonWriterPipeline': 2,
+    'coolscrapy.pipelines.JsonExportPipeline': 3,
+    'coolscrapy.pipelines.MyDatabasePipeline': 4,
+    'coolscrapy.pipelines.MyImagesPipeline': 5,
+}
+DOWNLOADER_MIDDLEWARES = {
+    # 这里是下载中间件
+    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware': None,
+    'coolscrapy.middlewares.RotateUserAgentMiddleware': 400
+}
+SPIDER_MIDDLEWARES = {
+    # 这是爬虫中间件， 543是运行的优先级
+    'coolscrapy.middlewares.UrlUniqueMiddleware': 543,
+}
+
+# 几个反正被Ban的策略设置
+DOWNLOAD_TIMEOUT = 20
+DOWNLOAD_DELAY = 5
+# 禁用Cookie
+COOKIES_ENABLES = False
+
+LOG_LEVEL = logging.INFO
+LOG_STDOUT = True
+LOG_FILE = "log/spider.log"
+
+# windows install http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
+# linux pip install MySQL-python
+DATABASE = {'drivername': 'mysql',
+            'host': '192.168.203.95',
+            'port': '3306',
+            'username': 'root',
+            'password': 'mysql',
+            'database': 'weiqiye',
+            'query': {'charset': 'utf8'}}
+
+# 图片下载设置
+IMAGES_STORE = 'D:/work/zpics'
+IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
+# 图片链接前缀
+URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'coolscrapy (+http://www.yourdomain.com)'
 
@@ -84,6 +127,3 @@ NEWSPIDER_MODULE = 'coolscrapy.spiders'
 # HTTPCACHE_IGNORE_HTTP_CODES=[]
 # HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-LOG_LEVEL = logging.INFO
-LOG_STDOUT = True
-LOG_FILE = "log/spider.log"
