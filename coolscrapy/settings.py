@@ -16,11 +16,12 @@ SPIDER_MODULES = ['coolscrapy.spiders']
 NEWSPIDER_MODULE = 'coolscrapy.spiders'
 
 ITEM_PIPELINES = {
-    'coolscrapy.pipelines.FilterWordsPipeline': 1,
-    'coolscrapy.pipelines.JsonWriterPipeline': 2,
-    'coolscrapy.pipelines.JsonExportPipeline': 3,
-    'coolscrapy.pipelines.MyDatabasePipeline': 4,
-    'coolscrapy.pipelines.MyImagesPipeline': 5,
+    'coolscrapy.pipelines.DuplicatesPipeline': 1,
+    'coolscrapy.pipelines.FilterWordsPipeline': 2,
+    # 'coolscrapy.pipelines.JsonWriterPipeline': 3,
+    # 'coolscrapy.pipelines.JsonExportPipeline': 4,
+    'coolscrapy.pipelines.MyDatabasePipeline': 5,
+    'coolscrapy.pipelines.MyImagesPipeline': 6,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
@@ -29,7 +30,7 @@ DOWNLOADER_MIDDLEWARES = {
 }
 SPIDER_MIDDLEWARES = {
     # 这是爬虫中间件， 543是运行的优先级
-    'coolscrapy.middlewares.UrlUniqueMiddleware': 543,
+    # 'coolscrapy.middlewares.UrlUniqueMiddleware': 543,
 }
 
 # 几个反正被Ban的策略设置

@@ -8,32 +8,62 @@ Desc :
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
-from settings import DATABASE
+from coolscrapy.settings import DATABASE
 import datetime
 
-DeclarativeBase = declarative_base()
+Base = declarative_base()
 
 
-def db_connect():
-    """
-    Performs database connection using database settings from settings.py.
-    Returns sqlalchemy engine instance
-    """
-    return create_engine(URL(**DATABASE))
+class Rule(Base):
+    __tablename__ = 'rules'
+
+    # 表的结构:
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    allow_domains = Column(String)
+    start_urls = Column(String)
+    next_page = Column(String)
+    allow_url = Column(String)
+    extract_from = Column(String)
+    title_xpath = Column(String)
+    body_xpath = Column(String)
+    publish_time_xpath = Column(String)
+    source_site_xpath = Column(String)
+    enable = Column(Integer)
 
 
-def create_news_table(engine):
-    """"""
-    DeclarativeBase.metadata.create_all(engine)
+class ArticleRule(Base):
+    """自定义文章爬取规则"""
+    __tablename__ = 'rules'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    allow_domains = Column(String)
+    start_urls = Column(String)
+    next_page = Column(String)
+    allow_url = Column(String)
+    extract_from = Column(String)
+    title_xpath = Column(String)
+    body_xpath = Column(String)
+    publish_time_xpath = Column(String)
+    source_site_xpath = Column(String)
+    enable = Column(Integer)
 
 
-def _get_date():
-    return datetime.datetime.now()
+class Article(Base):
+    """文章类"""
+    __tablename__ = 'articles'
+
+    id = Column(Integer, primary_key=True)
+    title = Column(String)
+    url = Column(String)
+    body = Column(String)
+    publish_time = Column(String)
+    source_site = Column(String)
 
 
-# 定义新闻实体
-class News(DeclarativeBase):
-    """Sqlalchemy deals model"""
+class News(Base):
+    """定义新闻实体"""
     __tablename__ = "wqy_push_essay"
     # 主键
     id = Column(Integer, primary_key=True)
@@ -54,3 +84,19 @@ class News(DeclarativeBase):
     # 带html标签的正文
     htmlcontent = Column('htmlcontent', Text, nullable=True)
 
+
+def db_connect():
+    """
+    Performs database connection using database settings from settings.py.
+    Returns sqlalchemy engine instance
+    """
+    return create_engine(URL(**DATABASE))
+
+
+def create_news_table(engine):
+    """"""
+    Base.metadata.create_all(engine)
+
+
+def _get_date():
+    return datetime.datetime.now()

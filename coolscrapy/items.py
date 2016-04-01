@@ -8,6 +8,14 @@
 import scrapy
 
 
+class Article(scrapy.Item):
+    title = scrapy.Field()
+    url = scrapy.Field()
+    body = scrapy.Field()
+    publish_time = scrapy.Field()
+    source_site = scrapy.Field()
+
+
 class NewsItem(scrapy.Item):
     """医药网新闻Item"""
     crawlkey = scrapy.Field()      # 关键字

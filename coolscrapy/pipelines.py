@@ -5,16 +5,29 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
-from scrapy.exceptions import DropItem
-from scrapy import Request
+import datetime
+
+from scrapy import log
 from scrapy import signals
 from scrapy.contrib.exporter import JsonItemExporter
-from scrapy import log
-import json
-import datetime
-from sqlalchemy.orm import sessionmaker
-from models import News, db_connect, create_news_table
 from scrapy.contrib.pipeline.images import ImagesPipeline
+from scrapy.exceptions import DropItem
+from sqlalchemy.orm import sessionmaker
+
+from coolscrapy.models import News, db_connect, create_news_table, Article
+import redis
+
+Redis = redis.StrictRedis(host='localhost',port=6379,db=0)
+# Redis = redis.Redis(host='localhost', port=6379, db=0, password=None)
+
+class DuplicatesPipeline(object):
+    """Item去重复"""
+    def process_item(self, item, spider):
+        if Redis.exists('url:%s' % item['url']):
+            raise DropItem("Duplicate item found: %s" % item)
+        else:
+            Redis.set('url:%s' % item['url'], 1)
+            return item
 
 
 class FilterWordsPipeline(object):
@@ -90,6 +103,38 @@ class JsonExportPipeline(object):
         return item
 
 
+# 存储到数据库
+class DataBasePipeline(object):
+    def __init__(self):
+        """
+        Initializes database connection and sessionmaker.
+        Creates deals table.
+        """
+        engine = db_connect()
+        create_news_table(engine)
+        # 初始化对象属性Session为可调用对象
+        self.Session = sessionmaker(bind=engine)
+        self.recent_links = None
+        self.nowtime = datetime.datetime.now()
+
+    def open_spider(self, spider):
+        """This method is called when the spider is opened."""
+        pass
+
+    def process_item(self, item, spider):
+        a = Article(title=item["title"].encode("utf-8"),
+                    url=item["url"],
+                    body=item["body"].encode("utf-8"),
+                    publish_time=item["publish_time"].encode("utf-8"),
+                    source_site=item["source_site"].encode("utf-8"))
+        session = self.Session()
+        session.add(a)
+        session.commit()
+
+    def close_spider(self,spider):
+        self.Session().close()
+
+
 class MyDatabasePipeline(object):
     """抓取数据保存到数据库管道"""
 
@@ -110,7 +155,7 @@ class MyDatabasePipeline(object):
         log.msg('open_spider[%s]....' % spider.name, level=log.INFO)
         session = self.Session()
         recent_news = session.query(News).filter(
-            News.crawlkey == spider.name ,
+            News.crawlkey == spider.name,
             self.nowtime - News.pubdate <= datetime.timedelta(days=30)).all()
         self.recent_links = [t.link for t in recent_news]
         print(self.recent_links)
@@ -138,9 +183,9 @@ class MyDatabasePipeline(object):
 
 class MyImagesPipeline(ImagesPipeline):
     """先安装：pip install Pillow"""
+
     def item_completed(self, results, item, info):
         image_paths = [x['path'] for ok, x in results if ok]
         if not image_paths:
             raise DropItem("Item contains no images")
         return item
-
