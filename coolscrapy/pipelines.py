@@ -16,9 +16,11 @@ from sqlalchemy.orm import sessionmaker
 
 from coolscrapy.models import News, db_connect, create_news_table, Article
 import redis
+import json
+from contextlib import contextmanager
 
-Redis = redis.StrictRedis(host='localhost',port=6379,db=0)
-# Redis = redis.Redis(host='localhost', port=6379, db=0, password=None)
+Redis = redis.StrictRedis(host='localhost', port=6379, db=0)
+
 
 class DuplicatesPipeline(object):
     """Item去重复"""
@@ -53,7 +55,7 @@ class JsonWriterPipeline(object):
 
     def __init__(self):
         pass
-        # self.file = open('items.json', 'wb')
+        self.file = open('items.json', 'wb')
 
     def open_spider(self, spider):
         """This method is called when the spider is opened."""
@@ -61,14 +63,14 @@ class JsonWriterPipeline(object):
 
     def process_item(self, item, spider):
         log.msg('process_item....', level=log.INFO)
-        # line = json.dumps(dict(item)) + "\n"
-        # self.file.write(line)
+        line = json.dumps(dict(item)) + "\n"
+        self.file.write(line)
         return item
 
     def close_spider(self, spider):
         """This method is called when the spider is closed."""
         log.msg('close_spider....', level=log.INFO)
-        # self.file.close()
+        self.file.close()
 
 
 class JsonExportPipeline(object):
@@ -103,40 +105,47 @@ class JsonExportPipeline(object):
         return item
 
 
-# 存储到数据库
-class DataBasePipeline(object):
+@contextmanager
+def session_scope(Session):
+    """Provide a transactional scope around a series of operations."""
+    session = Session()
+    try:
+        yield session
+        session.commit()
+    except:
+        session.rollback()
+        raise
+    finally:
+        session.close()
+
+
+class ArticleDataBasePipeline(object):
+    """保存文章到数据库"""
+
     def __init__(self):
-        """
-        Initializes database connection and sessionmaker.
-        Creates deals table.
-        """
         engine = db_connect()
         create_news_table(engine)
-        # 初始化对象属性Session为可调用对象
         self.Session = sessionmaker(bind=engine)
-        self.recent_links = None
-        self.nowtime = datetime.datetime.now()
 
     def open_spider(self, spider):
         """This method is called when the spider is opened."""
         pass
 
     def process_item(self, item, spider):
-        a = Article(title=item["title"].encode("utf-8"),
-                    url=item["url"],
+        a = Article(url=item["url"],
+                    title=item["title"].encode("utf-8"),
                     body=item["body"].encode("utf-8"),
                     publish_time=item["publish_time"].encode("utf-8"),
                     source_site=item["source_site"].encode("utf-8"))
-        session = self.Session()
-        session.add(a)
-        session.commit()
+        with session_scope(self.Session) as session:
+            session.add(a)
 
-    def close_spider(self,spider):
-        self.Session().close()
+    def close_spider(self, spider):
+        pass
 
 
-class MyDatabasePipeline(object):
-    """抓取数据保存到数据库管道"""
+class NewsDatabasePipeline(object):
+    """保存新闻到数据库"""
 
     def __init__(self):
         """
@@ -167,18 +176,14 @@ class MyDatabasePipeline(object):
         # 每次获取到Item调用这个callable，获得一个新的session
         log.msg('mysql->%s' % item['link'], log.INFO)
         if item['link'] not in self.recent_links:
-            session = self.Session()
-            news = News(**item)
-            try:
+            with session_scope(self.Session) as session:
+                news = News(**item)
                 session.add(news)
-                session.commit()
                 self.recent_links.append(item['link'])
-            except:
-                session.rollback()
-                raise
-            finally:
-                session.close()
         return item
+
+    def close_spider(self, spider):
+        pass
 
 
 class MyImagesPipeline(ImagesPipeline):

@@ -20,7 +20,7 @@ ITEM_PIPELINES = {
     'coolscrapy.pipelines.FilterWordsPipeline': 2,
     # 'coolscrapy.pipelines.JsonWriterPipeline': 3,
     # 'coolscrapy.pipelines.JsonExportPipeline': 4,
-    'coolscrapy.pipelines.MyDatabasePipeline': 5,
+    'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
     'coolscrapy.pipelines.MyImagesPipeline': 6,
 }
 DOWNLOADER_MIDDLEWARES = {
@@ -54,10 +54,13 @@ DATABASE = {'drivername': 'mysql',
             'query': {'charset': 'utf8'}}
 
 # 图片下载设置
-IMAGES_STORE = 'D:/work/zpics'
+IMAGES_STORE = '/tmp/'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 # 图片链接前缀
 URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
+
+# 扩展-定义爬取数量
+# CLOSESPIDER_ITEMCOUNT = 10
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'coolscrapy (+http://www.yourdomain.com)'

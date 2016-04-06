@@ -4,10 +4,12 @@
 Topic: 定义数据库模型实体
 Desc : 
 """
+from contextlib import contextmanager
 
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
+from sqlalchemy.orm import sessionmaker
 from coolscrapy.settings import DATABASE
 import datetime
 

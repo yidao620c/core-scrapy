@@ -50,3 +50,4 @@ class JokeItem(scrapy.Item):
     """糗事百科笑话Item"""
     content = scrapy.Field()
     image_urls = scrapy.Field()
+    images = scrapy.Field()

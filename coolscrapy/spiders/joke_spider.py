@@ -25,24 +25,27 @@ class JokerSpider(Spider):
     # '//li[contains(@class, "nav_pro_item")]/div/a/img/@src[1]')
     # '//*[contains(@class, "nav_pro_text")]/a/@href')
     name = 'joker'
-    allowed_domains = ['qiushibaike.com']
+    allowed_domains = ['xiaohua.com']
     start_urls = [
-        'http://www.qiushibaike.com',
+        'http://www.xiaohua.com/',
     ]
 
     def parse(self, response):
         # 抓取最新笑话
         items = []
         jokelist = []
-        for i in range(1, 11):
-            i_xpath = response.xpath('//div[@id="content-left"]/div[%d]' % (i,))
+        count = 1
+        for jk in response.xpath('//div[starts-with(@class, "joke-box")]/ul/li[@class="t2"]'):
+            if count > 10:
+                break
+            count += 1
             item = JokeItem()
-            item['content'] = '<br/>'.join(i_xpath.xpath(
-                'div[@class="content"]/text()').extract()).encode('utf-8')
+            title = jk.xpath('*[1]/text()').extract_first()
+            pic_content = jk.xpath('a[2]/img')
+            txt_content = jk.xpath('a[2]/p')
             img_src = None
-            if i_xpath.xpath('div[@class="thumb"]'):
-                item['image_urls'] = i_xpath.xpath(
-                    'div[@class="thumb"]/a[1]/img/@src').extract()
+            if pic_content:
+                item['image_urls'] = pic_content.xpath('@src').extract()
                 full_imgurl = item['image_urls'][0]
                 img_src = full_imgurl
                 filename = os.path.basename(item['image_urls'][0])
@@ -50,6 +53,8 @@ class JokerSpider(Spider):
                 with contextlib.closing(urllib2.urlopen(full_imgurl)) as f:
                     with open(os.path.join(IMAGES_STORE, filename), 'wb') as bfile:
                         bfile.write(f.read())
+            else:
+                item['content'] = '<br/>'.join(txt_content.xpath('text()').extract()).encode('utf-8')
             items.append(item)
             jokelist.append((item['content'], img_src))
         send_mail(jokelist)

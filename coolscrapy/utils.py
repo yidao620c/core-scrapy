@@ -95,18 +95,17 @@ def ltos(lst):
 
 
 def send_mail(jokes):
-    sender = 'xiongneng@gzhdi.com'
-    # receiver = ['xiongneng@gzhdi.com']
-    receiver = ['xiadan@gzhdi.com']
-    subject = '糗事百科最新笑话-祝你开心每一天'
+    sender = 'xiongneng@winhong.com'
+    receiver = ['xiadan@winhong.com']
+    subject = '每日笑话'
     smtpserver = 'smtp.263.net'
-    username = 'xiongneng@gzhdi.com'
+    username = 'xiongneng@winhong.com'
     password = '******'
     msg_root = MIMEMultipart('related')
     msg_root['Subject'] = subject
 
     msg_text_str = """
-        <h1>糗事百科，祝君笑口常开。</h1>
+        <h1>笑话网祝你笑口常开。</h1>
         <div class="listbox">
             <ul>
         """
@@ -122,7 +121,7 @@ def send_mail(jokes):
     msg_text = MIMEText(msg_text_str, 'html', 'utf-8')
     msg_root.attach(msg_text)
 
-    for idx, (_, img_url) in enumerate(jokes, 1):
+    for idx, (_, img_url) in enumerate(jokes, start=1):
         if img_url:
             with open(os.path.join(IMAGES_STORE, os.path.basename(img_url)), 'rb') as fp:
                 msg_image = MIMEImage(fp.read())
@@ -138,3 +137,6 @@ def send_mail(jokes):
 if __name__ == '__main__':
     print('<br/>'.join(['aaa', 'bbb']))
     print('呜呜呜仍无法发干撒发斯蒂芬,\nadfasdfsa')
+    jj = [(1, 2,)]
+    kk = enumerate(jj, 1)
+    print(kk)
