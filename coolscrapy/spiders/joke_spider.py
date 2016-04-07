@@ -12,9 +12,9 @@ import logging
 
 from scrapy import Spider
 
-from coolscrapy.utils import send_mail
-from coolscrapy.items import *
-from coolscrapy.settings import IMAGES_STORE
+from ..utils import send_mail
+from ..items import *
+from ..settings import IMAGES_STORE
 
 
 class JokerSpider(Spider):

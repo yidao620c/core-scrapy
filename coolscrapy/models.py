@@ -9,7 +9,7 @@ import datetime
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
-from coolscrapy.settings import DATABASE
+from .settings import DATABASE
 
 
 def db_connect():
@@ -36,16 +36,16 @@ class ArticleRule(Base):
     __tablename__ = 'article_rule'
 
     id = Column(Integer, primary_key=True)
-    name = Column(String)
-    allow_domains = Column(String)
-    start_urls = Column(String)
-    next_page = Column(String)
-    allow_url = Column(String)
-    extract_from = Column(String)
-    title_xpath = Column(String)
-    body_xpath = Column(String)
-    publish_time_xpath = Column(String)
-    source_site_xpath = Column(String)
+    name = Column(String(30))
+    allow_domains = Column(String(100))
+    start_urls = Column(String(100))
+    next_page = Column(String(100))
+    allow_url = Column(String(200))
+    extract_from = Column(String(200))
+    title_xpath = Column(String(100))
+    body_xpath = Column(Text)
+    publish_time_xpath = Column(String(100))
+    source_site_xpath = Column(String(30))
     enable = Column(Integer)
 
 
@@ -54,11 +54,11 @@ class Article(Base):
     __tablename__ = 'articles'
 
     id = Column(Integer, primary_key=True)
-    title = Column(String)
-    url = Column(String)
-    body = Column(String)
-    publish_time = Column(String)
-    source_site = Column(String)
+    title = Column(String(30))
+    url = Column(String(100))
+    body = Column(Text)
+    publish_time = Column(String(30))
+    source_site = Column(String(30))
 
 
 class News(Base):

@@ -4,7 +4,7 @@
 Topic: 爬取虎嗅网首页
 Desc : 
 """
-from coolscrapy.items import HuxiuItem
+from ..items import HuxiuItem
 import scrapy
 
 

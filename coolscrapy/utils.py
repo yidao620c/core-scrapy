@@ -11,7 +11,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 import os.path
-from coolscrapy.settings import IMAGES_STORE
+from .settings import IMAGES_STORE
 
 
 def filter_tags(htmlstr):
@@ -150,8 +150,8 @@ def session_scope(Session):
         session.close()
 
 
-from coolscrapy.models import ArticleRule
-from coolscrapy.models import db_connect, create_news_table
+from .models import ArticleRule
+from .models import db_connect, create_news_table
 from sqlalchemy.orm import sessionmaker
 
 

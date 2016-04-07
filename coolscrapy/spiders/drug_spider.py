@@ -4,7 +4,7 @@
 # Topic: 网络爬虫
 # Desc :
 # """
-from coolscrapy.items import *
+from ..items import *
 from scrapy.spiders import Spider
 from scrapy.spiders import XMLFeedSpider, CrawlSpider, Rule
 from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
@@ -14,7 +14,7 @@ from scrapy.loader import ItemLoader
 from scrapy import Request
 from scrapy.exceptions import DropItem
 from urlparse import urljoin
-from coolscrapy.utils import *
+from ..utils import *
 from datetime import datetime
 import coolscrapy.settings as setting
 import re
