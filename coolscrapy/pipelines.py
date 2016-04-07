@@ -19,7 +19,7 @@ from scrapy.exporters import JsonItemExporter
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy.exceptions import DropItem
 from sqlalchemy.orm import sessionmaker
-from .models import News, db_connect, create_news_table, Article
+from coolscrapy.models import News, db_connect, create_news_table, Article
 
 Redis = redis.StrictRedis(host='localhost', port=6379, db=0)
 

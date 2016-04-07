@@ -4,7 +4,7 @@
 Topic: 爬取XML订阅的蜘蛛
 Desc : 
 """
-from ..items import BlogItem
+from coolscrapy.items import BlogItem
 import scrapy
 from scrapy.spiders import XMLFeedSpider
 

@@ -8,7 +8,7 @@ Desc :
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
-from ..items import Article
+from coolscrapy.items import Article
 
 
 class ArticleSpider(CrawlSpider):

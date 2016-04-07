@@ -14,7 +14,7 @@ from scrapy.loader import ItemLoader
 from scrapy import Request
 from scrapy.exceptions import DropItem
 from urlparse import urljoin
-from ..utils import *
+from coolscrapy.utils import *
 from datetime import datetime
 import coolscrapy.settings as setting
 import re

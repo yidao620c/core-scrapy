@@ -4,7 +4,7 @@
 Topic: 爬取链接的蜘蛛
 Desc : 
 """
-from ..items import HuxiuItem
+from coolscrapy.items import HuxiuItem
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
