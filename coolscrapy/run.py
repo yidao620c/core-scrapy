@@ -6,7 +6,7 @@ Desc :
 """
 
 import logging
-from spiders.article_spider import DeepSpider
+from spiders.article_spider import ArticleSpider
 from twisted.internet import reactor
 from scrapy import signals
 from scrapy.crawler import CrawlerRunner
@@ -28,7 +28,7 @@ rules = db.query(ArticleRule).filter(ArticleRule.enable == 1)
 runner = CrawlerRunner(settings)
 
 for rule in rules:
-    spider = DeepSpider(rule)  # instantiate every spider using rule
+    spider = ArticleSpider(rule)  # instantiate every spider using rule
     # stop reactor when spider closes
     # runner.signals.connect(spider_closing, signal=signals.spider_closed)
     runner.crawl(spider)

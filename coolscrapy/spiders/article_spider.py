@@ -11,8 +11,8 @@ from scrapy.linkextractors import LinkExtractor
 from coolscrapy.items import Article
 
 
-class DeepSpider(CrawlSpider):
-    name = "Deep"
+class ArticleSpider(CrawlSpider):
+    name = "article"
 
     def __init__(self, rule):
         self.rule = rule
@@ -29,7 +29,7 @@ class DeepSpider(CrawlSpider):
             restrict_xpaths=[rule.extract_from]),
             callback='parse_item'))
         self.rules = tuple(rule_list)
-        super(DeepSpider, self).__init__()
+        super(ArticleSpider, self).__init__()
 
     def parse_item(self, response):
         self.log('Hi, this is an article page! %s' % response.url)
@@ -46,7 +46,6 @@ class DeepSpider(CrawlSpider):
         publish_time = response.xpath(self.rule.publish_time_xpath).extract()
         article["publish_time"] = publish_time[0] if publish_time else ""
 
-        source_site = response.xpath(self.rule.source_site_xpath).extract()
-        article["source_site"] = source_site[0] if source_site else ""
+        article["source_site"] = self.rule.source_site_xpath
 
         return article

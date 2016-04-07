@@ -133,8 +133,8 @@ class ArticleDataBasePipeline(object):
     def process_item(self, item, spider):
         a = Article(url=item["url"],
                     title=item["title"].encode("utf-8"),
-                    body=item["body"].encode("utf-8"),
                     publish_time=item["publish_time"].encode("utf-8"),
+                    body=item["body"].encode("utf-8"),
                     source_site=item["source_site"].encode("utf-8"))
         with session_scope(self.Session) as session:
             session.add(a)

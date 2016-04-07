@@ -5,12 +5,10 @@ Topic: 定义数据库模型实体
 Desc : 
 """
 import datetime
-from contextlib import contextmanager
 
 from sqlalchemy.engine.url import URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
-from sqlalchemy.orm import sessionmaker
 from coolscrapy.settings import DATABASE
 
 
@@ -31,24 +29,6 @@ def _get_date():
     return datetime.datetime.now()
 
 Base = declarative_base()
-
-
-class Rule(Base):
-    __tablename__ = 'rules'
-
-    # 表的结构:
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    allow_domains = Column(String)
-    start_urls = Column(String)
-    next_page = Column(String)
-    allow_url = Column(String)
-    extract_from = Column(String)
-    title_xpath = Column(String)
-    body_xpath = Column(String)
-    publish_time_xpath = Column(String)
-    source_site_xpath = Column(String)
-    enable = Column(Integer)
 
 
 class ArticleRule(Base):

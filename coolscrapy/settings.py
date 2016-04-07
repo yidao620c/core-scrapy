@@ -20,7 +20,7 @@ ITEM_PIPELINES = {
     'coolscrapy.pipelines.FilterWordsPipeline': 2,
     # 'coolscrapy.pipelines.JsonWriterPipeline': 3,
     # 'coolscrapy.pipelines.JsonExportPipeline': 4,
-    #'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
+    'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
     #'coolscrapy.pipelines.MyImagesPipeline': 6,
 }
 DOWNLOADER_MIDDLEWARES = {
@@ -50,7 +50,7 @@ DATABASE = {'drivername': 'mysql',
             'port': '3306',
             'username': 'root',
             'password': 'mysql',
-            'database': 'weiqiye',
+            'database': 'spider',
             'query': {'charset': 'utf8'}}
 
 # 图片下载设置

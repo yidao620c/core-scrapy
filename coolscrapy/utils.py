@@ -6,6 +6,7 @@ Desc :
 """
 import re
 import smtplib
+from contextlib import contextmanager
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -53,7 +54,7 @@ def replace_charentity(htmlstr):
                      'lt': '<', '60': '<',
                      'gt': '>', '62': '>',
                      'amp': '&', '38': '&',
-                     'quot': '"', '34': '"', }
+                     'quot': '"', '34': '"',}
 
     re_charentity = re.compile(r'&#?(?P<name>\w+);')
     sz = re_charentity.search(htmlstr)
@@ -73,6 +74,7 @@ def replace_charentity(htmlstr):
 pat1 = re.compile(r'<div class="hzh_botleft">(?:.|\n)*?</div>')
 pat2 = re.compile(r'<script (?:.|\n)*?</script>')
 pat3 = re.compile(r'<a href="javascript:"(?:.|\n)*?</a>')
+
 
 def clean_html(p_str):
     """html标签清理"""
@@ -96,7 +98,7 @@ def ltos(lst):
 
 def send_mail(jokes):
     sender = 'xiongneng@winhong.com'
-    receiver = ['xiadan@winhong.com','xiongneng@winhong.com']
+    receiver = ['xiadan@winhong.com', 'xiongneng@winhong.com']
     subject = '每日笑话'
     smtpserver = 'smtp.263.net'
     username = 'xiongneng@winhong.com'
@@ -134,9 +136,60 @@ def send_mail(jokes):
     smtp.quit()
 
 
+@contextmanager
+def session_scope(Session):
+    """Provide a transactional scope around a series of operations."""
+    session = Session()
+    try:
+        yield session
+        session.commit()
+    except:
+        session.rollback()
+        raise
+    finally:
+        session.close()
+
+
+from coolscrapy.models import ArticleRule
+from coolscrapy.models import db_connect, create_news_table
+from sqlalchemy.orm import sessionmaker
+
+
+def init_rule():
+    engine = db_connect()
+    create_news_table(engine)
+    Session = sessionmaker(bind=engine)
+    with session_scope(Session) as session:
+        artile_rule1 = ArticleRule(
+            name='文章Rule-虎嗅网',
+            allow_domains='huxiu.com',
+            start_urls='http://www.huxiu.com/',
+            next_page='',
+            allow_url='/article/\d+/\d+\.html',
+            extract_from='//div[@class="mod-info-flow"]',
+            title_xpath='//div[@class="article-wrap"]/h1/text()',
+            body_xpath='//div[@id="article_content"]/p/text()',
+            publish_time_xpath='//span[@class="article-time"]/text()',
+            source_site_xpath='虎嗅网',
+            enable=1
+        )
+        artile_rule2 = ArticleRule(
+            name='文章Rule-开源中国',
+            allow_domains='oschina.net',
+            start_urls='http://www.oschina.net/',
+            next_page='',
+            allow_url='',
+            extract_from='//div[@id="IndustryNews"]',
+            title_xpath='//h1[@class="OSCTitle"]/text()',
+            publish_time_xpath='//div[@class="PubDate"]/text()',
+            body_xpath='//div[starts-with(@class, "Body")]/p/text()',
+            source_site_xpath='开源中国',
+            enable=1
+        )
+        session.add(artile_rule1)
+        session.add(artile_rule2)
+    pass
+
+
 if __name__ == '__main__':
-    print('<br/>'.join(['aaa', 'bbb']))
-    print('呜呜呜仍无法发干撒发斯蒂芬,\nadfasdfsa')
-    jj = [(1, 2,)]
-    kk = enumerate(jj, 1)
-    print(kk)
+    init_rule()

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 """
-Topic: 糗事百科最新笑话
+Topic: 抓取最新笑话
 Desc : 
 """
 
@@ -36,7 +36,7 @@ class JokerSpider(Spider):
         jokelist = []
         count = 1
         for jk in response.xpath('//div[starts-with(@class, "joke-box")]/ul/li[@class="t2"]'):
-            if count > 10:
+            if count > 6:
                 break
             count += 1
             item = JokeItem()
