@@ -40,7 +40,7 @@ class JokerSpider(Spider):
                 break
             count += 1
             item = JokeItem()
-            title = jk.xpath('*[1]/text()').extract_first()
+            title = jk.xpath('*[1]/text()').extract_first().encode('utf-8')
             pic_content = jk.xpath('a[2]/img')
             txt_content = jk.xpath('a[2]/p')
             img_src = None
@@ -56,7 +56,10 @@ class JokerSpider(Spider):
                 item['content'] = '<h3>%s</h3>' % title
             else:
                 content = '<br/>'.join(txt_content.xpath('text()').extract()).encode('utf-8')
-                item['content'] = '<h3>%s</h3><br/>%s' % (title, content)
+                strong_txt = txt_content.xpath('strong/text()').extract_first()
+                if strong_txt:
+                    content = '<strong>%s</strong><br/>' % strong_txt.encode('utf-8') + content
+                item['content'] = '<h3>%s</h3>%s' % (title, content)
             items.append(item)
             jokelist.append((item['content'], img_src))
         send_mail(jokelist)
