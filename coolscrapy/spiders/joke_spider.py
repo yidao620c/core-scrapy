@@ -8,9 +8,9 @@ Desc :
 import urllib2
 import os.path
 import contextlib
+import logging
 
 from scrapy import Spider
-from scrapy import log
 
 from coolscrapy.utils import send_mail
 from coolscrapy.items import *
@@ -49,13 +49,14 @@ class JokerSpider(Spider):
                 full_imgurl = item['image_urls'][0]
                 img_src = full_imgurl
                 filename = os.path.basename(item['image_urls'][0])
-                log.msg('-------------' + full_imgurl, log.INFO)
+                self.log('-------------' + full_imgurl, logging.INFO)
                 with contextlib.closing(urllib2.urlopen(full_imgurl)) as f:
                     with open(os.path.join(IMAGES_STORE, filename), 'wb') as bfile:
                         bfile.write(f.read())
-                item['content'] = ''
+                item['content'] = '<h3>%s</h3>' % title
             else:
-                item['content'] = '<br/>'.join(txt_content.xpath('text()').extract()).encode('utf-8')
+                content = '<br/>'.join(txt_content.xpath('text()').extract()).encode('utf-8')
+                item['content'] = '<h3>%s</h3><br/>%s' % (title, content)
             items.append(item)
             jokelist.append((item['content'], img_src))
         send_mail(jokelist)

@@ -5,7 +5,7 @@
 # Desc :
 # """
 from coolscrapy.items import *
-from scrapy.spider import Spider
+from scrapy.spiders import Spider
 from scrapy.spiders import XMLFeedSpider, CrawlSpider, Rule
 from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
 from scrapy.linkextractors import LinkExtractor

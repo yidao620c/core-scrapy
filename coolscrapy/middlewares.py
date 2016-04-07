@@ -5,12 +5,10 @@ Topic: URL去重复中间件
 Desc : 
 """
 import redis
+import random
 from scrapy import signals, log
 from scrapy.http import Request
-
-
-import random
-from scrapy.contrib.downloadermiddleware.useragent import UserAgentMiddleware
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 
 
 class RotateUserAgentMiddleware(UserAgentMiddleware):

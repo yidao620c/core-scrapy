@@ -6,18 +6,17 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 import datetime
-
-from scrapy import log
-from scrapy import signals
-from scrapy.contrib.exporter import JsonItemExporter
-from scrapy.contrib.pipeline.images import ImagesPipeline
-from scrapy.exceptions import DropItem
-from sqlalchemy.orm import sessionmaker
-
-from coolscrapy.models import News, db_connect, create_news_table, Article
 import redis
 import json
 from contextlib import contextmanager
+
+from scrapy import log
+from scrapy import signals
+from scrapy.exporters import JsonItemExporter
+from scrapy.pipelines.images import ImagesPipeline
+from scrapy.exceptions import DropItem
+from sqlalchemy.orm import sessionmaker
+from coolscrapy.models import News, db_connect, create_news_table, Article
 
 Redis = redis.StrictRedis(host='localhost', port=6379, db=0)
 

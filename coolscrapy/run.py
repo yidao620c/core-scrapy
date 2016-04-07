@@ -5,16 +5,15 @@ Topic: sample
 Desc : 
 """
 
-from coolscrapy.models import ArticleRule
-from spiders.article_spider import DeepSpider
 import logging
-
+from spiders.article_spider import DeepSpider
 from twisted.internet import reactor
 from scrapy import signals
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging, logger
 from scrapy.utils.project import get_project_settings
 from coolscrapy.models import db_connect
+from coolscrapy.models import ArticleRule
 
 
 def spider_closing(spider):
