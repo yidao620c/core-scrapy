@@ -53,6 +53,7 @@ class JokerSpider(Spider):
                 with contextlib.closing(urllib2.urlopen(full_imgurl)) as f:
                     with open(os.path.join(IMAGES_STORE, filename), 'wb') as bfile:
                         bfile.write(f.read())
+                item['content'] = ''
             else:
                 item['content'] = '<br/>'.join(txt_content.xpath('text()').extract()).encode('utf-8')
             items.append(item)

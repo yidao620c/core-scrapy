@@ -16,12 +16,12 @@ SPIDER_MODULES = ['coolscrapy.spiders']
 NEWSPIDER_MODULE = 'coolscrapy.spiders'
 
 ITEM_PIPELINES = {
-    'coolscrapy.pipelines.DuplicatesPipeline': 1,
+    #'coolscrapy.pipelines.DuplicatesPipeline': 1,
     'coolscrapy.pipelines.FilterWordsPipeline': 2,
     # 'coolscrapy.pipelines.JsonWriterPipeline': 3,
     # 'coolscrapy.pipelines.JsonExportPipeline': 4,
-    'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
-    'coolscrapy.pipelines.MyImagesPipeline': 6,
+    #'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
+    #'coolscrapy.pipelines.MyImagesPipeline': 6,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
@@ -41,7 +41,7 @@ COOKIES_ENABLES = False
 
 LOG_LEVEL = logging.INFO
 LOG_STDOUT = True
-LOG_FILE = "log/spider.log"
+LOG_FILE = "/tmp/spider.log"
 
 # windows install http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
 # linux pip install MySQL-python

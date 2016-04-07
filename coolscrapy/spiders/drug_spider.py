@@ -6,13 +6,12 @@
 # """
 from coolscrapy.items import *
 from scrapy.spider import Spider
-from scrapy.contrib.spiders import XMLFeedSpider, CrawlSpider, Rule
-from scrapy.contrib.linkextractors.lxmlhtml import LxmlLinkExtractor
-from scrapy.contrib.linkextractors import LinkExtractor
+from scrapy.spiders import XMLFeedSpider, CrawlSpider, Rule
+from scrapy.linkextractors.lxmlhtml import LxmlLinkExtractor
+from scrapy.linkextractors import LinkExtractor
 from scrapy.selector import Selector, HtmlXPathSelector
-from scrapy.contrib.loader import ItemLoader
+from scrapy.loader import ItemLoader
 from scrapy import Request
-from scrapy import log
 from scrapy.exceptions import DropItem
 from urlparse import urljoin
 from coolscrapy.utils import *
@@ -23,6 +22,7 @@ import uuid
 import urllib2
 import contextlib
 import os
+import logging
 
 
 class CnyywXMLFeedSpider(CrawlSpider):
@@ -39,19 +39,19 @@ class CnyywXMLFeedSpider(CrawlSpider):
             xitem = NewsItem()
             xitem['crawlkey'] = self.name
             xitem['title'] = ltos(i_xpath.xpath('title/text()').extract())
-            self.log('title=%s' % xitem['title'].encode('utf-8'), log.INFO)
+            self.log('title=%s' % xitem['title'].encode('utf-8'), logging.INFO)
             xitem['link'] = ltos(i_xpath.xpath('link/text()').extract())
-            self.log('link=%s' % xitem['link'], log.INFO)
+            self.log('link=%s' % xitem['link'], logging.INFO)
             pubdate_temp = ltos(i_xpath.xpath('pubDate/text()').extract())
-            self.log('pubdate=%s' % pubdate_temp, log.INFO)
+            self.log('pubdate=%s' % pubdate_temp, logging.INFO)
             xitem['pubdate'] = datetime.strptime(pubdate_temp, '%Y-%m-%d %H:%M:%S')
-            self.log('((((^_^))))'.center(50, '-'), log.INFO)
+            self.log('((((^_^))))'.center(50, '-'), logging.INFO)
             yield Request(url=xitem['link'], meta={'item': xitem}, callback=self.parse_item_page)
 
     def parse_item_page(self, response):
         page_item = response.meta['item']
         try:
-            self.log('-------------------> link_page url=%s' % page_item['link'], log.INFO)
+            self.log('-------------------> link_page url=%s' % page_item['link'], logging.INFO)
             page_item['category'] = ltos(response.xpath(
                 '//div[@class="pos"]/a[last()]/text()').extract())
             page_item['location'] = ltos(response.xpath(
@@ -68,7 +68,7 @@ class CnyywXMLFeedSpider(CrawlSpider):
             page_item['htmlcontent'] = page_item['content']
             return page_item
         except:
-            self.log('ERROR-----%s' % response.url, log.ERROR)
+            self.log('ERROR-----%s' % response.url, logging.ERROR)
             return None
 
 
@@ -80,19 +80,19 @@ class Drug39Spider(Spider):
     ]
 
     def parse(self, response):
-        self.log('-------------------> link_list url=%s' % response.url, log.INFO)
+        self.log('-------------------> link_list url=%s' % response.url, logging.INFO)
         links = response.xpath('//div[starts-with(@class, "listbox")]/ul/li')
         for link in links:
             url = link.xpath('span[1]/a/@href').extract()[0]
             date_str = link.xpath('span[2]/text()').extract()[0]
             date_str = date_str.split(' ')[1] + ':00'
-            self.log('+++++++++++' + date_str, log.INFO)
+            self.log('+++++++++++' + date_str, logging.INFO)
             yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
 
     def parse_item_page(self, response):
         dstr = response.meta['ds']
         try:
-            self.log('-------------------> link_page url=%s' % response.url, log.INFO)
+            self.log('-------------------> link_page url=%s' % response.url, logging.INFO)
             item = NewsItem()
             item['crawlkey'] = self.name
             item['category'] = ltos(response.xpath(
@@ -119,17 +119,17 @@ class Drug39Spider(Spider):
                 suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
                 uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
                 uuids.append(uuid_name)
-                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, logging.INFO)
                 with contextlib.closing(urllib2.urlopen(full_path)) as f:
                     with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
                         bfile.write(f.read())
             for indx, val in enumerate(uuids):
                 htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
             item['htmlcontent'] = htmlcontent
-            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
+            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), logging.INFO)
             return item
         except:
-            self.log('ERROR-----%s' % response.url, log.ERROR)
+            self.log('ERROR-----%s' % response.url, logging.ERROR)
             return None
 
 
@@ -156,7 +156,7 @@ class PharmnetCrawlSpider(CrawlSpider):
         if '/hyyw/' not in response.url:
             yield self.parse_page(response)
         else:
-            self.log('-------------------> link_list url=%s' % response.url, log.INFO)
+            self.log('-------------------> link_list url=%s' % response.url, logging.INFO)
             links = response.xpath('//div[@class="list"]/ul/li/p/a')
             for link in links:
                 url = link.xpath('@href').extract()[0]
@@ -164,7 +164,7 @@ class PharmnetCrawlSpider(CrawlSpider):
 
     def parse_page(self, response):
         try:
-            self.log('-------------------> link_page url=%s' % response.url, log.INFO)
+            self.log('-------------------> link_page url=%s' % response.url, logging.INFO)
             item = NewsItem()
             item['crawlkey'] = self.name
             item['category'] = ltos(response.xpath(
@@ -189,17 +189,17 @@ class PharmnetCrawlSpider(CrawlSpider):
                 suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
                 uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
                 uuids.append(uuid_name)
-                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, logging.INFO)
                 with contextlib.closing(urllib2.urlopen(full_path)) as f:
                     with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
                         bfile.write(f.read())
             for indx, val in enumerate(uuids):
                 htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
             item['htmlcontent'] = htmlcontent
-            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
+            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), logging.INFO)
             return item
         except:
-            self.log('ERROR-----%s' % response.url, log.ERROR)
+            self.log('ERROR-----%s' % response.url, logging.ERROR)
             raise DropItem('DropItem-----%s' % response.url)
 
 
@@ -212,20 +212,20 @@ class HaoyaoCrawlSpider(Spider):
     ]
 
     def parse(self, response):
-        self.log('-------------------> link_list url=%s' % response.url, log.INFO)
+        self.log('-------------------> link_list url=%s' % response.url, logging.INFO)
         links = response.xpath('//div[@class="list"]')
         for link in links:
             url = link.xpath('div[1]/a/@href').extract()[0]
             url = 'http://www.haoyao.net/news/' + url.split('/')[-1]
-            self.log('+++++++++++url=' + url, log.INFO)
+            self.log('+++++++++++url=' + url, logging.INFO)
             date_str = (link.xpath('div[2]/text()').extract()[0]).strip() + ' 00:00:00'
-            self.log('+++++++++++date_str=' + date_str, log.INFO)
+            self.log('+++++++++++date_str=' + date_str, logging.INFO)
             yield Request(url=url, meta={'ds': date_str}, callback=self.parse_item_page)
 
     def parse_item_page(self, response):
         dstr = response.meta['ds']
         try:
-            self.log('-------------------> link_page url=%s' % response.url, log.INFO)
+            self.log('-------------------> link_page url=%s' % response.url, logging.INFO)
             item = NewsItem()
             item['crawlkey'] = self.name
             item['category'] = '医药新闻'
@@ -248,17 +248,17 @@ class HaoyaoCrawlSpider(Spider):
                 suffix_name = '.' + os.path.basename(full_path).split('.')[-1]
                 uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
                 uuids.append(uuid_name)
-                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, log.INFO)
+                self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, logging.INFO)
                 with contextlib.closing(urllib2.urlopen(full_path)) as f:
                     with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
                         bfile.write(f.read())
             for indx, val in enumerate(uuids):
                 htmlcontent = pat_img.sub(Nth(indx + 1, setting.URL_PREFIX + val), htmlcontent)
             item['htmlcontent'] = htmlcontent
-            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), log.INFO)
+            self.log('+++++++++title=%s+++++++++' % item['title'].encode('utf-8'), logging.INFO)
             return item
         except:
-            self.log('ERROR-----%s' % response.url, log.ERROR)
+            self.log('ERROR-----%s' % response.url, logging.ERROR)
             return None
 
 

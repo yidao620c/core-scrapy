@@ -96,7 +96,7 @@ def ltos(lst):
 
 def send_mail(jokes):
     sender = 'xiongneng@winhong.com'
-    receiver = ['xiadan@winhong.com']
+    receiver = ['xiadan@winhong.com','xiongneng@winhong.com']
     subject = '每日笑话'
     smtpserver = 'smtp.263.net'
     username = 'xiongneng@winhong.com'

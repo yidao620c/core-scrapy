@@ -37,7 +37,7 @@ class FilterWordsPipeline(object):
     description"""
 
     # put all words in lowercase
-    words_to_filter = ['politics', 'religion', 'pilgrim']
+    words_to_filter = ['pilgrim']
 
     def process_item(self, item, spider):
         for word in self.words_to_filter:
