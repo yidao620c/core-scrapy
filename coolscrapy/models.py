@@ -36,7 +36,7 @@ class Rule(Base):
 
 class ArticleRule(Base):
     """自定义文章爬取规则"""
-    __tablename__ = 'rules'
+    __tablename__ = 'article_rule'
 
     id = Column(Integer, primary_key=True)
     name = Column(String)

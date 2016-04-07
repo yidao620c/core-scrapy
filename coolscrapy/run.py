@@ -5,7 +5,7 @@ Topic: sample
 Desc : 
 """
 
-from coolscrapy.models import Rule
+from coolscrapy.models import ArticleRule
 from spiders.article_spider import DeepSpider
 import logging
 
@@ -25,7 +25,7 @@ configure_logging()
 settings = get_project_settings()
 
 db = db_connect()
-rules = db.query(Rule).filter(Rule.enable == 1)
+rules = db.query(ArticleRule).filter(ArticleRule.enable == 1)
 runner = CrawlerRunner(settings)
 
 for rule in rules:
