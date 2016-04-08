@@ -182,7 +182,7 @@ def init_rule():
             extract_from='//div[@id="IndustryNews"]',
             title_xpath='//h1[@class="OSCTitle"]/text()',
             publish_time_xpath='//div[@class="PubDate"]/text()',
-            body_xpath='//div[starts-with(@class, "Body")]/p//text()',
+            body_xpath='//div[starts-with(@class, "Body")]/p[position()>1]//text()',
             source_site='开源中国',
             enable=1
         )
