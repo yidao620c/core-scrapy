@@ -16,12 +16,12 @@ SPIDER_MODULES = ['coolscrapy.spiders']
 NEWSPIDER_MODULE = 'coolscrapy.spiders'
 
 ITEM_PIPELINES = {
-    #'coolscrapy.pipelines.DuplicatesPipeline': 1,
+    # 'coolscrapy.pipelines.DuplicatesPipeline': 1,
     'coolscrapy.pipelines.FilterWordsPipeline': 2,
     # 'coolscrapy.pipelines.JsonWriterPipeline': 3,
     # 'coolscrapy.pipelines.JsonExportPipeline': 4,
     'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
-    #'coolscrapy.pipelines.MyImagesPipeline': 6,
+    # 'coolscrapy.pipelines.MyImagesPipeline': 6,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
@@ -58,6 +58,9 @@ IMAGES_STORE = '/tmp/'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 # 图片链接前缀
 URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
+
+# 运行所有爬虫
+# COMMANDS_MODULE = 'coolscrapy.commands'
 
 # 扩展-定义爬取数量
 # CLOSESPIDER_ITEMCOUNT = 10
@@ -130,4 +133,3 @@ URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
 # HTTPCACHE_DIR='httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES=[]
 # HTTPCACHE_STORAGE='scrapy.extensions.httpcache.FilesystemCacheStorage'
-
