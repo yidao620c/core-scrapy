@@ -55,7 +55,7 @@ class ArticleRule(Base):
     # 发布时间xpath
     publish_time_xpath = Column(String(30))
     # 文章来源
-    source_site_xpath = Column(String(30))
+    source_site = Column(String(30))
     # 规则是否生效
     enable = Column(Integer)
 

@@ -5,6 +5,7 @@ Topic: 一些工具类
 Desc : 
 """
 import re
+import sys
 import smtplib
 from contextlib import contextmanager
 from email.mime.multipart import MIMEMultipart
@@ -100,6 +101,7 @@ def ltos(lst):
 
 
 def send_mail(jokes):
+    """发送电子邮件"""
     sender = 'xiongneng@winhong.com'
     receiver = ['xiadan@winhong.com', 'xiongneng@winhong.com']
     subject = '每日笑话'
@@ -159,7 +161,7 @@ def init_rule():
     Session = sessionmaker(bind=engine)
     with session_scope(Session) as session:
         artile_rule1 = ArticleRule(
-            name='文章Rule-虎嗅网',
+            name='huxiu',
             allow_domains='huxiu.com',
             start_urls='http://www.huxiu.com/',
             next_page='',
@@ -168,11 +170,11 @@ def init_rule():
             title_xpath='//div[@class="article-wrap"]/h1/text()',
             body_xpath='//div[@id="article_content"]/p//text()',
             publish_time_xpath='//span[@class="article-time"]/text()',
-            source_site_xpath='虎嗅网',
+            source_site='虎嗅网',
             enable=1
         )
         artile_rule2 = ArticleRule(
-            name='文章Rule-开源中国',
+            name='osc',
             allow_domains='oschina.net',
             start_urls='http://www.oschina.net/',
             next_page='',
@@ -181,11 +183,36 @@ def init_rule():
             title_xpath='//h1[@class="OSCTitle"]/text()',
             publish_time_xpath='//div[@class="PubDate"]/text()',
             body_xpath='//div[starts-with(@class, "Body")]/p//text()',
-            source_site_xpath='开源中国',
+            source_site='开源中国',
             enable=1
         )
         session.add(artile_rule1)
         session.add(artile_rule2)
+
+
+def parse_text(extract_texts, rule_name, attr_name):
+    """xpath的提取方式
+    @param extract_texts: 被处理的文本数组
+    @param rule_name: 规则名称
+    @param attr_name: 属性名
+    """
+    custom_func = globals()["%s_%s" % (rule_name, attr_name)]
+    if custom_func:
+        return custom_func(extract_texts)
+    return '\n'.join(extract_texts).strip() if extract_texts else ""
+
+
+pat4 = re.compile(r'\d{4}年\d{2}月\d{2}日')
+
+
+def osc_publish_time(extract_texts):
+    """发布时间的提取方式
+    @param extract_texts: 被处理的文本数组
+    """
+    if extract_texts:
+        res = ''.join(extract_texts).strip()
+        return re.search(pat4, res).group()
+    return ""
 
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ Topic: sample
 Desc : 
 """
 
-import scrapy
+from coolscrapy.utils import parse_text
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from coolscrapy.items import Article
@@ -38,13 +38,13 @@ class ArticleSpider(CrawlSpider):
         article["url"] = response.url
 
         title = response.xpath(self.rule.title_xpath).extract()
-        article["title"] = title[0] if title else ""
+        article["title"] = parse_text(title, self.rule.name, 'title')
 
         body = response.xpath(self.rule.body_xpath).extract()
-        article["body"] = '\n'.join(body) if body else ""
+        article["body"] = parse_text(body, self.rule.name, 'body')
 
         publish_time = response.xpath(self.rule.publish_time_xpath).extract()
-        article["publish_time"] = publish_time[0] if publish_time else ""
+        article["publish_time"] = parse_text(publish_time, self.rule.name, 'publish_time')
 
         article["source_site"] = self.rule.source_site_xpath
 
