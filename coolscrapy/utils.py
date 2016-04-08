@@ -166,7 +166,7 @@ def init_rule():
             allow_url='/article/\d+/\d+\.html',
             extract_from='//div[@class="mod-info-flow"]',
             title_xpath='//div[@class="article-wrap"]/h1/text()',
-            body_xpath='//div[@id="article_content"]/p/text()',
+            body_xpath='//div[@id="article_content"]/p/*/text()',
             publish_time_xpath='//span[@class="article-time"]/text()',
             source_site_xpath='虎嗅网',
             enable=1

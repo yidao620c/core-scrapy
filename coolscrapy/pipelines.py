@@ -11,9 +11,9 @@
 import datetime
 import redis
 import json
+import logging
 from contextlib import contextmanager
 
-from scrapy import log
 from scrapy import signals
 from scrapy.exporters import JsonItemExporter
 from scrapy.pipelines.images import ImagesPipeline
@@ -22,7 +22,7 @@ from sqlalchemy.orm import sessionmaker
 from coolscrapy.models import News, db_connect, create_news_table, Article
 
 Redis = redis.StrictRedis(host='localhost', port=6379, db=0)
-
+_log = logging.getLogger(__name__)
 
 class DuplicatesPipeline(object):
     """Item去重复"""
@@ -61,48 +61,48 @@ class JsonWriterPipeline(object):
 
     def open_spider(self, spider):
         """This method is called when the spider is opened."""
-        log.msg('open_spider....', level=log.INFO)
+        _log.info('open_spider....')
 
     def process_item(self, item, spider):
-        log.msg('process_item....', level=log.INFO)
+        _log.info('process_item....')
         line = json.dumps(dict(item)) + "\n"
         self.file.write(line)
         return item
 
     def close_spider(self, spider):
         """This method is called when the spider is closed."""
-        log.msg('close_spider....', level=log.INFO)
+        _log.info('close_spider....')
         self.file.close()
 
 
 class JsonExportPipeline(object):
     def __init__(self):
-        log.msg('JsonExportPipeline.init....', level=log.INFO)
+        _log.info('JsonExportPipeline.init....')
         self.files = {}
 
     @classmethod
     def from_crawler(cls, crawler):
-        log.msg('JsonExportPipeline.from_crawler....', level=log.INFO)
+        _log.info('JsonExportPipeline.from_crawler....')
         pipeline = cls()
         crawler.signals.connect(pipeline.spider_opened, signals.spider_opened)
         crawler.signals.connect(pipeline.spider_closed, signals.spider_closed)
         return pipeline
 
     def spider_opened(self, spider):
-        log.msg('JsonExportPipeline.spider_opened....', level=log.INFO)
+        _log.info('JsonExportPipeline.spider_opened....')
         file = open('%s.json' % spider.name, 'w+b')
         self.files[spider] = file
         self.exporter = JsonItemExporter(file)
         self.exporter.start_exporting()
 
     def spider_closed(self, spider):
-        log.msg('JsonExportPipeline.spider_closed....', level=log.INFO)
+        _log.info('JsonExportPipeline.spider_closed....')
         self.exporter.finish_exporting()
         file = self.files.pop(spider)
         file.close()
 
     def process_item(self, item, spider):
-        log.msg('JsonExportPipeline.process_item....', level=log.INFO)
+        _log.info('JsonExportPipeline.process_item....')
         self.exporter.export_item(item)
         return item
 
@@ -163,20 +163,20 @@ class NewsDatabasePipeline(object):
 
     def open_spider(self, spider):
         """This method is called when the spider is opened."""
-        log.msg('open_spider[%s]....' % spider.name, level=log.INFO)
+        _log.info('open_spider[%s]....' % spider.name)
         session = self.Session()
         recent_news = session.query(News).filter(
             News.crawlkey == spider.name,
             self.nowtime - News.pubdate <= datetime.timedelta(days=30)).all()
         self.recent_links = [t.link for t in recent_news]
-        log.msg(self.recent_links)
+        _log.info(self.recent_links)
 
     def process_item(self, item, spider):
         """Save deals in the database.
         This method is called for every item pipeline component.
         """
         # 每次获取到Item调用这个callable，获得一个新的session
-        log.msg('mysql->%s' % item['link'], log.INFO)
+        _log.info('mysql->%s' % item['link'])
         if item['link'] not in self.recent_links:
             with session_scope(self.Session) as session:
                 news = News(**item)
