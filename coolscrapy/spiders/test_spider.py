@@ -20,7 +20,7 @@ class TestSpider(scrapy.Spider):
         body = response.xpath('//div[@class="PubDate"]/text()').extract()
         body1 = ''.join(body).strip()
         body2 = body1.encode('utf-8')
-        pat4 = re.compile(r'\d{4}年\d{2}月\d{2}日')
+        pat4 = re.compile(ur'\d{4}年\d{2}月\d{2}日')
         if (re.search(pat4, body1)):
             print('body...')
         if (re.search(pat4, body2)):
@@ -28,7 +28,7 @@ class TestSpider(scrapy.Spider):
         logging.info('---------------success----------------')
 
 if __name__ == '__main__':
-    body = '发布于： 2016年04月08日'
-    pat4 = re.compile(r'\d{4}年\d{2}月\d{2}日')
+    body = u'发布于： 2016年04月08日'
+    pat4 = re.compile(ur'\d{4}年\d{2}月\d{2}日')
     if (re.search(pat4, body)):
         print(re.search(pat4, body).group())

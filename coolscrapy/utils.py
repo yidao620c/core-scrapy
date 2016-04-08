@@ -203,7 +203,7 @@ def parse_text(extract_texts, rule_name, attr_name):
     return '\n'.join(extract_texts).strip() if extract_texts else ""
 
 
-pat4 = re.compile(r'\d{4}年\d{2}月\d{2}日')
+pat4 = re.compile(ur'\d{4}年\d{2}月\d{2}日')
 
 
 def osc_publish_time(extract_texts):
@@ -211,8 +211,9 @@ def osc_publish_time(extract_texts):
     @param extract_texts: 被处理的文本数组
     """
     if extract_texts:
-        res = ''.join(extract_texts).strip().encode('utf-8')
-        return re.search(pat4, res).group()
+        single_text = ''.join(extract_texts).strip()
+        res = re.search(pat4, single_text)
+        return res.group() if res else ""
     return ""
 
 
