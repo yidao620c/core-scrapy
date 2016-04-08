@@ -27,14 +27,14 @@ if __name__ == '__main__':
     runner = CrawlerRunner(settings)
 
     for rule in rules:
-        spider = ArticleSpider(rule)  # instantiate every spider using rule
+        # spider = ArticleSpider(rule)  # instantiate every spider using rule
         # stop reactor when spider closes
         # runner.signals.connect(spider_closing, signal=signals.spider_closed)
-        runner.crawl(spider)
+        runner.crawl(ArticleSpider, rule=rule)
 
     d = runner.join()
     d.addBoth(lambda _: reactor.stop())
 
     # blocks process so always keep as the last statement
     reactor.run()
-
+    print('all finished.')
