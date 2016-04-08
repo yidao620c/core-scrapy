@@ -176,7 +176,7 @@ def init_rule():
             allow_domains='oschina.net',
             start_urls='http://www.oschina.net/',
             next_page='',
-            allow_url='',
+            allow_url='/news/',
             extract_from='//div[@id="IndustryNews"]',
             title_xpath='//h1[@class="OSCTitle"]/text()',
             publish_time_xpath='//div[@class="PubDate"]/text()',
@@ -186,7 +186,6 @@ def init_rule():
         )
         session.add(artile_rule1)
         session.add(artile_rule2)
-    pass
 
 
 if __name__ == '__main__':

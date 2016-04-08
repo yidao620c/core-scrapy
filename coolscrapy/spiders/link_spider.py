@@ -4,6 +4,7 @@
 Topic: 爬取链接的蜘蛛
 Desc : 
 """
+import logging
 from coolscrapy.items import HuxiuItem
 import scrapy
 from scrapy.spiders import CrawlSpider, Rule
@@ -33,7 +34,7 @@ class LinkSpider(CrawlSpider):
         item['link'] = response.url
         item['published'] = detail.xpath(
             'div[@class="article-author"]/span[@class="article-time"]/text()')[0].extract()
-        print(item['title'],item['link'],item['published'])
+        logging.info(item['title'],item['link'],item['published'])
         yield item
 
 

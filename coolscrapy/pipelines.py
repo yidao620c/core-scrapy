@@ -169,7 +169,7 @@ class NewsDatabasePipeline(object):
             News.crawlkey == spider.name,
             self.nowtime - News.pubdate <= datetime.timedelta(days=30)).all()
         self.recent_links = [t.link for t in recent_news]
-        print(self.recent_links)
+        log.msg(self.recent_links)
 
     def process_item(self, item, spider):
         """Save deals in the database.

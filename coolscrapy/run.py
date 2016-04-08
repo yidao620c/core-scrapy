@@ -9,14 +9,12 @@ import logging
 from spiders.article_spider import ArticleSpider
 from twisted.internet import reactor
 from scrapy.crawler import CrawlerRunner
-from scrapy.utils.log import configure_logging, logger
 from scrapy.utils.project import get_project_settings
 from coolscrapy.models import db_connect
 from coolscrapy.models import ArticleRule
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
-    configure_logging()
     settings = get_project_settings()
 
     db = db_connect()
@@ -37,4 +35,4 @@ if __name__ == '__main__':
 
     # blocks process so always keep as the last statement
     reactor.run()
-    print('all finished.')
+    logging.info('all finished.')

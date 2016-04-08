@@ -42,6 +42,8 @@ COOKIES_ENABLES = False
 LOG_LEVEL = logging.INFO
 LOG_STDOUT = True
 LOG_FILE = "/tmp/spider.log"
+LOG_FORMAT = "%(asctime)s [%(name)s] %(levelname)s: %(message)s"
+
 
 # windows install http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
 # linux pip install MySQL-python
@@ -58,9 +60,6 @@ IMAGES_STORE = '/tmp/'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 # 图片链接前缀
 URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
-
-# 运行所有爬虫
-# COMMANDS_MODULE = 'coolscrapy.commands'
 
 # 扩展-定义爬取数量
 # CLOSESPIDER_ITEMCOUNT = 10
