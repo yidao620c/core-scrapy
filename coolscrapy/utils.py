@@ -211,7 +211,7 @@ def osc_publish_time(extract_texts):
     @param extract_texts: 被处理的文本数组
     """
     if extract_texts:
-        res = ''.join(extract_texts).strip()
+        res = ''.join(extract_texts).strip().encode('utf-8')
         return re.search(pat4, res).group()
     return ""
 
