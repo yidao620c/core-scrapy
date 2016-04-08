@@ -10,13 +10,14 @@ from spiders.article_spider import ArticleSpider
 from twisted.internet import reactor
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.project import get_project_settings
+from scrapy.utils.log import configure_logging
 from coolscrapy.models import db_connect
 from coolscrapy.models import ArticleRule
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == '__main__':
     settings = get_project_settings()
-
+    configure_logging(settings)
     db = db_connect()
     Session = sessionmaker(bind=db)
     session = Session()
