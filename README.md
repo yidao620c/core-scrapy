@@ -13,7 +13,7 @@
 * [Scrapy笔记（9）- 部署](http://www.pycoding.com/2016/03/21/scrapy-09.html)
 * [Scrapy笔记（10）- 动态配置爬虫](http://www.pycoding.com/2016/04/10/scrapy-10.html)
 * [Scrapy笔记（11）- 模拟登录](http://www.pycoding.com/2016/04/12/scrapy-11.html)
-* [Scrapy笔记（12）- 模拟登录](http://www.pycoding.com/2016/04/15/scrapy-12.html)
+* [Scrapy笔记（12）- 抓取动态网站](http://www.pycoding.com/2016/04/15/scrapy-12.html)
 
 ### Wiki
 Scrapy是Python开发的一个快速,高层次的屏幕抓取和web抓取框架，用于抓取web站点并从页面中提取结构化的数据。

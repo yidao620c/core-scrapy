@@ -11,21 +11,16 @@ import re
 
 class TestSpider(scrapy.Spider):
     name = "test"
-    allowed_domains = ["oschina.net"]
+    allowed_domains = ["jd.com"]
     start_urls = [
-        "http://www.oschina.net/news/72297/csharp-7-features-preview"
+        "http://www.jd.com/"
     ]
 
     def parse(self, response):
-        body = response.xpath('//div[@class="PubDate"]/text()').extract()
-        body1 = ''.join(body).strip()
-        body2 = body1.encode('utf-8')
-        pat4 = re.compile(ur'\d{4}年\d{2}月\d{2}日')
-        if (re.search(pat4, body1)):
-            print('body...')
-        if (re.search(pat4, body2)):
-            print('body2222222222222')
-        logging.info('---------------success----------------')
+        logging.info(u'---------我这个是简单的直接获取京东网首页测试---------')
+        guessyou = response.xpath('//div[@id="guessyou"]/div[1]/h2/text()').extract_first()
+        logging.info(u"find：%s" % guessyou)
+        logging.info(u'---------------success----------------')
 
 if __name__ == '__main__':
     body = u'发布于： 2016年04月08日'

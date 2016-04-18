@@ -26,7 +26,10 @@ ITEM_PIPELINES = {
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-    'coolscrapy.middlewares.RotateUserAgentMiddleware': 400
+    'coolscrapy.middlewares.RotateUserAgentMiddleware': 400,
+    'scrapy_splash.SplashCookiesMiddleware': 723,
+    'scrapy_splash.SplashMiddleware': 725,
+    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
 SPIDER_MIDDLEWARES = {
     # 这是爬虫中间件， 543是运行的优先级
@@ -61,6 +64,11 @@ IMAGES_STORE = '/tmp/'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 # 图片链接前缀
 URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
+
+# js异步加载支持
+SPLASH_URL = 'http://192.168.203.91:8050'
+DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
 
 # 扩展-定义爬取数量
 # CLOSESPIDER_ITEMCOUNT = 10
