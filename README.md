@@ -2,18 +2,18 @@
 
 ### Scrapy1.0教程
 
-* [Scrapy笔记（1）- 入门篇](http://www.pycoding.com/2016/03/08/scrapy-01.html)
-* [Scrapy笔记（2）- 完整示例](http://www.pycoding.com/2016/03/10/scrapy-02.html)
-* [Scrapy笔记（3）- Spider详解](http://www.pycoding.com/2016/03/12/scrapy-03.html)
-* [Scrapy笔记（4）- Selector详解](http://www.pycoding.com/2016/03/14/scrapy-04.html)
-* [Scrapy笔记（5）- Item详解](http://www.pycoding.com/2016/03/16/scrapy-05.html)
-* [Scrapy笔记（6）- Item Pipeline](http://www.pycoding.com/2016/03/18/scrapy-06.html)
-* [Scrapy笔记（7）- 内置服务](http://www.pycoding.com/2016/03/19/scrapy-07.html)
-* [Scrapy笔记（8）- 文件与图片](http://www.pycoding.com/2016/03/20/scrapy-08.html)
-* [Scrapy笔记（9）- 部署](http://www.pycoding.com/2016/03/21/scrapy-09.html)
-* [Scrapy笔记（10）- 动态配置爬虫](http://www.pycoding.com/2016/04/10/scrapy-10.html)
-* [Scrapy笔记（11）- 模拟登录](http://www.pycoding.com/2016/04/12/scrapy-11.html)
-* [Scrapy笔记（12）- 抓取动态网站](http://www.pycoding.com/2016/04/15/scrapy-12.html)
+* [Scrapy笔记（1）- 入门篇](http://yidao620c.github.io/2016/03/08/scrapy-01.html)
+* [Scrapy笔记（2）- 完整示例](http://yidao620c.github.io/2016/03/10/scrapy-02.html)
+* [Scrapy笔记（3）- Spider详解](http://yidao620c.github.io/2016/03/12/scrapy-03.html)
+* [Scrapy笔记（4）- Selector详解](http://yidao620c.github.io/2016/03/14/scrapy-04.html)
+* [Scrapy笔记（5）- Item详解](http://yidao620c.github.io/2016/03/16/scrapy-05.html)
+* [Scrapy笔记（6）- Item Pipeline](http://yidao620c.github.io/2016/03/18/scrapy-06.html)
+* [Scrapy笔记（7）- 内置服务](http://yidao620c.github.io/2016/03/19/scrapy-07.html)
+* [Scrapy笔记（8）- 文件与图片](http://yidao620c.github.io/2016/03/20/scrapy-08.html)
+* [Scrapy笔记（9）- 部署](http://yidao620c.github.io/2016/03/21/scrapy-09.html)
+* [Scrapy笔记（10）- 动态配置爬虫](http://yidao620c.github.io/2016/04/10/scrapy-10.html)
+* [Scrapy笔记（11）- 模拟登录](http://yidao620c.github.io/2016/04/12/scrapy-11.html)
+* [Scrapy笔记（12）- 抓取动态网站](http://yidao620c.github.io/2016/04/15/scrapy-12.html)
 
 ### Wiki
 Scrapy是Python开发的一个快速,高层次的屏幕抓取和web抓取框架，用于抓取web站点并从页面中提取结构化的数据。
@@ -60,7 +60,7 @@ Scrach是抓取的意思，这个Python的爬虫框架叫Scrapy，大概也是�
 1. 然后到 github 网站的该 git 远程仓库的 my-new-feature 分支下发起 Pull Request
 
 ## 许可证
-Copyright (c) 2014-2016 [Xiong Neng](http://www.pycoding.com/)
+Copyright (c) 2014-2016 [Xiong Neng](http://yidao620c.github.io/)
 
 基于 MIT 协议发布: <http://www.opensource.org/licenses/MIT>
 
