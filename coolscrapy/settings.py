@@ -27,7 +27,7 @@ ITEM_PIPELINES = {
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-    'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
+    'coolscrapy.middlewares.RotateUserAgentMiddleware': 400,
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
