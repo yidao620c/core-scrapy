@@ -5,7 +5,7 @@ Topic: 抓取最新笑话
 Desc : 
 """
 
-import urllib2
+from urllib import request
 import os.path
 import contextlib
 import logging
@@ -50,12 +50,12 @@ class JokerSpider(Spider):
                 img_src = full_imgurl
                 filename = os.path.basename(item['image_urls'][0])
                 self.log('-------------' + full_imgurl, logging.INFO)
-                with contextlib.closing(urllib2.urlopen(full_imgurl)) as f:
+                with contextlib.closing(request.urlopen(full_imgurl)) as f:
                     with open(os.path.join(IMAGES_STORE, filename), 'wb') as bfile:
                         bfile.write(f.read())
                 item['content'] = '<h3>%s</h3>' % title
             else:
-                content = '<br/>'.join(txt_content.xpath('text()').extract()).encode('utf-8')
+                content = '<br/>'.join(txt_content.xpath('text()').extract().encode('utf-8'))
                 strong_txt = txt_content.xpath('strong/text()').extract_first()
                 if strong_txt:
                     content = '<strong>%s</strong><br/>' % strong_txt.encode('utf-8') + content

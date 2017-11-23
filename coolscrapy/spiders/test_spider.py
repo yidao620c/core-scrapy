@@ -24,6 +24,6 @@ class TestSpider(scrapy.Spider):
 
 if __name__ == '__main__':
     body = u'发布于： 2016年04月08日'
-    pat4 = re.compile(ur'\d{4}年\d{2}月\d{2}日')
+    pat4 = re.compile(r'\d{4}年\d{2}月\d{2}日')
     if (re.search(pat4, body)):
         print(re.search(pat4, body).group())

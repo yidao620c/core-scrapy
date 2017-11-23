@@ -196,14 +196,13 @@ def parse_text(extract_texts, rule_name, attr_name):
     @param rule_name: 规则名称
     @param attr_name: 属性名
     """
-
     custom_func = "%s_%s" % (rule_name, attr_name)
     if custom_func in globals():
         return globals()[custom_func](extract_texts)
     return '\n'.join(extract_texts).strip() if extract_texts else ""
 
 
-pat4 = re.compile(ur'\d{4}年\d{2}月\d{2}日')
+pat4 = re.compile(r'\d{4}年\d{2}月\d{2}日')
 
 
 def osc_publish_time(extract_texts):
@@ -217,5 +216,8 @@ def osc_publish_time(extract_texts):
     return ""
 
 
+def tx(xpath_obj):
+    return ''.join(xpath_obj.extract()).strip()
+
 if __name__ == '__main__':
-    init_rule()
+    print('11/222/333/'.split('/'))

@@ -94,3 +94,30 @@ class News(Base):
     # 带html标签的正文
     htmlcontent = Column('htmlcontent', Text, nullable=True)
 
+
+class Tobacco(Base):
+    """烟草"""
+    __tablename__ = 't_tobacco'
+
+    id = Column(Integer, primary_key=True)
+    product_name = Column(String(32))
+    brand = Column(String(32))
+    product_type = Column(String(16))
+    package_spec = Column(String(32))
+    reference_price = Column(String(32))
+    manufacturer = Column(String(32))
+    pics = Column(String(255))
+    created_time = Column(DateTime, default=_get_date)
+    updated_time = Column(DateTime, default=_get_date)
+
+
+class Barcode(Base):
+    """烟草条形码"""
+    __tablename__ = 't_barcode'
+
+    id = Column(Integer, primary_key=True)
+    tobacco_id = Column(Integer)
+    barcode = Column(String(32))
+    btype = Column(String(32))
+    created_time = Column(DateTime, default=_get_date)
+    updated_time = Column(DateTime, default=_get_date)

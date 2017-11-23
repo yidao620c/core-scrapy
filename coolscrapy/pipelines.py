@@ -14,18 +14,20 @@ import json
 import logging
 from contextlib import contextmanager
 
-from scrapy import signals
+from scrapy import signals, Request
 from scrapy.exporters import JsonItemExporter
 from scrapy.pipelines.images import ImagesPipeline
 from scrapy.exceptions import DropItem
 from sqlalchemy.orm import sessionmaker
-from coolscrapy.models import News, db_connect, create_news_table, Article
+from coolscrapy.models import News, db_connect, create_news_table, Article, Tobacco, Barcode
 
 Redis = redis.StrictRedis(host='localhost', port=6379, db=0)
 _log = logging.getLogger(__name__)
 
+
 class DuplicatesPipeline(object):
     """Item去重复"""
+
     def process_item(self, item, spider):
         if Redis.exists('url:%s' % item['url']):
             raise DropItem("Duplicate item found: %s" % item)
@@ -111,6 +113,7 @@ class JsonExportPipeline(object):
 def session_scope(Session):
     """Provide a transactional scope around a series of operations."""
     session = Session()
+    session.expire_on_commit = False
     try:
         yield session
         session.commit()
@@ -196,3 +199,66 @@ class MyImagesPipeline(ImagesPipeline):
         if not image_paths:
             raise DropItem("Item contains no images")
         return item
+
+
+class TobaccoImagePipeline(ImagesPipeline):
+    """先安装：pip install Pillow"""
+
+    def get_media_requests(self, item, info):
+        yield Request(item['pics'])
+
+    def item_completed(self, results, item, info):
+        image_paths = [x['path'] for ok, x in results if ok]
+        if not image_paths:
+            raise DropItem("Item contains no images")
+        # 设置tobacco的pics字段
+        item['pics'] = image_paths[0]
+        return item
+
+
+class TobaccoDatabasePipeline(object):
+    """将烟草记录保存到数据库"""
+
+    def __init__(self):
+        engine = db_connect()
+        self.Session = sessionmaker(bind=engine)
+
+    def open_spider(self, spider):
+        """This method is called when the spider is opened."""
+        pass
+
+    def process_item(self, item, spider):
+        logging.info("将烟草记录保存到数据库 start....")
+        product_vals = item['product'].split('/')
+        # 先插入一条烟的记录
+        tobacco = Tobacco(product_name=product_vals[0],
+                          brand=product_vals[1],
+                          product_type=item['product_type'],
+                          package_spec=item['package_spec'],
+                          reference_price=item['reference_price'],
+                          manufacturer=item['manufacturer'],
+                          pics=item['pics'])
+        with session_scope(self.Session) as session:
+            session.add(tobacco)
+        logging.info("tobacco.iiiiiiiiiiiiiiiiiiiiiiiiidddddd=, {}".format(tobacco.id))
+        # 然后再插入二维码记录
+        if product_vals[2]:
+            code_vals = product_vals[2].split('：')
+            barcode = Barcode(tobacco_id=tobacco.id,
+                              btype=code_vals[0],
+                              barcode=code_vals[1])
+            with session_scope(self.Session) as session:
+                session.add(barcode)
+        if product_vals[3]:
+            code_vals = product_vals[3].split('：')
+            barcode = Barcode(tobacco_id=tobacco.id,
+                              btype=code_vals[0],
+                              barcode=code_vals[1])
+            with session_scope(self.Session) as session:
+                # if barcode not in session:
+                #     session.merge(barcode)
+                session.add(barcode)
+        logging.info("将烟草记录保存到数据库 end....")
+
+    def close_spider(self, spider):
+        pass

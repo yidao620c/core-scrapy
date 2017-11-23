@@ -51,3 +51,13 @@ class JokeItem(scrapy.Item):
     content = scrapy.Field()
     image_urls = scrapy.Field()
     images = scrapy.Field()
+
+
+class TobaccoItem(scrapy.Item):
+    """烟草条形码Item"""
+    pics = scrapy.Field()             # 图片
+    product = scrapy.Field()          # 产品
+    product_type = scrapy.Field()     # 产品类型
+    package_spec = scrapy.Field()     # 包装规格
+    reference_price = scrapy.Field()  # 参考零售价格
+    manufacturer = scrapy.Field()     # 生产厂家

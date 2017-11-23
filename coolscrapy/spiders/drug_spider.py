@@ -13,13 +13,12 @@ from scrapy.selector import Selector, HtmlXPathSelector
 from scrapy.loader import ItemLoader
 from scrapy import Request
 from scrapy.exceptions import DropItem
-from urlparse import urljoin
 from coolscrapy.utils import *
 from datetime import datetime
 import coolscrapy.settings as setting
 import re
 import uuid
-import urllib2
+import urllib
 import contextlib
 import os
 import logging
@@ -190,7 +189,7 @@ class PharmnetCrawlSpider(CrawlSpider):
                 uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
                 uuids.append(uuid_name)
                 self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, logging.INFO)
-                with contextlib.closing(urllib2.urlopen(full_path)) as f:
+                with contextlib.closing(urllib.urlopen(full_path)) as f:
                     with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
                         bfile.write(f.read())
             for indx, val in enumerate(uuids):
@@ -249,7 +248,7 @@ class HaoyaoCrawlSpider(Spider):
                 uuid_name = '{0:02d}{1:s}'.format(i + 1, uuid.uuid4().hex) + suffix_name
                 uuids.append(uuid_name)
                 self.log('UUID_PIC--------%s' % setting.URL_PREFIX + uuid_name, logging.INFO)
-                with contextlib.closing(urllib2.urlopen(full_path)) as f:
+                with contextlib.closing(urllib.urlopen(full_path)) as f:
                     with open(os.path.join(IMAGES_STORE, uuid_name), 'wb') as bfile:
                         bfile.write(f.read())
             for indx, val in enumerate(uuids):

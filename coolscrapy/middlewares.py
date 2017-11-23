@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 """
-Topic: URL去重复中间件
+Topic: 中间件集合
 Desc : 
 """
 import redis
@@ -17,6 +17,12 @@ logger = logging.getLogger(__name__)
 class RotateUserAgentMiddleware(UserAgentMiddleware):
     """避免被ban策略之一：使用useragent池。
     使用注意：需在settings.py中进行相应的设置。
+    更好的方式是使用：
+    pip install scrapy-fake-useragent
+    DOWNLOADER_MIDDLEWARES = {
+        'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+        'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
+    }
     """
     def __init__(self, user_agent=''):
         super(RotateUserAgentMiddleware, self).__init__()

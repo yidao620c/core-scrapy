@@ -17,16 +17,17 @@ NEWSPIDER_MODULE = 'coolscrapy.spiders'
 
 ITEM_PIPELINES = {
     # 'coolscrapy.pipelines.DuplicatesPipeline': 1,
-    'coolscrapy.pipelines.FilterWordsPipeline': 2,
+    # 'coolscrapy.pipelines.FilterWordsPipeline': 2,
     # 'coolscrapy.pipelines.JsonWriterPipeline': 3,
     # 'coolscrapy.pipelines.JsonExportPipeline': 4,
-    'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
-    # 'coolscrapy.pipelines.MyImagesPipeline': 6,
+    # 'coolscrapy.pipelines.ArticleDataBasePipeline': 5,
+    'coolscrapy.pipelines.TobaccoImagePipeline': 6,
+    'coolscrapy.pipelines.TobaccoDatabasePipeline': 7,
 }
 DOWNLOADER_MIDDLEWARES = {
     # 这里是下载中间件
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
-    'coolscrapy.middlewares.RotateUserAgentMiddleware': 400,
+    'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 400,
     'scrapy_splash.SplashCookiesMiddleware': 723,
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
@@ -45,25 +46,25 @@ COOKIES_ENABLES = True
 
 LOG_LEVEL = logging.INFO
 LOG_STDOUT = True
-LOG_FILE = "/tmp/spider.log"
+LOG_FILE = "E:/logs/spider.log"
 LOG_FORMAT = "%(asctime)s [%(name)s] %(levelname)s: %(message)s"
 
 
-# windows install http://www.lfd.uci.edu/~gohlke/pythonlibs/#mysql-python
+# windows pip install mysqlclient
 # linux pip install MySQL-python
 DATABASE = {'drivername': 'mysql',
-            'host': '192.168.203.95',
+            'host': '123.207.66.156',
             'port': '3306',
             'username': 'root',
-            'password': 'mysql',
-            'database': 'spider',
+            'password': '******',
+            'database': 'test',
             'query': {'charset': 'utf8'}}
 
 # 图片下载设置
-IMAGES_STORE = '/tmp/'
+IMAGES_STORE = 'E:/logs/'
 IMAGES_EXPIRES = 30  # 30天内抓取的都不会被重抓
 # 图片链接前缀
-URL_PREFIX = 'http://dev.wingarden.net/tpl/static/pushimgs/'
+URL_PREFIX = 'http://enzhico.net/pics/'
 
 # js异步加载支持
 SPLASH_URL = 'http://192.168.203.91:8050'
