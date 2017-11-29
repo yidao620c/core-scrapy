@@ -1,9 +1,10 @@
 #!/bin/bash
 
-cd gitbook
+cd document
 
+# gitbook install
 # install the plugins and build the static site
-gitbook install && gitbook build
+gitbook build
 
 cd ..
 
@@ -11,14 +12,15 @@ cd ..
 git checkout gh-pages
 
 # pull the latest updates
-git pull origin gh-pages --rebase
+git pull origin gh-pages
 
 # copy the static site files into the current directory.
-cp -R gitbook/_book/* .
+\cp -Rf gitbook/_book/* .
 
 # remove 'node_modules' and '_book' directory
-git clean -fx gitbook/node_modules
-git clean -fx gitbook/_book
+# git clean -fx gitbook/node_modules
+# git clean -fx gitbook/_book
+rm -rf gitbook/_book/
 
 # add all files
 git add .
