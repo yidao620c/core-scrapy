@@ -1,3 +1,7 @@
 .idea/
 *.pyc
 *.log
+node_modules/
+_book/
+.project
+*~
