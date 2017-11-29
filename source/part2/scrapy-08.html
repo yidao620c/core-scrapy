@@ -1,0 +1,681 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>文件与图片 · Scrapy Cookbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="熊能 <yidao620@gmail.com>">
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website-1511957750314.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    
+
+    
+    <link rel="next" href="../part3/" />
+    
+    
+    <link rel="prev" href="scrapy-07.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="/assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xncoding.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="../../">
+
+            
+                <a href="../../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="../other/about.html">
+
+            
+                <a href="../other/about.html">
+            
+                    
+                    About this guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.1" 
+            data-path="../part1/">
+
+            
+                <a href="../part1/">
+            
+                    
+                    基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.1" 
+            data-path="../part1/scrapy-01.html">
+
+            
+                <a href="../part1/scrapy-01.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.2" 
+            data-path="../part1/scrapy-02.html">
+
+            
+                <a href="../part1/scrapy-02.html">
+            
+                    
+                    完整示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              selected  "
+            data-level="2.2" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    核心组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                  
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.1" 
+            data-path="scrapy-03.html">
+
+            
+                <a href="scrapy-03.html">
+            
+                    
+                    Spider详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.2" 
+            data-path="scrapy-04.html">
+
+            
+                <a href="scrapy-04.html">
+            
+                    
+                    Selector详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.3" 
+            data-path="scrapy-05.html">
+
+            
+                <a href="scrapy-05.html">
+            
+                    
+                    Item详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.4" 
+            data-path="scrapy-06.html">
+
+            
+                <a href="scrapy-06.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.5" 
+            data-path="scrapy-07.html">
+
+            
+                <a href="scrapy-07.html">
+            
+                    
+                    内置服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="2.2.6" 
+            data-path="scrapy-08.html">
+
+            
+                <a href="scrapy-08.html">
+            
+                    
+                    文件与图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3" 
+            data-path="../part3/">
+
+            
+                <a href="../part3/">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3.1" 
+            data-path="../part3/scrapy-09.html">
+
+            
+                <a href="../part3/scrapy-09.html">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.1" 
+            data-path="../part4/scrapy-10.html">
+
+            
+                <a href="../part4/scrapy-10.html">
+            
+                    
+                    动态配置爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.2" 
+            data-path="../part4/scrapy-11.html">
+
+            
+                <a href="../part4/scrapy-11.html">
+            
+                    
+                    模拟登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.3" 
+            data-path="../part4/scrapy-12.html">
+
+            
+                <a href="../part4/scrapy-12.html">
+            
+                    
+                    抓取动态网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="4.1" 
+            data-path="../part5/">
+
+            
+                <a href="../part5/">
+            
+                    
+                    结束语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >文件与图片</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="scrapy&#x6559;&#x7A0B;08--&#x6587;&#x4EF6;&#x4E0E;&#x56FE;&#x7247;">Scrapy&#x6559;&#x7A0B;08- &#x6587;&#x4EF6;&#x4E0E;&#x56FE;&#x7247;</h1>
+<p>Scrapy&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x53EF;&#x91CD;&#x7528;&#x7684;<a href="http://doc.scrapy.org/en/1.0/topics/item-pipeline.html" target="_blank">item pipelines</a>&#x4E3A;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;Item&#x53BB;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x3002;
+&#x901A;&#x5E38;&#x6765;&#x8BF4;&#x4F60;&#x4F1A;&#x9009;&#x62E9;&#x4F7F;&#x7528;Files Pipeline&#x6216;Images Pipeline&#x3002;</p>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x7BA1;&#x9053;&#x90FD;&#x5B9E;&#x73B0;&#x4E86;&#xFF1A;</p>
+<ul>
+<li>&#x907F;&#x514D;&#x91CD;&#x590D;&#x4E0B;&#x8F7D;</li>
+<li>&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E0B;&#x8F7D;&#x540E;&#x4FDD;&#x5B58;&#x7684;&#x5730;&#x65B9;(&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76EE;&#x5F55;&#x4E2D;,Amazon S3&#x4E2D;)</li>
+</ul>
+<p>Images Pipeline&#x4E3A;&#x5904;&#x7406;&#x56FE;&#x7247;&#x63D0;&#x4F9B;&#x4E86;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;&#x6240;&#x6709;&#x4E0B;&#x8F7D;&#x7684;&#x56FE;&#x7247;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x6210;&#x666E;&#x901A;&#x7684;JPG&#x5E76;&#x4F7F;&#x7528;RGB&#x989C;&#x8272;&#x6A21;&#x5F0F;</li>
+<li>&#x751F;&#x6210;&#x7F29;&#x7565;&#x56FE;</li>
+<li>&#x68C0;&#x67E5;&#x56FE;&#x7247;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x9AD8;&#x5EA6;&#x786E;&#x4FDD;&#x5B83;&#x4EEC;&#x6EE1;&#x8DB3;&#x6700;&#x5C0F;&#x7684;&#x5C3A;&#x5BF8;&#x9650;&#x5236;</li>
+</ul>
+<p>&#x7BA1;&#x9053;&#x540C;&#x65F6;&#x4F1A;&#x5728;&#x5185;&#x90E8;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;&#x88AB;&#x8C03;&#x5EA6;&#x4E0B;&#x8F7D;&#x7684;URL&#x5217;&#x8868;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x5305;&#x542B;&#x76F8;&#x540C;&#x5A92;&#x4F53;&#x7684;&#x76F8;&#x5E94;&#x5173;&#x8054;&#x5230;&#x8FD9;&#x4E2A;&#x961F;&#x5217;&#x4E0A;&#x6765;&#xFF0C;&#x4ECE;&#x800C;&#x9632;&#x6B62;&#x4E86;&#x591A;&#x4E2A;item&#x5171;&#x4EAB;&#x8FD9;&#x4E2A;&#x5A92;&#x4F53;&#x65F6;&#x91CD;&#x590D;&#x4E0B;&#x8F7D;&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;files-pipeline">&#x4F7F;&#x7528;Files Pipeline</h2>
+<p>&#x4E00;&#x822C;&#x6211;&#x4EEC;&#x4F1A;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x6765;&#x4F7F;&#x7528;&#x6587;&#x4EF6;&#x7BA1;&#x9053;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x67D0;&#x4E2A;Spider&#x4E2D;&#xFF0C;&#x4F60;&#x722C;&#x53D6;&#x4E00;&#x4E2A;item&#x540E;&#xFF0C;&#x5C06;&#x76F8;&#x5E94;&#x7684;&#x6587;&#x4EF6;URL&#x653E;&#x5165;<code>file_urls</code>&#x5B57;&#x6BB5;&#x4E2D;</li>
+<li>item&#x88AB;&#x8FD4;&#x56DE;&#x4E4B;&#x540E;&#x5C31;&#x4F1A;&#x8F6C;&#x4EA4;&#x7ED9;item pipeline</li>
+<li>&#x5F53;&#x8FD9;&#x4E2A;item&#x5230;&#x8FBE;<code>FilesPipeline</code>&#x65F6;&#xFF0C;&#x5728;<code>file_urls</code>&#x5B57;&#x6BB5;&#x4E2D;&#x7684;URL&#x5217;&#x8868;&#x4F1A;&#x901A;&#x8FC7;&#x6807;&#x51C6;&#x7684;Scrapy&#x8C03;&#x5EA6;&#x5668;&#x548C;&#x4E0B;&#x8F7D;&#x5668;&#x6765;&#x8C03;&#x5EA6;&#x4E0B;&#x8F7D;&#xFF0C;&#x5E76;&#x4E14;&#x4F18;&#x5148;&#x7EA7;&#x5F88;&#x9AD8;&#xFF0C;&#x5728;&#x6293;&#x53D6;&#x5176;&#x4ED6;&#x9875;&#x9762;&#x524D;&#x5C31;&#x88AB;&#x5904;&#x7406;&#x3002;&#x800C;&#x8FD9;&#x4E2A;<code>item</code>&#x4F1A;&#x4E00;&#x76F4;&#x5728;&#x8FD9;&#x4E2A;pipeline&#x4E2D;&#x88AB;&#x9501;&#x5B9A;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x3002;</li>
+<li>&#x5F53;&#x6587;&#x4EF6;&#x88AB;&#x4E0B;&#x8F7D;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x7ED3;&#x679C;&#x4F1A;&#x88AB;&#x8D4B;&#x503C;&#x7ED9;&#x53E6;&#x4E00;&#x4E2A;<code>files</code>&#x5B57;&#x6BB5;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x65B0;&#x7684;&#x5B57;&#x5178;&#x5217;&#x8868;&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x8F7D;&#x8DEF;&#x5F84;&#xFF0C;&#x6E90;&#x5730;&#x5740;&#xFF0C;&#x6587;&#x4EF6;&#x6821;&#x9A8C;&#x7801;&#x3002;<code>files</code>&#x91CC;&#x9762;&#x7684;&#x987A;&#x5E8F;&#x548C;<code>file_url</code>&#x987A;&#x5E8F;&#x662F;&#x4E00;&#x81F4;&#x7684;&#x3002;&#x8981;&#x662F;&#x67D0;&#x4E2A;&#x5199;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x51FA;&#x9519;&#x5C31;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;<code>files</code>&#x4E2D;&#x4E86;&#x3002;</li>
+</ol>
+<h2 id="&#x4F7F;&#x7528;images-pipeline">&#x4F7F;&#x7528;Images Pipeline</h2>
+<p><code>ImagesPipeline</code>&#x8DDF;<code>FilesPipeline</code>&#x7684;&#x4F7F;&#x7528;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;<code>image_urls</code>&#x4FDD;&#x5B58;&#x56FE;&#x7247;URL&#x5730;&#x5740;&#xFF0C;<code>images</code>&#x4FDD;&#x5B58;&#x4E0B;&#x8F7D;&#x540E;&#x7684;&#x56FE;&#x7247;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>ImagesPipeline</code>&#x7684;&#x597D;&#x5904;&#x662F;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x6765;&#x63D0;&#x4F9B;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x7F29;&#x7565;&#x56FE;&#xFF0C;&#x901A;&#x8FC7;&#x56FE;&#x7247;&#x5927;&#x5C0F;&#x8FC7;&#x6EE4;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x7684;&#x56FE;&#x7247;&#x7B49;&#x3002;</p>
+<p><code>ImagesPipeline</code>&#x4F7F;&#x7528;<a href="https://github.com/python-pillow/Pillow" target="_blank">Pillow</a>&#x6765;&#x751F;&#x6210;&#x7F29;&#x7565;&#x56FE;&#x4EE5;&#x53CA;&#x8F6C;&#x6362;&#x6210;&#x6807;&#x51C6;&#x7684;JPEG/RGB&#x683C;&#x5F0F;&#x3002;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x8FD9;&#x4E2A;&#x5305;&#xFF0C;&#x6211;&#x4EEC;&#x5EFA;&#x8BAE;&#x4F60;&#x4F7F;&#x7528;Pillow&#x800C;&#x4E0D;&#x662F;PIL&#x3002;</p>
+<h2 id="&#x4F7F;&#x7528;&#x4F8B;&#x5B50;">&#x4F7F;&#x7528;&#x4F8B;&#x5B50;</h2>
+<p>&#x8981;&#x4F7F;&#x7528;&#x5A92;&#x4F53;&#x7BA1;&#x9053;&#xFF0C;&#x8BF7;&#x5148;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6253;&#x5F00;&#x5B83;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x540C;&#x65F6;&#x4F7F;&#x7528;&#x56FE;&#x7247;&#x548C;&#x6587;&#x4EF6;&#x7BA1;&#x9053;</span>
+ITEM_PIPELINES = {
+                  <span class="hljs-string">&apos;scrapy.pipelines.images.ImagesPipeline&apos;</span>: <span class="hljs-number">1</span>,
+                  <span class="hljs-string">&apos;scrapy.pipelines.files.FilesPipeline&apos;</span>: <span class="hljs-number">2</span>,
+                 }
+FILES_STORE = <span class="hljs-string">&apos;/path/to/valid/dir&apos;</span>  <span class="hljs-comment"># &#x6587;&#x4EF6;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</span>
+IMAGES_STORE = <span class="hljs-string">&apos;/path/to/valid/dir&apos;</span> <span class="hljs-comment"># &#x56FE;&#x7247;&#x5B58;&#x50A8;&#x8DEF;&#x5F84;</span>
+<span class="hljs-comment"># 90 days of delay for files expiration</span>
+FILES_EXPIRES = <span class="hljs-number">90</span>
+<span class="hljs-comment"># 30 days of delay for images expiration</span>
+IMAGES_EXPIRES = <span class="hljs-number">30</span>
+<span class="hljs-comment"># &#x56FE;&#x7247;&#x7F29;&#x7565;&#x56FE;</span>
+IMAGES_THUMBS = {
+    <span class="hljs-string">&apos;small&apos;</span>: (<span class="hljs-number">50</span>, <span class="hljs-number">50</span>),
+    <span class="hljs-string">&apos;big&apos;</span>: (<span class="hljs-number">270</span>, <span class="hljs-number">270</span>),
+}
+<span class="hljs-comment"># &#x56FE;&#x7247;&#x8FC7;&#x6EE4;&#x5668;&#xFF0C;&#x6700;&#x5C0F;&#x9AD8;&#x5EA6;&#x548C;&#x5BBD;&#x5EA6;</span>
+IMAGES_MIN_HEIGHT = <span class="hljs-number">110</span>
+IMAGES_MIN_WIDTH = <span class="hljs-number">110</span>
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x4E86;&#x7F29;&#x7565;&#x56FE;&#x7684;&#x4E0B;&#x8F7D;&#x4F8B;&#x5B50;&#x4F1A;&#x751F;&#x6210;&#x5982;&#x4E0B;&#x56FE;&#x7247;&#xFF1A;</p>
+<pre><code>&lt;IMAGES_STORE&gt;/full/63bbfea82b8880ed33cdb762aa11fab722a90a24.jpg
+&lt;IMAGES_STORE&gt;/thumbs/small/63bbfea82b8880ed33cdb762aa11fab722a90a24.jpg
+&lt;IMAGES_STORE&gt;/thumbs/big/63bbfea82b8880ed33cdb762aa11fab722a90a24.jpg
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x67D0;&#x4E2A;Item&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x6709;<code>file_urls</code>&#x6216;<code>image_urls</code>&#xFF0C;&#x5E76;&#x4E14;&#x5B58;&#x5728;&#x76F8;&#x5E94;&#x7684;<code>files</code>&#x6216;<code>images</code>&#x5B57;&#x6BB5;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> scrapy
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyItem</span><span class="hljs-params">(scrapy.Item)</span>:</span>
+
+    <span class="hljs-comment"># ... other item fields ...</span>
+    image_urls = scrapy.Field()
+    images = scrapy.Field()
+</code></pre>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x5A92;&#x4F53;&#x7BA1;&#x9053;">&#x81EA;&#x5B9A;&#x4E49;&#x5A92;&#x4F53;&#x7BA1;&#x9053;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x9700;&#x8981;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x60F3;&#x81EA;&#x5B9A;&#x4E49;&#x4E0B;&#x8F7D;&#x5A92;&#x4F53;&#x903B;&#x8F91;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;<a href="http://doc.scrapy.org/en/1.0/topics/media-pipeline.html#topics-media-pipeline-override" target="_blank">&#x6269;&#x5C55;&#x5A92;&#x4F53;&#x7BA1;&#x9053;</a></p>
+<p>&#x4E0D;&#x7BA1;&#x662F;&#x6269;&#x5C55;<code>FilesPipeline</code>&#x8FD8;&#x662F;<code>ImagesPipeline</code>,&#x90FD;&#x53EA;&#x9700;&#x91CD;&#x5199;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;</p>
+<ul>
+<li><code>get_media_requests(self, item, info)</code>,&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Request</code>&#x5BF9;&#x8C61;</li>
+<li><code>item_completed(self, results, item, info)</code>,&#x5F53;&#x4E0A;&#x95E8;&#x7684;Request&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#x56DE;&#x8C03;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x586B;&#x5145;<code>files</code>&#x6216;<code>images</code>&#x5B57;&#x6BB5;</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x6269;&#x5C55;<code>ImagesPipeline</code>&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x53EA;&#x53D6;path&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x8D4B;&#x7ED9;<code>image_paths</code>&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x9ED8;&#x8BA4;&#x7684;<code>images</code></p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> scrapy
+<span class="hljs-keyword">from</span> scrapy.pipelines.images <span class="hljs-keyword">import</span> ImagesPipeline
+<span class="hljs-keyword">from</span> scrapy.exceptions <span class="hljs-keyword">import</span> DropItem
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyImagesPipeline</span><span class="hljs-params">(ImagesPipeline)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_media_requests</span><span class="hljs-params">(self, item, info)</span>:</span>
+        <span class="hljs-keyword">for</span> image_url <span class="hljs-keyword">in</span> item[<span class="hljs-string">&apos;image_urls&apos;</span>]:
+            <span class="hljs-keyword">yield</span> scrapy.Request(image_url)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">item_completed</span><span class="hljs-params">(self, results, item, info)</span>:</span>
+        image_paths = [x[<span class="hljs-string">&apos;path&apos;</span>] <span class="hljs-keyword">for</span> ok, x <span class="hljs-keyword">in</span> results <span class="hljs-keyword">if</span> ok]
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> image_paths:
+            <span class="hljs-keyword">raise</span> DropItem(<span class="hljs-string">&quot;Item contains no images&quot;</span>)
+        item[<span class="hljs-string">&apos;image_paths&apos;</span>] = image_paths
+        <span class="hljs-keyword">return</span> item
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="scrapy-07.html" class="navigation navigation-prev " aria-label="Previous page: 内置服务">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../part3/" class="navigation navigation-next " aria-label="Next page: 部署">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"文件与图片","level":"2.2.6","depth":2,"next":{"title":"部署","level":"2.3","depth":1,"path":"source/part3/README.md","ref":"source/part3/README.md","articles":[{"title":"部署","level":"2.3.1","depth":2,"path":"source/part3/scrapy-09.md","ref":"source/part3/scrapy-09.md","articles":[]}]},"previous":{"title":"内置服务","level":"2.2.5","depth":2,"path":"source/part2/scrapy-07.md","ref":"source/part2/scrapy-07.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-gestalt","-theme-default","styles-sass-fix","multipart","toggle-chapters"],"styles":{"website":"website-1511957750314.css"},"pluginsConfig":{"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","excludeDefaultStyles":true},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"toggle-chapters":{}},"theme":"default","author":"熊能 <yidao620@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scrapy Cookbook2","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.xncoding.com"}},"gitbook":"*","description":"scrapy简明指南"},"file":{"path":"source/part2/scrapy-08.md","mtime":"2017-11-29T11:39:53.033Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-29T12:15:49.038Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

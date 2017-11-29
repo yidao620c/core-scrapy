@@ -1,0 +1,851 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>动态配置爬虫 · Scrapy Cookbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="熊能 <yidao620@gmail.com>">
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website-1511957750314.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    
+
+    
+    <link rel="next" href="scrapy-11.html" />
+    
+    
+    <link rel="prev" href="../part3/scrapy-09.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="/assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xncoding.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="../../">
+
+            
+                <a href="../../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="../other/about.html">
+
+            
+                <a href="../other/about.html">
+            
+                    
+                    About this guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.1" 
+            data-path="../part1/">
+
+            
+                <a href="../part1/">
+            
+                    
+                    基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.1" 
+            data-path="../part1/scrapy-01.html">
+
+            
+                <a href="../part1/scrapy-01.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.2" 
+            data-path="../part1/scrapy-02.html">
+
+            
+                <a href="../part1/scrapy-02.html">
+            
+                    
+                    完整示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2" 
+            data-path="../part2/">
+
+            
+                <a href="../part2/">
+            
+                    
+                    核心组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.1" 
+            data-path="../part2/scrapy-03.html">
+
+            
+                <a href="../part2/scrapy-03.html">
+            
+                    
+                    Spider详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.2" 
+            data-path="../part2/scrapy-04.html">
+
+            
+                <a href="../part2/scrapy-04.html">
+            
+                    
+                    Selector详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.3" 
+            data-path="../part2/scrapy-05.html">
+
+            
+                <a href="../part2/scrapy-05.html">
+            
+                    
+                    Item详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.4" 
+            data-path="../part2/scrapy-06.html">
+
+            
+                <a href="../part2/scrapy-06.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.5" 
+            data-path="../part2/scrapy-07.html">
+
+            
+                <a href="../part2/scrapy-07.html">
+            
+                    
+                    内置服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.6" 
+            data-path="../part2/scrapy-08.html">
+
+            
+                <a href="../part2/scrapy-08.html">
+            
+                    
+                    文件与图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3" 
+            data-path="../part3/">
+
+            
+                <a href="../part3/">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.3.1" 
+            data-path="../part3/scrapy-09.html">
+
+            
+                <a href="../part3/scrapy-09.html">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="3.1" 
+            data-path="scrapy-10.html">
+
+            
+                <a href="scrapy-10.html">
+            
+                    
+                    动态配置爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.2" 
+            data-path="scrapy-11.html">
+
+            
+                <a href="scrapy-11.html">
+            
+                    
+                    模拟登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.3" 
+            data-path="scrapy-12.html">
+
+            
+                <a href="scrapy-12.html">
+            
+                    
+                    抓取动态网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="4.1" 
+            data-path="../part5/">
+
+            
+                <a href="../part5/">
+            
+                    
+                    结束语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >动态配置爬虫</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="scrapy&#x6559;&#x7A0B;10--&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x722C;&#x866B;">Scrapy&#x6559;&#x7A0B;10- &#x52A8;&#x6001;&#x914D;&#x7F6E;&#x722C;&#x866B;</h1>
+<p>&#x6709;&#x5F88;&#x591A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4ECE;&#x591A;&#x4E2A;&#x7F51;&#x7AD9;&#x722C;&#x53D6;&#x6240;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x60F3;&#x722C;&#x53D6;&#x591A;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;&#x65B0;&#x95FB;&#xFF0C;&#x5C06;&#x5176;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x540C;&#x4E00;&#x4E2A;&#x8868;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x662F;&#x4E0D;&#x662F;&#x8981;&#x5BF9;&#x6BCF;&#x4E2A;&#x7F51;&#x7AD9;&#x90FD;&#x5F97;&#x53BB;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Spider&#x7C7B;&#x5462;&#xFF1F;
+&#x5176;&#x5B9E;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#x914D;&#x7F6E;&#x8868;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x52A8;&#x6001;&#x589E;&#x52A0;&#x6216;&#x4FEE;&#x6539;&#x722C;&#x53D6;&#x89C4;&#x5219;&#xFF0C;&#x7136;&#x540E;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x4E0D;&#x9700;&#x8981;&#x66F4;&#x6539;&#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x591A;&#x4E2A;&#x7F51;&#x7AD9;&#x722C;&#x53D6;&#x3002;</p>
+<p>&#x8981;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x80FD;&#x518D;&#x4F7F;&#x7528;&#x524D;&#x9762;&#x7684;<code>scrapy crawl test</code>&#x8FD9;&#x79CD;&#x547D;&#x4EE4;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7F16;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;Scrapy spider&#xFF0C;&#x53C2;&#x8003;<a href="http://doc.scrapy.org/en/1.0/topics/practices.html#run-scrapy-from-a-script" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<h3 id="&#x811A;&#x672C;&#x8FD0;&#x884C;scrapy">&#x811A;&#x672C;&#x8FD0;&#x884C;Scrapy</h3>
+<p>&#x53EF;&#x4EE5;&#x5229;&#x7528;scrapy&#x63D0;&#x4F9B;&#x7684;<a href="http://doc.scrapy.org/en/1.0/topics/api.html#topics-api" target="_blank">&#x6838;&#x5FC3;API</a>&#x901A;&#x8FC7;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x542F;&#x52A8;scrapy&#xFF0C;&#x4EE3;&#x66FF;&#x4F20;&#x7EDF;&#x7684;<code>scrapy crawl</code>&#x542F;&#x52A8;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>Scrapy&#x6784;&#x5EFA;&#x4E8E;Twisted&#x5F02;&#x6B65;&#x7F51;&#x7EDC;&#x6846;&#x67B6;&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x9700;&#x8981;&#x5728;Twisted reactor&#x91CC;&#x9762;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>scrapy.crawler.CrawlerProcess</code>&#x8FD9;&#x4E2A;&#x7C7B;&#x6765;&#x8FD0;&#x884C;&#x4F60;&#x7684;spider&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x4F1A;&#x4E3A;&#x4F60;&#x542F;&#x52A8;&#x4E00;&#x4E2A;Twisted reactor&#xFF0C;&#x5E76;&#x80FD;&#x914D;&#x7F6E;&#x4F60;&#x7684;&#x65E5;&#x5FD7;&#x548C;shutdown&#x5904;&#x7406;&#x5668;&#x3002;&#x6240;&#x6709;&#x7684;scrapy&#x547D;&#x4EE4;&#x90FD;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7C7B;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> scrapy
+<span class="hljs-keyword">from</span> scrapy.crawler <span class="hljs-keyword">import</span> CrawlerProcess
+<span class="hljs-keyword">from</span> scrapy.utils.project <span class="hljs-keyword">import</span> get_project_settings
+
+process = CrawlerProcess(get_project_settings())
+
+process.crawl(MySpider)
+process.start() <span class="hljs-comment"># the script will block here until the crawling is finished</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;</p>
+<pre><code class="lang-bash">python run.py
+</code></pre>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x66F4;&#x5F3A;&#x5927;&#x7684;&#x7C7B;&#x662F;<code>scrapy.crawler.CrawlerRunner</code>&#xFF0C;&#x63A8;&#x8350;&#x4F60;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> twisted.internet <span class="hljs-keyword">import</span> reactor
+<span class="hljs-keyword">import</span> scrapy
+<span class="hljs-keyword">from</span> scrapy.crawler <span class="hljs-keyword">import</span> CrawlerRunner
+<span class="hljs-keyword">from</span> scrapy.utils.log <span class="hljs-keyword">import</span> configure_logging
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MySpider</span><span class="hljs-params">(scrapy.Spider)</span>:</span>
+    <span class="hljs-comment"># Your spider definition</span>
+    ...
+
+configure_logging({<span class="hljs-string">&apos;LOG_FORMAT&apos;</span>: <span class="hljs-string">&apos;%(levelname)s: %(message)s&apos;</span>})
+runner = CrawlerRunner()
+
+d = runner.crawl(MySpider)
+d.addBoth(<span class="hljs-keyword">lambda</span> _: reactor.stop())
+reactor.run() <span class="hljs-comment"># the script will block here until the crawling is finished</span>
+</code></pre>
+<h3 id="&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x591A;&#x4E2A;spider">&#x540C;&#x4E00;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x591A;&#x4E2A;spider</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x5F53;&#x4F60;&#x6BCF;&#x6B21;&#x6267;&#x884C;<code>scrapy crawl</code>&#x547D;&#x4EE4;&#x65F6;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#x3002;&#x4F46;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6838;&#x5FC3;API&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E2D;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x591A;&#x4E2A;spider</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> scrapy
+<span class="hljs-keyword">from</span> twisted.internet <span class="hljs-keyword">import</span> reactor
+<span class="hljs-keyword">from</span> scrapy.crawler <span class="hljs-keyword">import</span> CrawlerRunner
+<span class="hljs-keyword">from</span> scrapy.utils.log <span class="hljs-keyword">import</span> configure_logging
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MySpider1</span><span class="hljs-params">(scrapy.Spider)</span>:</span>
+    <span class="hljs-comment"># Your first spider definition</span>
+    ...
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MySpider2</span><span class="hljs-params">(scrapy.Spider)</span>:</span>
+    <span class="hljs-comment"># Your second spider definition</span>
+    ...
+
+configure_logging()
+runner = CrawlerRunner()
+runner.crawl(MySpider1)
+runner.crawl(MySpider2)
+d = runner.join()
+d.addBoth(<span class="hljs-keyword">lambda</span> _: reactor.stop())
+
+reactor.run() <span class="hljs-comment"># the script will block here until all crawling jobs are finished</span>
+</code></pre>
+<h3 id="&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x8868;">&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x8868;</h3>
+<p>&#x597D;&#x4E86;&#x8A00;&#x5F52;&#x6B63;&#x4F20;&#xFF0C;&#x6709;&#x4E86;&#x524D;&#x9762;&#x7684;&#x811A;&#x672C;&#x542F;&#x52A8;&#x57FA;&#x7840;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x6211;&#x4EEC;&#x7684;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x722C;&#x866B;&#x4E86;&#x3002;
+&#x6211;&#x4EEC;&#x7684;&#x9700;&#x6C42;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x4ECE;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x7F51;&#x7AD9;&#x722C;&#x53D6;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x7684;&#x65B0;&#x95FB;&#x6587;&#x7AE0;&#xFF0C;&#x7136;&#x540E;&#x5B58;&#x50A8;&#x5230;article&#x8868;&#x4E2D;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x8868;&#x548C;&#x6587;&#x7AE0;&#x8868;&#xFF0C;&#x901A;&#x8FC7;&#x52A8;&#x6001;&#x7684;&#x521B;&#x5EFA;&#x8718;&#x86DB;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5;&#x540E;&#x5C31;&#x53EA;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x89C4;&#x5219;&#x8868;&#x5373;&#x53EF;&#x4E86;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x4F7F;&#x7528;SQLAlchemy&#x6846;&#x67B6;&#x6765;&#x6620;&#x5C04;&#x6570;&#x636E;&#x5E93;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python</span>
+<span class="hljs-comment"># -*- encoding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+Topic: &#x5B9A;&#x4E49;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x5B9E;&#x4F53;
+Desc :
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> datetime
+
+<span class="hljs-keyword">from</span> sqlalchemy.engine.url <span class="hljs-keyword">import</span> URL
+<span class="hljs-keyword">from</span> sqlalchemy.ext.declarative <span class="hljs-keyword">import</span> declarative_base
+<span class="hljs-keyword">from</span> sqlalchemy <span class="hljs-keyword">import</span> create_engine, Column, Integer, String, Text, DateTime
+<span class="hljs-keyword">from</span> coolscrapy.settings <span class="hljs-keyword">import</span> DATABASE
+
+Base = declarative_base()
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArticleRule</span><span class="hljs-params">(Base)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x81EA;&#x5B9A;&#x4E49;&#x6587;&#x7AE0;&#x722C;&#x53D6;&#x89C4;&#x5219;&quot;&quot;&quot;</span>
+    __tablename__ = <span class="hljs-string">&apos;article_rule&apos;</span>
+
+    id = Column(Integer, primary_key=<span class="hljs-keyword">True</span>)
+    <span class="hljs-comment"># &#x89C4;&#x5219;&#x540D;&#x79F0;</span>
+    name = Column(String(<span class="hljs-number">30</span>))
+    <span class="hljs-comment"># &#x8FD0;&#x884C;&#x7684;&#x57DF;&#x540D;&#x5217;&#x8868;&#xFF0C;&#x9017;&#x53F7;&#x9694;&#x5F00;</span>
+    allow_domains = Column(String(<span class="hljs-number">100</span>))
+    <span class="hljs-comment"># &#x5F00;&#x59CB;URL&#x5217;&#x8868;&#xFF0C;&#x9017;&#x53F7;&#x9694;&#x5F00;</span>
+    start_urls = Column(String(<span class="hljs-number">100</span>))
+    <span class="hljs-comment"># &#x4E0B;&#x4E00;&#x9875;&#x7684;xpath</span>
+    next_page = Column(String(<span class="hljs-number">100</span>))
+    <span class="hljs-comment"># &#x6587;&#x7AE0;&#x94FE;&#x63A5;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;(&#x5B50;&#x4E32;)</span>
+    allow_url = Column(String(<span class="hljs-number">200</span>))
+    <span class="hljs-comment"># &#x6587;&#x7AE0;&#x94FE;&#x63A5;&#x63D0;&#x53D6;&#x533A;&#x57DF;xpath</span>
+    extract_from = Column(String(<span class="hljs-number">200</span>))
+    <span class="hljs-comment"># &#x6587;&#x7AE0;&#x6807;&#x9898;xpath</span>
+    title_xpath = Column(String(<span class="hljs-number">100</span>))
+    <span class="hljs-comment"># &#x6587;&#x7AE0;&#x5185;&#x5BB9;xpath</span>
+    body_xpath = Column(Text)
+    <span class="hljs-comment"># &#x53D1;&#x5E03;&#x65F6;&#x95F4;xpath</span>
+    publish_time_xpath = Column(String(<span class="hljs-number">30</span>))
+    <span class="hljs-comment"># &#x6587;&#x7AE0;&#x6765;&#x6E90;</span>
+    source_site = Column(String(<span class="hljs-number">30</span>))
+    <span class="hljs-comment"># &#x89C4;&#x5219;&#x662F;&#x5426;&#x751F;&#x6548;</span>
+    enable = Column(Integer)
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(Base)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x6587;&#x7AE0;&#x7C7B;&quot;&quot;&quot;</span>
+    __tablename__ = <span class="hljs-string">&apos;articles&apos;</span>
+
+    id = Column(Integer, primary_key=<span class="hljs-keyword">True</span>)
+    url = Column(String(<span class="hljs-number">100</span>))
+    title = Column(String(<span class="hljs-number">100</span>))
+    body = Column(Text)
+    publish_time = Column(String(<span class="hljs-number">30</span>))
+    source_site = Column(String(<span class="hljs-number">30</span>))
+</code></pre>
+<h3 id="&#x5B9A;&#x4E49;&#x6587;&#x7AE0;item">&#x5B9A;&#x4E49;&#x6587;&#x7AE0;Item</h3>
+<p>&#x8FD9;&#x4E2A;&#x5F88;&#x7B80;&#x5355;&#x4E86;&#xFF0C;&#x6CA1;&#x4EC0;&#x4E48;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x7684;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> scrapy
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Article</span><span class="hljs-params">(scrapy.Item)</span>:</span>
+    title = scrapy.Field()
+    url = scrapy.Field()
+    body = scrapy.Field()
+    publish_time = scrapy.Field()
+    source_site = scrapy.Field()
+</code></pre>
+<h3 id="&#x5B9A;&#x4E49;articlespider">&#x5B9A;&#x4E49;ArticleSpider</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x5B9A;&#x4E49;&#x722C;&#x53D6;&#x6587;&#x7AE0;&#x7684;&#x8718;&#x86DB;&#xFF0C;&#x8FD9;&#x4E2A;spider&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;Rule&#x5B9E;&#x4F8B;&#x6765;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x7136;&#x540E;&#x6839;&#x636E;Rule&#x5B9E;&#x4F8B;&#x4E2D;&#x7684;xpath&#x89C4;&#x5219;&#x6765;&#x83B7;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> coolscrapy.utils <span class="hljs-keyword">import</span> parse_text
+<span class="hljs-keyword">from</span> scrapy.spiders <span class="hljs-keyword">import</span> CrawlSpider, Rule
+<span class="hljs-keyword">from</span> scrapy.linkextractors <span class="hljs-keyword">import</span> LinkExtractor
+<span class="hljs-keyword">from</span> coolscrapy.items <span class="hljs-keyword">import</span> Article
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArticleSpider</span><span class="hljs-params">(CrawlSpider)</span>:</span>
+    name = <span class="hljs-string">&quot;article&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, rule)</span>:</span>
+        self.rule = rule
+        self.name = rule.name
+        self.allowed_domains = rule.allow_domains.split(<span class="hljs-string">&quot;,&quot;</span>)
+        self.start_urls = rule.start_urls.split(<span class="hljs-string">&quot;,&quot;</span>)
+        rule_list = []
+        <span class="hljs-comment"># &#x6DFB;&#x52A0;`&#x4E0B;&#x4E00;&#x9875;`&#x7684;&#x89C4;&#x5219;</span>
+        <span class="hljs-keyword">if</span> rule.next_page:
+            rule_list.append(Rule(LinkExtractor(restrict_xpaths=rule.next_page)))
+        <span class="hljs-comment"># &#x6DFB;&#x52A0;&#x62BD;&#x53D6;&#x6587;&#x7AE0;&#x94FE;&#x63A5;&#x7684;&#x89C4;&#x5219;</span>
+        rule_list.append(Rule(LinkExtractor(
+            allow=[rule.allow_url],
+            restrict_xpaths=[rule.extract_from]),
+            callback=<span class="hljs-string">&apos;parse_item&apos;</span>))
+        self.rules = tuple(rule_list)
+        super(ArticleSpider, self).__init__()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse_item</span><span class="hljs-params">(self, response)</span>:</span>
+        self.log(<span class="hljs-string">&apos;Hi, this is an article page! %s&apos;</span> % response.url)
+
+        article = Article()
+        article[<span class="hljs-string">&quot;url&quot;</span>] = response.url
+
+        title = response.xpath(self.rule.title_xpath).extract()
+        article[<span class="hljs-string">&quot;title&quot;</span>] = parse_text(title, self.rule.name, <span class="hljs-string">&apos;title&apos;</span>)
+
+        body = response.xpath(self.rule.body_xpath).extract()
+        article[<span class="hljs-string">&quot;body&quot;</span>] = parse_text(body, self.rule.name, <span class="hljs-string">&apos;body&apos;</span>)
+
+        publish_time = response.xpath(self.rule.publish_time_xpath).extract()
+        article[<span class="hljs-string">&quot;publish_time&quot;</span>] = parse_text(publish_time, self.rule.name, <span class="hljs-string">&apos;publish_time&apos;</span>)
+
+        article[<span class="hljs-string">&quot;source_site&quot;</span>] = self.rule.source_site
+
+        <span class="hljs-keyword">return</span> article
+</code></pre>
+<p>&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;start_urls&#xFF0C;rules&#x7B49;&#x90FD;&#x521D;&#x59CB;&#x5316;&#x6210;&#x4E86;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90FD;&#x7531;&#x4F20;&#x5165;&#x7684;rule&#x5BF9;&#x8C61;&#x521D;&#x59CB;&#x5316;&#xFF0C;parse_item&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x62BD;&#x53D6;&#x89C4;&#x5219;&#x4E5F;&#x90FD;&#x6709;rule&#x5BF9;&#x8C61;&#x63D0;&#x4F9B;&#x3002;</p>
+<h3 id="&#x7F16;&#x5199;pipeline&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;">&#x7F16;&#x5199;pipeline&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</h3>
+<p>&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x4F7F;&#x7528;SQLAlchemy&#x6765;&#x5C06;&#x6587;&#x7AE0;Item&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;</p>
+<pre><code class="lang-python"><span class="hljs-meta">@contextmanager</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">session_scope</span><span class="hljs-params">(Session)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;Provide a transactional scope around a series of operations.&quot;&quot;&quot;</span>
+    session = Session()
+    <span class="hljs-keyword">try</span>:
+        <span class="hljs-keyword">yield</span> session
+        session.commit()
+    <span class="hljs-keyword">except</span>:
+        session.rollback()
+        <span class="hljs-keyword">raise</span>
+    <span class="hljs-keyword">finally</span>:
+        session.close()
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ArticleDataBasePipeline</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x4FDD;&#x5B58;&#x6587;&#x7AE0;&#x5230;&#x6570;&#x636E;&#x5E93;&quot;&quot;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        engine = db_connect()
+        create_news_table(engine)
+        self.Session = sessionmaker(bind=engine)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">open_spider</span><span class="hljs-params">(self, spider)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;This method is called when the spider is opened.&quot;&quot;&quot;</span>
+        <span class="hljs-keyword">pass</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">process_item</span><span class="hljs-params">(self, item, spider)</span>:</span>
+        a = Article(url=item[<span class="hljs-string">&quot;url&quot;</span>],
+                    title=item[<span class="hljs-string">&quot;title&quot;</span>].encode(<span class="hljs-string">&quot;utf-8&quot;</span>),
+                    publish_time=item[<span class="hljs-string">&quot;publish_time&quot;</span>].encode(<span class="hljs-string">&quot;utf-8&quot;</span>),
+                    body=item[<span class="hljs-string">&quot;body&quot;</span>].encode(<span class="hljs-string">&quot;utf-8&quot;</span>),
+                    source_site=item[<span class="hljs-string">&quot;source_site&quot;</span>].encode(<span class="hljs-string">&quot;utf-8&quot;</span>))
+        <span class="hljs-keyword">with</span> session_scope(self.Session) <span class="hljs-keyword">as</span> session:
+            session.add(a)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">close_spider</span><span class="hljs-params">(self, spider)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+</code></pre>
+<h3 id="&#x4FEE;&#x6539;runpy&#x542F;&#x52A8;&#x811A;&#x672C;">&#x4FEE;&#x6539;run.py&#x542F;&#x52A8;&#x811A;&#x672C;</h3>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x4E0A;&#x9762;&#x7684;run.py&#x7A0D;&#x4F5C;&#x4FEE;&#x6539;&#x5373;&#x53EF;&#x5B9A;&#x5236;&#x6211;&#x4EEC;&#x7684;&#x6587;&#x7AE0;&#x722C;&#x866B;&#x542F;&#x52A8;&#x811A;&#x672C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">from</span> spiders.article_spider <span class="hljs-keyword">import</span> ArticleSpider
+<span class="hljs-keyword">from</span> twisted.internet <span class="hljs-keyword">import</span> reactor
+<span class="hljs-keyword">from</span> scrapy.crawler <span class="hljs-keyword">import</span> CrawlerRunner
+<span class="hljs-keyword">from</span> scrapy.utils.project <span class="hljs-keyword">import</span> get_project_settings
+<span class="hljs-keyword">from</span> scrapy.utils.log <span class="hljs-keyword">import</span> configure_logging
+<span class="hljs-keyword">from</span> coolscrapy.models <span class="hljs-keyword">import</span> db_connect
+<span class="hljs-keyword">from</span> coolscrapy.models <span class="hljs-keyword">import</span> ArticleRule
+<span class="hljs-keyword">from</span> sqlalchemy.orm <span class="hljs-keyword">import</span> sessionmaker
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    settings = get_project_settings()
+    configure_logging(settings)
+    db = db_connect()
+    Session = sessionmaker(bind=db)
+    session = Session()
+    rules = session.query(ArticleRule).filter(ArticleRule.enable == <span class="hljs-number">1</span>).all()
+    session.close()
+    runner = CrawlerRunner(settings)
+
+    <span class="hljs-keyword">for</span> rule <span class="hljs-keyword">in</span> rules:
+        <span class="hljs-comment"># stop reactor when spider closes</span>
+        <span class="hljs-comment"># runner.signals.connect(spider_closing, signal=signals.spider_closed)</span>
+        runner.crawl(ArticleSpider, rule=rule)
+
+    d = runner.join()
+    d.addBoth(<span class="hljs-keyword">lambda</span> _: reactor.stop())
+
+    <span class="hljs-comment"># blocks process so always keep as the last statement</span>
+    reactor.run()
+    logging.info(<span class="hljs-string">&apos;all finished.&apos;</span>)
+</code></pre>
+<p>OK&#xFF0C;&#x4E00;&#x5207;&#x641E;&#x5B9A;&#x3002;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F80;ArticleRule&#x8868;&#x4E2D;&#x52A0;&#x5165;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x800C;&#x4E0D;&#x7528;&#x6DFB;&#x52A0;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x8FD9;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x4E2A;&#x7F51;&#x7AD9;&#x8FDB;&#x884C;&#x722C;&#x53D6;&#x3002;
+&#x5F53;&#x7136;&#x4F60;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;Web&#x524D;&#x7AEF;&#x6765;&#x5B8C;&#x6210;&#x7EF4;&#x62A4;ArticleRule&#x8868;&#x7684;&#x4EFB;&#x52A1;&#x3002;&#x5F53;&#x7136;ArticleRule&#x89C4;&#x5219;&#x4E5F;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x9664;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4EFB;&#x4F55;&#x5730;&#x65B9;&#xFF0C;&#x6BD4;&#x5982;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;<a href="https://github.com/yidao620c/core-scrapy" target="_blank">GitHub</a>&#x4E0A;&#x770B;&#x5230;&#x672C;&#x6587;&#x7684;&#x5B8C;&#x6574;&#x9879;&#x76EE;&#x6E90;&#x7801;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../part3/scrapy-09.html" class="navigation navigation-prev " aria-label="Previous page: 部署">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="scrapy-11.html" class="navigation navigation-next " aria-label="Next page: 模拟登录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"动态配置爬虫","level":"3.1","depth":1,"next":{"title":"模拟登录","level":"3.2","depth":1,"path":"source/part4/scrapy-11.md","ref":"source/part4/scrapy-11.md","articles":[]},"previous":{"title":"部署","level":"2.3.1","depth":2,"path":"source/part3/scrapy-09.md","ref":"source/part3/scrapy-09.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-gestalt","-theme-default","styles-sass-fix","multipart","toggle-chapters"],"styles":{"website":"website-1511957750314.css"},"pluginsConfig":{"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","excludeDefaultStyles":true},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"toggle-chapters":{}},"theme":"default","author":"熊能 <yidao620@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scrapy Cookbook2","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.xncoding.com"}},"gitbook":"*","description":"scrapy简明指南"},"file":{"path":"source/part4/scrapy-10.md","mtime":"2017-11-29T11:39:53.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-29T12:15:49.038Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
