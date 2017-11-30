@@ -15,12 +15,12 @@ git checkout gh-pages
 git pull origin gh-pages
 
 # copy the static site files into the current directory.
-\cp -Rf gitbook/_book/* .
+\cp -Rf document/_book/* .
 
 # remove 'node_modules' and '_book' directory
 # git clean -fx gitbook/node_modules
 # git clean -fx gitbook/_book
-rm -rf gitbook/_book/
+rm -rf document/_book/
 
 # add all files
 git add .
