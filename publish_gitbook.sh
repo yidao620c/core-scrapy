@@ -26,6 +26,20 @@ fi
 # git clean -fx gitbook/_book
 rm -rf doc/_book/
 
+# remove website css files, except last one
+ccount=`ls website-* | wc -w`
+if [[ "$ccount" > 1 ]];then
+    allcss=($(ls website-*))
+    c=0
+    for css in "${allcss[@]}"; do
+       let "c=c+1"
+       if [[ $c -ge $ccount ]]; then
+           break;
+       fi
+       rm -f $css
+    done
+fi
+
 # add all files
 git add .
 
