@@ -3,7 +3,7 @@
 * [Getting Started](README.md)
 * [About this guide](source/other/about.md)
 
-# PartⅠ - 基础篇
+## PartⅠ - 基础篇
 * [基础入门](source/part1/README.md)
   - [入门篇](source/part1/scrapy-01.md)
   - [完整示例](source/part1/scrapy-02.md)
@@ -17,10 +17,10 @@
 * [部署](source/part3/README.md)
   - [部署](source/part3/scrapy-09.md)
 
-# PartⅡ - 进阶篇
+## PartⅡ - 进阶篇
 * [动态配置爬虫](source/part4/scrapy-10.md)
 * [模拟登录](source/part4/scrapy-11.md)
 * [抓取动态网站](source/part4/scrapy-12.md)
 
-# Part Ⅲ - 高手篇
+## Part Ⅲ - 高手篇
 * [结束语](source/part5/README.md)
