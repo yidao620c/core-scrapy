@@ -41,7 +41,7 @@ if [[ "$ccount" > 1 ]];then
 fi
 
 # add all files
-git add .
+git add --all
 
 # commit
 git commit -a -m "Update docs"
