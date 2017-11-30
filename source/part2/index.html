@@ -1,0 +1,596 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>核心组件 · Scrapy Cookbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="熊能 <yidao620@gmail.com>">
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website-1511972870691.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    
+
+    
+    <link rel="next" href="scrapy-03.html" />
+    
+    
+    <link rel="prev" href="../part1/scrapy-02.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="/assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xncoding.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="../../">
+
+            
+                <a href="../../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="../other/about.html">
+
+            
+                <a href="../other/about.html">
+            
+                    
+                    About this guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.1" 
+            data-path="../part1/">
+
+            
+                <a href="../part1/">
+            
+                    
+                    基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.1" 
+            data-path="../part1/scrapy-01.html">
+
+            
+                <a href="../part1/scrapy-01.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.2" 
+            data-path="../part1/scrapy-02.html">
+
+            
+                <a href="../part1/scrapy-02.html">
+            
+                    
+                    完整示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="2.2" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    核心组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                  
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.1" 
+            data-path="scrapy-03.html">
+
+            
+                <a href="scrapy-03.html">
+            
+                    
+                    Spider详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.2" 
+            data-path="scrapy-04.html">
+
+            
+                <a href="scrapy-04.html">
+            
+                    
+                    Selector详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.3" 
+            data-path="scrapy-05.html">
+
+            
+                <a href="scrapy-05.html">
+            
+                    
+                    Item详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.4" 
+            data-path="scrapy-06.html">
+
+            
+                <a href="scrapy-06.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.5" 
+            data-path="scrapy-07.html">
+
+            
+                <a href="scrapy-07.html">
+            
+                    
+                    内置服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.6" 
+            data-path="scrapy-08.html">
+
+            
+                <a href="scrapy-08.html">
+            
+                    
+                    文件与图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3" 
+            data-path="../part3/">
+
+            
+                <a href="../part3/">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3.1" 
+            data-path="../part3/scrapy-09.html">
+
+            
+                <a href="../part3/scrapy-09.html">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.1" 
+            data-path="../part4/scrapy-10.html">
+
+            
+                <a href="../part4/scrapy-10.html">
+            
+                    
+                    动态配置爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.2" 
+            data-path="../part4/scrapy-11.html">
+
+            
+                <a href="../part4/scrapy-11.html">
+            
+                    
+                    模拟登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.3" 
+            data-path="../part4/scrapy-12.html">
+
+            
+                <a href="../part4/scrapy-12.html">
+            
+                    
+                    抓取动态网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="4.1" 
+            data-path="../part5/">
+
+            
+                <a href="../part5/">
+            
+                    
+                    结束语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >核心组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;">&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;</h2>
+<p>&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x5F00;&#x59CB;&#x4ECB;&#x7ECD;scrapy&#x91CC;&#x9762;&#x7684;&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#xFF0C;&#x5305;&#x62EC;&#x4E86;Spider&#x3001;Selector&#x3001;Item&#x3001;Pipeline&#x3001;&#x5185;&#x7F6E;&#x670D;&#x52A1;&#xFF0C;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x548C;&#x56FE;&#x7247;&#x7684;&#x5904;&#x7406;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../part1/scrapy-02.html" class="navigation navigation-prev " aria-label="Previous page: 完整示例">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="scrapy-03.html" class="navigation navigation-next " aria-label="Next page: Spider详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"核心组件","level":"2.2","depth":1,"next":{"title":"Spider详解","level":"2.2.1","depth":2,"path":"source/part2/scrapy-03.md","ref":"source/part2/scrapy-03.md","articles":[]},"previous":{"title":"完整示例","level":"2.1.2","depth":2,"path":"source/part1/scrapy-02.md","ref":"source/part1/scrapy-02.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-gestalt","-theme-default","styles-sass-fix","multipart","toggle-chapters"],"styles":{"website":"website-1511972870691.css"},"pluginsConfig":{"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","excludeDefaultStyles":true},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"toggle-chapters":{}},"theme":"default","author":"熊能 <yidao620@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scrapy Cookbook2","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.xncoding.com"}},"gitbook":"*","description":"scrapy简明指南"},"file":{"path":"source/part2/README.md","mtime":"2017-11-29T16:24:21.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-29T16:27:49.527Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

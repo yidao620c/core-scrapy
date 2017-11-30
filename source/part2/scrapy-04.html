@@ -1,0 +1,753 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Selector详解 · Scrapy Cookbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="熊能 <yidao620@gmail.com>">
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website-1511972870691.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    
+
+    
+    <link rel="next" href="scrapy-05.html" />
+    
+    
+    <link rel="prev" href="scrapy-03.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="/assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xncoding.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="../../">
+
+            
+                <a href="../../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="../other/about.html">
+
+            
+                <a href="../other/about.html">
+            
+                    
+                    About this guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.1" 
+            data-path="../part1/">
+
+            
+                <a href="../part1/">
+            
+                    
+                    基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.1" 
+            data-path="../part1/scrapy-01.html">
+
+            
+                <a href="../part1/scrapy-01.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.2" 
+            data-path="../part1/scrapy-02.html">
+
+            
+                <a href="../part1/scrapy-02.html">
+            
+                    
+                    完整示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              selected  "
+            data-level="2.2" 
+            data-path="./">
+
+            
+                <a href="./">
+            
+                    
+                    核心组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                  
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.1" 
+            data-path="scrapy-03.html">
+
+            
+                <a href="scrapy-03.html">
+            
+                    
+                    Spider详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="2.2.2" 
+            data-path="scrapy-04.html">
+
+            
+                <a href="scrapy-04.html">
+            
+                    
+                    Selector详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.3" 
+            data-path="scrapy-05.html">
+
+            
+                <a href="scrapy-05.html">
+            
+                    
+                    Item详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.4" 
+            data-path="scrapy-06.html">
+
+            
+                <a href="scrapy-06.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.5" 
+            data-path="scrapy-07.html">
+
+            
+                <a href="scrapy-07.html">
+            
+                    
+                    内置服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2.6" 
+            data-path="scrapy-08.html">
+
+            
+                <a href="scrapy-08.html">
+            
+                    
+                    文件与图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3" 
+            data-path="../part3/">
+
+            
+                <a href="../part3/">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3.1" 
+            data-path="../part3/scrapy-09.html">
+
+            
+                <a href="../part3/scrapy-09.html">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.1" 
+            data-path="../part4/scrapy-10.html">
+
+            
+                <a href="../part4/scrapy-10.html">
+            
+                    
+                    动态配置爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.2" 
+            data-path="../part4/scrapy-11.html">
+
+            
+                <a href="../part4/scrapy-11.html">
+            
+                    
+                    模拟登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.3" 
+            data-path="../part4/scrapy-12.html">
+
+            
+                <a href="../part4/scrapy-12.html">
+            
+                    
+                    抓取动态网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="4.1" 
+            data-path="../part5/">
+
+            
+                <a href="../part5/">
+            
+                    
+                    结束语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Selector详解</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="scrapy&#x6559;&#x7A0B;04--selector&#x8BE6;&#x89E3;">Scrapy&#x6559;&#x7A0B;04- Selector&#x8BE6;&#x89E3;</h1>
+<p>&#x5728;&#x4F60;&#x722C;&#x53D6;&#x7F51;&#x9875;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x666E;&#x904D;&#x7684;&#x4E8B;&#x60C5;&#x5C31;&#x662F;&#x5728;&#x9875;&#x9762;&#x6E90;&#x7801;&#x4E2D;&#x63D0;&#x53D6;&#x9700;&#x8981;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x51E0;&#x4E2A;&#x5E93;&#x53EF;&#x4EE5;&#x5E2E;&#x4F60;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<ol>
+<li><a href="http://www.crummy.com/software/BeautifulSoup/" target="_blank">BeautifulSoup</a>&#x662F;python&#x4E2D;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x6D41;&#x884C;&#x7684;&#x6293;&#x53D6;&#x5E93;,
+&#x5B83;&#x8FD8;&#x80FD;&#x5408;&#x7406;&#x7684;&#x5904;&#x7406;&#x9519;&#x8BEF;&#x683C;&#x5F0F;&#x7684;&#x6807;&#x7B7E;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#xFF1A;&#x5B83;&#x8FD0;&#x884C;&#x5F88;&#x6162;&#x3002;</li>
+<li><a href="http://lxml.de/" target="_blank">lxml</a>&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;<a href="https://docs.python.org/2/library/xml.etree.elementtree.html" target="_blank">ElementTree</a>&#x7684;XML&#x89E3;&#x6790;&#x5E93;(&#x540C;&#x65F6;&#x8FD8;&#x80FD;&#x89E3;&#x6790;HTML),
+&#x4E0D;&#x8FC7;lxml&#x5E76;&#x4E0D;&#x662F;Python&#x6807;&#x51C6;&#x5E93;</li>
+</ol>
+<p>&#x800C;Scrapy&#x5B9E;&#x73B0;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x63D0;&#x53D6;&#x673A;&#x5236;&#xFF0C;&#x5B83;&#x4EEC;&#x88AB;&#x79F0;&#x4E3A;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x901A;&#x8FC7;<a href="http://www.w3.org/TR/xpath" target="_blank">XPath</a>&#x6216;<a href="http://www.w3.org/TR/selectors" target="_blank">CSS</a>&#x8868;&#x8FBE;&#x5F0F;&#x5728;HTML&#x6587;&#x6863;&#x4E2D;&#x6765;&#x9009;&#x62E9;&#x7279;&#x5B9A;&#x7684;&#x90E8;&#x5206;</p>
+<p><a href="http://www.w3.org/TR/xpath" target="_blank">XPath</a>&#x662F;&#x4E00;&#x7528;&#x6765;&#x5728;XML&#x4E2D;&#x9009;&#x62E9;&#x8282;&#x70B9;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x7528;&#x5728;HTML&#x4E0A;&#x9762;&#x3002;
+<a href="http://www.w3.org/TR/selectors" target="_blank">CSS</a>&#x662F;&#x4E00;&#x79CD;HTML&#x6587;&#x6863;&#x4E0A;&#x9762;&#x7684;&#x6837;&#x5F0F;&#x8BED;&#x8A00;&#x3002;</p>
+<p>Scrapy&#x9009;&#x62E9;&#x5668;&#x6784;&#x5EFA;&#x5728;lxml&#x57FA;&#x7840;&#x4E4B;&#x4E0A;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x901F;&#x5EA6;&#x548C;&#x51C6;&#x786E;&#x6027;&#x3002;</p>
+<p>&#x672C;&#x7AE0;&#x6211;&#x4EEC;&#x6765;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x4E0B;&#x9009;&#x62E9;&#x5668;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x8FD8;&#x6709;&#x5B83;&#x4EEC;&#x6781;&#x5176;&#x7B80;&#x5355;&#x548C;&#x76F8;&#x4F3C;&#x7684;API&#xFF0C;&#x6BD4;lxml&#x7684;API&#x5C11;&#x591A;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;lxml&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x5F88;&#x591A;&#x5176;&#x4ED6;&#x9886;&#x57DF;&#x3002;</p>
+<p>&#x5B8C;&#x6574;&#x7684;API&#x8BF7;&#x67E5;&#x770B;<a href="http://doc.scrapy.org/en/latest/topics/selectors.html#topics-selectors-ref" target="_blank">Selector&#x53C2;&#x8003;</a></p>
+<h2 id="&#x5173;&#x4E8E;&#x9009;&#x62E9;&#x5668;">&#x5173;&#x4E8E;&#x9009;&#x62E9;&#x5668;</h2>
+<p>Scrapy&#x5E2E;&#x6211;&#x4EEC;&#x4E0B;&#x8F7D;&#x5B8C;&#x9875;&#x9762;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x600E;&#x6837;&#x5728;&#x6EE1;&#x662F;html&#x6807;&#x7B7E;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#x627E;&#x5230;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x7684;&#x5143;&#x7D20;&#x5462;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;&#x9009;&#x62E9;&#x5668;&#x4E86;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x7528;&#x6765;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#x5E76;&#x4E14;&#x63D0;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;&#x5148;&#x6765;&#x4E3E;&#x51E0;&#x4E2A;&#x4F8B;&#x5B50;&#x770B;&#x770B;&#xFF1A;</p>
+<ul>
+<li>/html/head/title: &#x9009;&#x62E9;<code>&lt;title&gt;</code>&#x8282;&#x70B9;, &#x5B83;&#x4F4D;&#x4E8E;html&#x6587;&#x6863;&#x7684;<code>&lt;head&gt;</code>&#x8282;&#x70B9;&#x5185;</li>
+<li>/html/head/title/text(): &#x9009;&#x62E9;&#x4E0A;&#x9762;&#x7684;<code>&lt;title&gt;</code>&#x8282;&#x70B9;&#x7684;&#x5185;&#x5BB9;.</li>
+<li>//td: &#x9009;&#x62E9;&#x9875;&#x9762;&#x4E2D;&#x6240;&#x6709;&#x7684;<td>&#x5143;&#x7D20;</td></li>
+<li>//div[@class=&quot;mine&quot;]: &#x9009;&#x62E9;&#x6240;&#x6709;&#x62E5;&#x6709;&#x5C5E;&#x6027;<code>class=&quot;mine&quot;</code>&#x7684;div&#x5143;&#x7D20;</li>
+</ul>
+<p>Scrapy&#x4F7F;&#x7528;css&#x548C;xpath&#x9009;&#x62E9;&#x5668;&#x6765;&#x5B9A;&#x4F4D;&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x6709;&#x56DB;&#x4E2A;&#x57FA;&#x672C;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>xpath(): &#x8FD4;&#x56DE;&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x4EE3;&#x8868;&#x4F7F;&#x7528;xpath&#x8BED;&#x6CD5;&#x9009;&#x62E9;&#x7684;&#x8282;&#x70B9;</li>
+<li>css(): &#x8FD4;&#x56DE;&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x4EE3;&#x8868;&#x4F7F;&#x7528;css&#x8BED;&#x6CD5;&#x9009;&#x62E9;&#x7684;&#x8282;&#x70B9;</li>
+<li>extract(): &#x8FD4;&#x56DE;&#x88AB;&#x9009;&#x62E9;&#x5143;&#x7D20;&#x7684;unicode&#x5B57;&#x7B26;&#x4E32;</li>
+<li>re(): &#x8FD4;&#x56DE;&#x901A;&#x8FC7;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x53D6;&#x7684;unicode&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;</li>
+</ul>
+<h2 id="&#x4F7F;&#x7528;&#x9009;&#x62E9;&#x5668;">&#x4F7F;&#x7528;&#x9009;&#x62E9;&#x5668;</h2>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x901A;&#x8FC7;Scrapy shell&#x6F14;&#x793A;&#x4E0B;&#x9009;&#x62E9;&#x5668;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x5982;&#x4E0B;&#x7684;&#x4E00;&#x4E2A;&#x7F51;&#x9875;<a href="http://doc.scrapy.org/en/latest/_static/selectors-sample1.html" target="_blank">http://doc.scrapy.org/en/latest/_static/selectors-sample1.html</a>&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">base</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;http://example.com/&apos;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Example website<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&apos;images&apos;</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;image1.html&apos;</span>&gt;</span>Name: My image 1 <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;image1_thumb.jpg&apos;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;image2.html&apos;</span>&gt;</span>Name: My image 2 <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;image2_thumb.jpg&apos;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;image3.html&apos;</span>&gt;</span>Name: My image 3 <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;image3_thumb.jpg&apos;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;image4.html&apos;</span>&gt;</span>Name: My image 4 <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;image4_thumb.jpg&apos;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&apos;image5.html&apos;</span>&gt;</span>Name: My image 5 <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&apos;image5_thumb.jpg&apos;</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x6253;&#x5F00;shell</p>
+<pre><code class="lang-bash">scrapy shell http://doc.scrapy.org/en/latest/_static/selectors-sample1.html
+</code></pre>
+<p>&#x8FD0;&#x884C;</p>
+<pre><code>&gt;&gt;&gt; response.xpath(&apos;//title/text()&apos;)
+[&lt;Selector (text) xpath=//title/text()&gt;]
+&gt;&gt;&gt; response.css(&apos;title::text&apos;)
+[&lt;Selector (text) xpath=//title/text()&gt;]
+</code></pre><p>&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;,<code>xpath()</code>&#x548C;<code>css()</code>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x662F;<code>SelectorList</code>&#x5B9E;&#x4F8B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5D4C;&#x5957;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code>&gt;&gt;&gt; response.css(&apos;img&apos;).xpath(&apos;@src&apos;).extract()
+[u&apos;image1_thumb.jpg&apos;,
+ u&apos;image2_thumb.jpg&apos;,
+ u&apos;image3_thumb.jpg&apos;,
+ u&apos;image4_thumb.jpg&apos;,
+ u&apos;image5_thumb.jpg&apos;]
+</code></pre><p>&#x5FC5;&#x987B;&#x4F7F;&#x7528;<code>.extract()</code>&#x624D;&#x80FD;&#x63D0;&#x53D6;&#x6700;&#x7EC8;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53EA;&#x60F3;&#x83B7;&#x5F97;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>.extract_first()</code></p>
+<pre><code>&gt;&gt;&gt; response.xpath(&apos;//div[@id=&quot;images&quot;]/a/text()&apos;).extract_first()
+u&apos;Name: My image 1 &apos;
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;<code>None</code>&#xFF0C;&#x8FD8;&#x53EF;&#x9009;&#x62E9;&#x9ED8;&#x8BA4;&#x503C;</p>
+<pre><code>&gt;&gt;&gt; response.xpath(&apos;//div[@id=&quot;not-exists&quot;]/text()&apos;).extract_first(default=&apos;not-found&apos;)
+&apos;not-found&apos;
+</code></pre><p>&#x800C;CSS&#x9009;&#x62E9;&#x5668;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;CSS3&#x6807;&#x51C6;&#xFF1A;</p>
+<pre><code>&gt;&gt;&gt; response.css(&apos;title::text&apos;).extract()
+[u&apos;Example website&apos;]
+</code></pre><p>&#x4E0B;&#x9762;&#x662F;&#x51E0;&#x4E2A;&#x6BD4;&#x8F83;&#x5168;&#x9762;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>&gt;&gt;&gt; response.xpath(&apos;//base/@href&apos;).extract()
+[u&apos;http://example.com/&apos;]
+
+&gt;&gt;&gt; response.css(&apos;base::attr(href)&apos;).extract()
+[u&apos;http://example.com/&apos;]
+
+&gt;&gt;&gt; response.xpath(&apos;//a[contains(@href, &quot;image&quot;)]/@href&apos;).extract()
+[u&apos;image1.html&apos;,
+ u&apos;image2.html&apos;,
+ u&apos;image3.html&apos;,
+ u&apos;image4.html&apos;,
+ u&apos;image5.html&apos;]
+
+&gt;&gt;&gt; response.css(&apos;a[href*=image]::attr(href)&apos;).extract()
+[u&apos;image1.html&apos;,
+ u&apos;image2.html&apos;,
+ u&apos;image3.html&apos;,
+ u&apos;image4.html&apos;,
+ u&apos;image5.html&apos;]
+
+&gt;&gt;&gt; response.xpath(&apos;//a[contains(@href, &quot;image&quot;)]/img/@src&apos;).extract()
+[u&apos;image1_thumb.jpg&apos;,
+ u&apos;image2_thumb.jpg&apos;,
+ u&apos;image3_thumb.jpg&apos;,
+ u&apos;image4_thumb.jpg&apos;,
+ u&apos;image5_thumb.jpg&apos;]
+
+&gt;&gt;&gt; response.css(&apos;a[href*=image] img::attr(src)&apos;).extract()
+[u&apos;image1_thumb.jpg&apos;,
+ u&apos;image2_thumb.jpg&apos;,
+ u&apos;image3_thumb.jpg&apos;,
+ u&apos;image4_thumb.jpg&apos;,
+ u&apos;image5_thumb.jpg&apos;]
+</code></pre><h2 id="&#x5D4C;&#x5957;&#x9009;&#x62E9;&#x5668;">&#x5D4C;&#x5957;&#x9009;&#x62E9;&#x5668;</h2>
+<p><code>xpath()</code>&#x548C;<code>css()</code>&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4E3E;&#x4F8B;&#x6765;&#x8BB2;&#xFF1A;</p>
+<pre><code>&gt;&gt;&gt; links = response.xpath(&apos;//a[contains(@href, &quot;image&quot;)]&apos;)
+&gt;&gt;&gt; links.extract()
+[u&apos;&lt;a href=&quot;image1.html&quot;&gt;Name: My image 1 &lt;br&gt;&lt;img src=&quot;image1_thumb.jpg&quot;&gt;&lt;/a&gt;&apos;,
+ u&apos;&lt;a href=&quot;image2.html&quot;&gt;Name: My image 2 &lt;br&gt;&lt;img src=&quot;image2_thumb.jpg&quot;&gt;&lt;/a&gt;&apos;,
+ u&apos;&lt;a href=&quot;image3.html&quot;&gt;Name: My image 3 &lt;br&gt;&lt;img src=&quot;image3_thumb.jpg&quot;&gt;&lt;/a&gt;&apos;,
+ u&apos;&lt;a href=&quot;image4.html&quot;&gt;Name: My image 4 &lt;br&gt;&lt;img src=&quot;image4_thumb.jpg&quot;&gt;&lt;/a&gt;&apos;,
+ u&apos;&lt;a href=&quot;image5.html&quot;&gt;Name: My image 5 &lt;br&gt;&lt;img src=&quot;image5_thumb.jpg&quot;&gt;&lt;/a&gt;&apos;]
+
+&gt;&gt;&gt; for index, link in enumerate(links):
+...     args = (index, link.xpath(&apos;@href&apos;).extract(), link.xpath(&apos;img/@src&apos;).extract())
+...     print &apos;Link number %d points to url %s and image %s&apos; % args
+
+Link number 0 points to url [u&apos;image1.html&apos;] and image [u&apos;image1_thumb.jpg&apos;]
+Link number 1 points to url [u&apos;image2.html&apos;] and image [u&apos;image2_thumb.jpg&apos;]
+Link number 2 points to url [u&apos;image3.html&apos;] and image [u&apos;image3_thumb.jpg&apos;]
+Link number 3 points to url [u&apos;image4.html&apos;] and image [u&apos;image4_thumb.jpg&apos;]
+Link number 4 points to url [u&apos;image5.html&apos;] and image [u&apos;image5_thumb.jpg&apos;]
+</code></pre><h2 id="&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;">&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<p><code>Selector</code>&#x6709;&#x4E00;&#x4E2A;<code>re()</code>&#x65B9;&#x6CD5;&#x901A;&#x8FC7;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x63D0;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x662F;unicode&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x518D;&#x53BB;&#x5D4C;&#x5957;&#x4F7F;&#x7528;</p>
+<pre><code>&gt;&gt;&gt; response.xpath(&apos;//a[contains(@href, &quot;image&quot;)]/text()&apos;).re(r&apos;Name:\s*(.*)&apos;)
+[u&apos;My image 1&apos;,
+ u&apos;My image 2&apos;,
+ u&apos;My image 3&apos;,
+ u&apos;My image 4&apos;,
+ u&apos;My image 5&apos;]
+
+&gt;&gt;&gt; response.xpath(&apos;//a[contains(@href, &quot;image&quot;)]/text()&apos;).re_first(r&apos;Name:\s*(.*)&apos;)
+u&apos;My image 1&apos;
+</code></pre><h2 id="xpath&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;">XPath&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</h2>
+<p>&#x5F53;&#x4F60;&#x5D4C;&#x5957;&#x4F7F;&#x7528;XPath&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;<code>/</code>&#x5F00;&#x5934;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x4F1A;&#x76F8;&#x5BF9;&#x6587;&#x6863;&#x6839;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;</p>
+<pre><code>&gt;&gt;&gt; divs = response.xpath(&apos;//div&apos;)
+&gt;&gt;&gt; for p in divs.xpath(&apos;.//p&apos;):  # extracts all &lt;p&gt; inside
+...     print p.extract()
+
+# &#x6216;&#x8005;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x4F7F;&#x7528;p&#x4E5F;&#x53EF;&#x4EE5;
+&gt;&gt;&gt; for p in divs.xpath(&apos;p&apos;):
+...     print p.extract()
+</code></pre><h2 id="xpath&#x5EFA;&#x8BAE;">XPath&#x5EFA;&#x8BAE;</h2>
+<h3 id="&#x4F7F;&#x7528;text&#x4F5C;&#x4E3A;&#x6761;&#x4EF6;&#x65F6;">&#x4F7F;&#x7528;text&#x4F5C;&#x4E3A;&#x6761;&#x4EF6;&#x65F6;</h3>
+<p>&#x907F;&#x514D;&#x4F7F;&#x7528;<code>.//text()</code>,&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>.</code></p>
+<pre><code>&gt;&gt;&gt; sel.xpath(&quot;//a[contains(., &apos;Next Page&apos;)]&quot;).extract()
+[u&apos;&lt;a href=&quot;#&quot;&gt;Click here to go to the &lt;strong&gt;Next Page&lt;/strong&gt;&lt;/a&gt;&apos;]
+</code></pre><h3 id="node1&#x548C;node1&#x533A;&#x522B;">//node[1]&#x548C;(//node)[1]&#x533A;&#x522B;</h3>
+<ul>
+<li>//node[1]: &#x9009;&#x62E9;&#x6240;&#x6709;&#x4F4D;&#x4E8E;&#x7B2C;&#x4E00;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x4F4D;&#x7F6E;&#x7684;node&#x8282;&#x70B9;</li>
+<li>(//node)[1]: &#x9009;&#x62E9;&#x6240;&#x6709;&#x7684;node&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;node&#x8282;&#x70B9;</li>
+</ul>
+<h3 id="&#x901A;&#x8FC7;class&#x67E5;&#x627E;&#x65F6;&#x4F18;&#x5148;&#x8003;&#x8651;css">&#x901A;&#x8FC7;class&#x67E5;&#x627E;&#x65F6;&#x4F18;&#x5148;&#x8003;&#x8651;CSS</h3>
+<pre><code>&gt;&gt; from scrapy import Selector
+&gt;&gt;&gt; sel = Selector(text=&apos;&lt;div class=&quot;hero shout&quot;&gt;&lt;time datetime=&quot;2014-07-23 19:00&quot;&gt;Special date&lt;/time&gt;&lt;/div&gt;&apos;)
+&gt;&gt;&gt; sel.css(&apos;.shout&apos;).xpath(&apos;./time/@datetime&apos;).extract()
+[u&apos;2014-07-23 19:00&apos;]
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="scrapy-03.html" class="navigation navigation-prev " aria-label="Previous page: Spider详解">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="scrapy-05.html" class="navigation navigation-next " aria-label="Next page: Item详解">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Selector详解","level":"2.2.2","depth":2,"next":{"title":"Item详解","level":"2.2.3","depth":2,"path":"source/part2/scrapy-05.md","ref":"source/part2/scrapy-05.md","articles":[]},"previous":{"title":"Spider详解","level":"2.2.1","depth":2,"path":"source/part2/scrapy-03.md","ref":"source/part2/scrapy-03.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-gestalt","-theme-default","styles-sass-fix","multipart","toggle-chapters"],"styles":{"website":"website-1511972870691.css"},"pluginsConfig":{"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","excludeDefaultStyles":true},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"toggle-chapters":{}},"theme":"default","author":"熊能 <yidao620@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scrapy Cookbook2","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.xncoding.com"}},"gitbook":"*","description":"scrapy简明指南"},"file":{"path":"source/part2/scrapy-04.md","mtime":"2017-11-29T16:24:21.467Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-29T16:27:49.527Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

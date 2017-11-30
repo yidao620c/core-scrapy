@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>模拟登录 · Scrapy Cookbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="熊能 <yidao620@gmail.com>">
+        
+        
+    
+    
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-multipart/multipart.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../website-1511972870691.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    
+        <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    
+
+    
+    <link rel="next" href="scrapy-12.html" />
+    
+    
+    <link rel="prev" href="scrapy-10.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            <div class="book-logo">   
+                
+                <img src="/assets/logo.png"/>
+                
+            </div>
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xncoding.com" target="_blank" class="custom-link">我的博客</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.1" 
+            data-path="../../">
+
+            
+                <a href="../../">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="1.2" 
+            data-path="../other/about.html">
+
+            
+                <a href="../other/about.html">
+            
+                    
+                    About this guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.1" 
+            data-path="../part1/">
+
+            
+                <a href="../part1/">
+            
+                    
+                    基础入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.1" 
+            data-path="../part1/scrapy-01.html">
+
+            
+                <a href="../part1/scrapy-01.html">
+            
+                    
+                    入门篇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.1.2" 
+            data-path="../part1/scrapy-02.html">
+
+            
+                <a href="../part1/scrapy-02.html">
+            
+                    
+                    完整示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.2" 
+            data-path="../part2/">
+
+            
+                <a href="../part2/">
+            
+                    
+                    核心组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.1" 
+            data-path="../part2/scrapy-03.html">
+
+            
+                <a href="../part2/scrapy-03.html">
+            
+                    
+                    Spider详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.2" 
+            data-path="../part2/scrapy-04.html">
+
+            
+                <a href="../part2/scrapy-04.html">
+            
+                    
+                    Selector详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.3" 
+            data-path="../part2/scrapy-05.html">
+
+            
+                <a href="../part2/scrapy-05.html">
+            
+                    
+                    Item详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.4" 
+            data-path="../part2/scrapy-06.html">
+
+            
+                <a href="../part2/scrapy-06.html">
+            
+                    
+                    Item Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.5" 
+            data-path="../part2/scrapy-07.html">
+
+            
+                <a href="../part2/scrapy-07.html">
+            
+                    
+                    内置服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.2.6" 
+            data-path="../part2/scrapy-08.html">
+
+            
+                <a href="../part2/scrapy-08.html">
+            
+                    
+                    文件与图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="2.3" 
+            data-path="../part3/">
+
+            
+                <a href="../part3/">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+                
+    
+        
+        <li class="chapter 
+               hide "
+            data-level="2.3.1" 
+            data-path="../part3/scrapy-09.html">
+
+            
+                <a href="../part3/scrapy-09.html">
+            
+                    
+                    部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.1" 
+            data-path="scrapy-10.html">
+
+            
+                <a href="scrapy-10.html">
+            
+                    
+                    动态配置爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+            active  selected  "
+            data-level="3.2" 
+            data-path="scrapy-11.html">
+
+            
+                <a href="scrapy-11.html">
+            
+                    
+                    模拟登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        
+        <li class="chapter 
+              "
+            data-level="3.3" 
+            data-path="scrapy-12.html">
+
+            
+                <a href="scrapy-12.html">
+            
+                    
+                    抓取动态网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        
+        <li class="chapter 
+              "
+            data-level="4.1" 
+            data-path="../part5/">
+
+            
+                <a href="../part5/">
+            
+                    
+                    结束语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >模拟登录</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="scrapy&#x6559;&#x7A0B;11--&#x6A21;&#x62DF;&#x767B;&#x5F55;">Scrapy&#x6559;&#x7A0B;11- &#x6A21;&#x62DF;&#x767B;&#x5F55;</h1>
+<p>&#x6709;&#x65F6;&#x5019;&#x722C;&#x53D6;&#x7F51;&#x7AD9;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x767B;&#x5F55;&#xFF0C;&#x5728;Scrapy&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6A21;&#x62DF;&#x767B;&#x5F55;&#x4FDD;&#x5B58;cookie&#x540E;&#x518D;&#x53BB;&#x722C;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x9875;&#x9762;&#x3002;&#x8FD9;&#x91CC;&#x6211;&#x901A;&#x8FC7;&#x767B;&#x5F55;github&#x7136;&#x540E;&#x722C;&#x53D6;&#x81EA;&#x5DF1;&#x7684;issue&#x5217;&#x8868;&#x6765;&#x6F14;&#x793A;&#x4E0B;&#x6574;&#x4E2A;&#x539F;&#x7406;&#x3002;</p>
+<p>&#x8981;&#x60F3;&#x5B9E;&#x73B0;&#x767B;&#x5F55;&#x5C31;&#x9700;&#x8981;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#xFF0C;&#x5148;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;github&#x7684;&#x767B;&#x5F55;&#x9875;&#x9762;<a href="https://github.com/login" target="_blank">https://github.com/login</a>&#xFF0C;
+&#x7136;&#x540E;&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#x6765;&#x5F97;&#x5230;&#x767B;&#x5F55;&#x65F6;&#x9700;&#x8981;&#x63D0;&#x4EA4;&#x4EC0;&#x4E48;&#x4E1C;&#x897F;:</p>
+<p><img src="../images/scrapy01.png" alt=""></p>
+<p>&#x6211;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;chrome&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#xFF0C;F12&#x6253;&#x5F00;&#x540E;&#x9009;&#x62E9;Network&#xFF0C;&#x5E76;&#x5C06;Preserve log&#x52FE;&#x4E0A;&#x3002;
+&#x6211;&#x6545;&#x610F;&#x8F93;&#x5165;&#x9519;&#x8BEF;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#xFF0C;&#x5F97;&#x5230;&#x5B83;&#x63D0;&#x4EA4;&#x7684;form&#x8868;&#x5355;&#x53C2;&#x6570;&#x8FD8;&#x6709;POST&#x63D0;&#x4EA4;&#x7684;URL:</p>
+<p><img src="../images/scrapy02.png" alt=""></p>
+<p>&#x53BB;&#x67E5;&#x770B;html&#x6E90;&#x7801;&#x4F1A;&#x53D1;&#x73B0;&#x8868;&#x5355;&#x91CC;&#x9762;&#x6709;&#x4E2A;&#x9690;&#x85CF;&#x7684;<code>authenticity_token</code>&#x503C;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x9700;&#x8981;&#x5148;&#x83B7;&#x53D6;&#x7136;&#x540E;&#x8DDF;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x4E00;&#x8D77;&#x63D0;&#x4EA4;&#x7684;:</p>
+<p><img src="../images/scrapy03.png" alt=""></p>
+<h3 id="&#x91CD;&#x5199;startrequests&#x65B9;&#x6CD5;">&#x91CD;&#x5199;start_requests&#x65B9;&#x6CD5;</h3>
+<p>&#x8981;&#x4F7F;&#x7528;cookie&#xFF0C;&#x7B2C;&#x4E00;&#x6B65;&#x5F97;&#x6253;&#x5F00;&#x5B83;&#x5440;&#xFF0C;&#x9ED8;&#x8BA4;scrapy&#x4F7F;&#x7528;<code>CookiesMiddleware</code>&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x6253;&#x5F00;&#x4E86;&#x3002;&#x5982;&#x679C;&#x4F60;&#x4E4B;&#x524D;&#x7981;&#x6B62;&#x8FC7;&#xFF0C;&#x8BF7;&#x8BBE;&#x7F6E;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-python">COOKIES_ENABLES = <span class="hljs-keyword">True</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5148;&#x8981;&#x6253;&#x5F00;&#x767B;&#x5F55;&#x9875;&#x9762;&#xFF0C;&#x83B7;&#x53D6;<code>authenticity_token</code>&#x503C;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x91CD;&#x5199;&#x4E86;start_requests&#x65B9;&#x6CD5;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x91CD;&#x5199;&#x4E86;&#x722C;&#x866B;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;, &#x5B9E;&#x73B0;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x8BF7;&#x6C42;, &#x8FD0;&#x884C;&#x6210;&#x529F;&#x540E;&#x4F1A;&#x8C03;&#x7528;callback&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_requests</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">return</span> [Request(<span class="hljs-string">&quot;https://github.com/login&quot;</span>,
+                    meta={<span class="hljs-string">&apos;cookiejar&apos;</span>: <span class="hljs-number">1</span>}, callback=self.post_login)]
+
+<span class="hljs-comment"># FormRequeset</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_login</span><span class="hljs-params">(self, response)</span>:</span>
+    <span class="hljs-comment"># &#x5148;&#x53BB;&#x62FF;&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x53C2;&#x6570;authenticity_token</span>
+    authenticity_token = response.xpath(
+        <span class="hljs-string">&apos;//input[@name=&quot;authenticity_token&quot;]/@value&apos;</span>).extract_first()
+    logging.info(<span class="hljs-string">&apos;authenticity_token=&apos;</span> + authenticity_token)
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<p><code>start_requests</code>&#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x4E86;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x9690;&#x85CF;&#x8868;&#x5355;&#x503C;<code>authenticity_token</code>&#xFF0C;&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x8FD8;&#x7ED9;Request&#x6307;&#x5B9A;&#x4E86;<code>cookiejar</code>&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x6765;&#x5F80;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4F20;&#x9012;cookie&#x6807;&#x8BC6;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;formrequest">&#x4F7F;&#x7528;FormRequest</h3>
+<p>Scrapy&#x4E3A;&#x6211;&#x4EEC;&#x51C6;&#x5907;&#x4E86;<code>FormRequest</code>&#x7C7B;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x8FDB;&#x884C;Form&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x7684;</p>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4E3A;&#x4E86;&#x6A21;&#x62DF;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;httpheader</span>
+post_headers = {
+    <span class="hljs-string">&quot;Accept&quot;</span>: <span class="hljs-string">&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;</span>,
+    <span class="hljs-string">&quot;Accept-Encoding&quot;</span>: <span class="hljs-string">&quot;gzip, deflate&quot;</span>,
+    <span class="hljs-string">&quot;Accept-Language&quot;</span>: <span class="hljs-string">&quot;zh-CN,zh;q=0.8,en;q=0.6&quot;</span>,
+    <span class="hljs-string">&quot;Cache-Control&quot;</span>: <span class="hljs-string">&quot;no-cache&quot;</span>,
+    <span class="hljs-string">&quot;Connection&quot;</span>: <span class="hljs-string">&quot;keep-alive&quot;</span>,
+    <span class="hljs-string">&quot;Content-Type&quot;</span>: <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>,
+    <span class="hljs-string">&quot;User-Agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36&quot;</span>,
+    <span class="hljs-string">&quot;Referer&quot;</span>: <span class="hljs-string">&quot;https://github.com/&quot;</span>,
+}
+<span class="hljs-comment"># &#x4F7F;&#x7528;FormRequeset&#x6A21;&#x62DF;&#x8868;&#x5355;&#x63D0;&#x4EA4;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_login</span><span class="hljs-params">(self, response)</span>:</span>
+    <span class="hljs-comment"># &#x5148;&#x53BB;&#x62FF;&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x53C2;&#x6570;authenticity_token</span>
+    authenticity_token = response.xpath(
+        <span class="hljs-string">&apos;//input[@name=&quot;authenticity_token&quot;]/@value&apos;</span>).extract_first()
+    logging.info(<span class="hljs-string">&apos;authenticity_token=&apos;</span> + authenticity_token)
+    <span class="hljs-comment"># FormRequeset.from_response&#x662F;Scrapy&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;, &#x7528;&#x4E8E;post&#x8868;&#x5355;</span>
+    <span class="hljs-comment"># &#x767B;&#x9646;&#x6210;&#x529F;&#x540E;, &#x4F1A;&#x8C03;&#x7528;after_login&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;url&#x8DDF;Request&#x9875;&#x9762;&#x7684;&#x4E00;&#x6837;&#x5C31;&#x7701;&#x7565;&#x6389;</span>
+    <span class="hljs-keyword">return</span> [FormRequest.from_response(response,
+                                      url=<span class="hljs-string">&apos;https://github.com/session&apos;</span>,
+                                      meta={<span class="hljs-string">&apos;cookiejar&apos;</span>: response.meta[<span class="hljs-string">&apos;cookiejar&apos;</span>]},
+                                      headers=self.post_headers,  <span class="hljs-comment"># &#x6CE8;&#x610F;&#x6B64;&#x5904;&#x7684;headers</span>
+                                      formdata={
+                                          <span class="hljs-string">&apos;utf8&apos;</span>: <span class="hljs-string">&apos;&#x2713;&apos;</span>,
+                                          <span class="hljs-string">&apos;login&apos;</span>: <span class="hljs-string">&apos;yidao620c&apos;</span>,
+                                          <span class="hljs-string">&apos;password&apos;</span>: <span class="hljs-string">&apos;******&apos;</span>,
+                                          <span class="hljs-string">&apos;authenticity_token&apos;</span>: authenticity_token
+                                      },
+                                      callback=self.after_login,
+                                      dont_filter=<span class="hljs-keyword">True</span>
+                                      )]
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_login</span><span class="hljs-params">(self, response)</span>:</span>
+    <span class="hljs-keyword">pass</span>
+</code></pre>
+<p><code>FormRequest.from_response()</code>&#x65B9;&#x6CD5;&#x8BA9;&#x4F60;&#x6307;&#x5B9A;&#x63D0;&#x4EA4;&#x7684;url&#xFF0C;&#x8BF7;&#x6C42;&#x5934;&#x8FD8;&#x6709;form&#x8868;&#x5355;&#x503C;&#xFF0C;&#x6CE8;&#x610F;&#x6211;&#x4EEC;&#x8FD8;&#x901A;&#x8FC7;<code>meta</code>&#x4F20;&#x9012;&#x4E86;cookie&#x6807;&#x8BC6;&#x3002;&#x5B83;&#x540C;&#x6837;&#x6709;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#x8C03;&#x7528;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x5B9E;&#x73B0;&#x5B83;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_login</span><span class="hljs-params">(self, response)</span>:</span>
+    <span class="hljs-comment"># &#x767B;&#x5F55;&#x4E4B;&#x540E;&#xFF0C;&#x5F00;&#x59CB;&#x8FDB;&#x5165;&#x6211;&#x8981;&#x722C;&#x53D6;&#x7684;&#x79C1;&#x4FE1;&#x9875;&#x9762;</span>
+    <span class="hljs-keyword">for</span> url <span class="hljs-keyword">in</span> self.start_urls:
+        <span class="hljs-comment"># &#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x5B9A;&#x4E49;&#x4E86;Rule&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x7684;&#x751F;&#x6210;&#x521D;&#x59CB;&#x722C;&#x53D6;Request&#x5373;&#x53EF;</span>
+        <span class="hljs-keyword">yield</span> Request(url, meta={<span class="hljs-string">&apos;cookiejar&apos;</span>: response.meta[<span class="hljs-string">&apos;cookiejar&apos;</span>]})
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x901A;&#x8FC7;<code>start_urls</code>&#x5B9A;&#x4E49;&#x4E86;&#x5F00;&#x59CB;&#x9875;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x751F;&#x6210;Request&#xFF0C;&#x5177;&#x4F53;&#x722C;&#x53D6;&#x7684;&#x89C4;&#x5219;&#x548C;<code>&#x4E0B;&#x4E00;&#x9875;</code>&#x89C4;&#x5219;&#x5728;&#x524D;&#x9762;&#x7684;Rule&#x91CC;&#x5B9A;&#x4E49;&#x4E86;&#x3002;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x6211;&#x7EE7;&#x7EED;&#x4F20;&#x9012;<code>cookiejar</code>&#xFF0C;&#x8BBF;&#x95EE;&#x521D;&#x59CB;&#x9875;&#x9762;&#x65F6;&#x5E26;&#x4E0A;cookie&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="&#x91CD;&#x5199;requeststofollow">&#x91CD;&#x5199;_requests_to_follow</h3>
+<p>&#x6709;&#x4E2A;&#x95EE;&#x9898;&#x521A;&#x5F00;&#x59CB;&#x56F0;&#x6270;&#x6211;&#x5F88;&#x4E45;&#x5C31;&#x662F;&#x8FD9;&#x91CC;&#x6211;&#x5B9A;&#x4E49;&#x7684;spider&#x7EE7;&#x627F;&#x81EA;CrawlSpider&#xFF0C;&#x5B83;&#x5185;&#x90E8;&#x81EA;&#x52A8;&#x53BB;&#x4E0B;&#x8F7D;&#x5339;&#x914D;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x800C;&#x6BCF;&#x6B21;&#x53BB;&#x8BBF;&#x95EE;&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x5E76;&#x6CA1;&#x6709;&#x81EA;&#x52A8;&#x5E26;&#x4E0A;cookie&#xFF0C;&#x540E;&#x6765;&#x6211;&#x91CD;&#x5199;&#x4E86;&#x5B83;&#x7684;<code>_requests_to_follow()</code>&#x65B9;&#x6CD5;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_requests_to_follow</span><span class="hljs-params">(self, response)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x91CD;&#x5199;&#x52A0;&#x5165;cookiejar&#x7684;&#x66F4;&#x65B0;&quot;&quot;&quot;</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> isinstance(response, HtmlResponse):
+        <span class="hljs-keyword">return</span>
+    seen = set()
+    <span class="hljs-keyword">for</span> n, rule <span class="hljs-keyword">in</span> enumerate(self._rules):
+        links = [l <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> rule.link_extractor.extract_links(response) <span class="hljs-keyword">if</span> l <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> seen]
+        <span class="hljs-keyword">if</span> links <span class="hljs-keyword">and</span> rule.process_links:
+            links = rule.process_links(links)
+        <span class="hljs-keyword">for</span> link <span class="hljs-keyword">in</span> links:
+            seen.add(link)
+            r = Request(url=link.url, callback=self._response_downloaded)
+            <span class="hljs-comment"># &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x6211;&#x91CD;&#x5199;&#x7684;</span>
+            r.meta.update(rule=n, link_text=link.text, cookiejar=response.meta[<span class="hljs-string">&apos;cookiejar&apos;</span>])
+            <span class="hljs-keyword">yield</span> rule.process_request(r)
+</code></pre>
+<h3 id="&#x9875;&#x9762;&#x5904;&#x7406;&#x65B9;&#x6CD5;">&#x9875;&#x9762;&#x5904;&#x7406;&#x65B9;&#x6CD5;</h3>
+<p>&#x5728;&#x89C4;&#x5219;Rule&#x91CC;&#x9762;&#x6211;&#x5B9A;&#x4E49;&#x4E86;&#x6BCF;&#x4E2A;&#x94FE;&#x63A5;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;<code>parse_page</code>&#xFF0C;&#x5C31;&#x662F;&#x6700;&#x7EC8;&#x6211;&#x4EEC;&#x5904;&#x7406;&#x6BCF;&#x4E2A;issue&#x9875;&#x9762;&#x63D0;&#x53D6;&#x4FE1;&#x606F;&#x7684;&#x903B;&#x8F91;</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse_page</span><span class="hljs-params">(self, response)</span>:</span>
+    <span class="hljs-string">&quot;&quot;&quot;&#x8FD9;&#x4E2A;&#x662F;&#x4F7F;&#x7528;LinkExtractor&#x81EA;&#x52A8;&#x5904;&#x7406;&#x94FE;&#x63A5;&#x4EE5;&#x53CA;`&#x4E0B;&#x4E00;&#x9875;`&quot;&quot;&quot;</span>
+    logging.info(<span class="hljs-string">u&apos;--------------&#x6D88;&#x606F;&#x5206;&#x5272;&#x7EBF;-----------------&apos;</span>)
+    logging.info(response.url)
+    issue_title = response.xpath(
+        <span class="hljs-string">&apos;//span[@class=&quot;js-issue-title&quot;]/text()&apos;</span>).extract_first()
+    logging.info(<span class="hljs-string">u&apos;issue_title&#xFF1A;&apos;</span> + issue_title.encode(<span class="hljs-string">&apos;utf-8&apos;</span>))
+</code></pre>
+<h3 id="&#x5B8C;&#x6574;&#x6E90;&#x7801;">&#x5B8C;&#x6574;&#x6E90;&#x7801;</h3>
+<pre><code class="lang-python"><span class="hljs-comment">#!/usr/bin/env python</span>
+<span class="hljs-comment"># -*- encoding: utf-8 -*-</span>
+<span class="hljs-string">&quot;&quot;&quot;
+Topic: &#x767B;&#x5F55;&#x722C;&#x866B;
+Desc : &#x6A21;&#x62DF;&#x767B;&#x5F55;https://github.com&#x540E;&#x5C06;&#x81EA;&#x5DF1;&#x7684;issue&#x5168;&#x90E8;&#x722C;&#x51FA;&#x6765;
+tips&#xFF1A;&#x4F7F;&#x7528;chrome&#x8C03;&#x8BD5;post&#x8868;&#x5355;&#x7684;&#x65F6;&#x5019;&#x52FE;&#x9009;Preserve log&#x548C;Disable cache
+&quot;&quot;&quot;</span>
+<span class="hljs-keyword">import</span> logging
+<span class="hljs-keyword">import</span> re
+<span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">import</span> scrapy
+<span class="hljs-keyword">from</span> scrapy.spiders <span class="hljs-keyword">import</span> CrawlSpider, Rule
+<span class="hljs-keyword">from</span> scrapy.linkextractors <span class="hljs-keyword">import</span> LinkExtractor
+<span class="hljs-keyword">from</span> scrapy.http <span class="hljs-keyword">import</span> Request, FormRequest, HtmlResponse
+
+logging.basicConfig(level=logging.INFO,
+                    format=<span class="hljs-string">&apos;%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s&apos;</span>,
+                    datefmt=<span class="hljs-string">&apos;%Y-%m-%d %H:%M:%S&apos;</span>,
+                    handlers=[logging.StreamHandler(sys.stdout)])
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GithubSpider</span><span class="hljs-params">(CrawlSpider)</span>:</span>
+    name = <span class="hljs-string">&quot;github&quot;</span>
+    allowed_domains = [<span class="hljs-string">&quot;github.com&quot;</span>]
+    start_urls = [
+        <span class="hljs-string">&apos;https://github.com/issues&apos;</span>,
+    ]
+    rules = (
+        <span class="hljs-comment"># &#x6D88;&#x606F;&#x5217;&#x8868;</span>
+        Rule(LinkExtractor(allow=(<span class="hljs-string">&apos;/issues/\d+&apos;</span>,),
+                           restrict_xpaths=<span class="hljs-string">&apos;//ul[starts-with(@class, &quot;table-list&quot;)]/li/div[2]/a[2]&apos;</span>),
+             callback=<span class="hljs-string">&apos;parse_page&apos;</span>),
+        <span class="hljs-comment"># &#x4E0B;&#x4E00;&#x9875;, If callback is None follow defaults to True, otherwise it defaults to False</span>
+        Rule(LinkExtractor(restrict_xpaths=<span class="hljs-string">&apos;//a[@class=&quot;next_page&quot;]&apos;</span>)),
+    )
+    post_headers = {
+        <span class="hljs-string">&quot;Accept&quot;</span>: <span class="hljs-string">&quot;text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8&quot;</span>,
+        <span class="hljs-string">&quot;Accept-Encoding&quot;</span>: <span class="hljs-string">&quot;gzip, deflate&quot;</span>,
+        <span class="hljs-string">&quot;Accept-Language&quot;</span>: <span class="hljs-string">&quot;zh-CN,zh;q=0.8,en;q=0.6&quot;</span>,
+        <span class="hljs-string">&quot;Cache-Control&quot;</span>: <span class="hljs-string">&quot;no-cache&quot;</span>,
+        <span class="hljs-string">&quot;Connection&quot;</span>: <span class="hljs-string">&quot;keep-alive&quot;</span>,
+        <span class="hljs-string">&quot;Content-Type&quot;</span>: <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>,
+        <span class="hljs-string">&quot;User-Agent&quot;</span>: <span class="hljs-string">&quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36&quot;</span>,
+        <span class="hljs-string">&quot;Referer&quot;</span>: <span class="hljs-string">&quot;https://github.com/&quot;</span>,
+    }
+
+    <span class="hljs-comment"># &#x91CD;&#x5199;&#x4E86;&#x722C;&#x866B;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;, &#x5B9E;&#x73B0;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x8BF7;&#x6C42;, &#x8FD0;&#x884C;&#x6210;&#x529F;&#x540E;&#x4F1A;&#x8C03;&#x7528;callback&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start_requests</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> [Request(<span class="hljs-string">&quot;https://github.com/login&quot;</span>,
+                        meta={<span class="hljs-string">&apos;cookiejar&apos;</span>: <span class="hljs-number">1</span>}, callback=self.post_login)]
+
+    <span class="hljs-comment"># FormRequeset</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">post_login</span><span class="hljs-params">(self, response)</span>:</span>
+        <span class="hljs-comment"># &#x5148;&#x53BB;&#x62FF;&#x9690;&#x85CF;&#x7684;&#x8868;&#x5355;&#x53C2;&#x6570;authenticity_token</span>
+        authenticity_token = response.xpath(
+            <span class="hljs-string">&apos;//input[@name=&quot;authenticity_token&quot;]/@value&apos;</span>).extract_first()
+        logging.info(<span class="hljs-string">&apos;authenticity_token=&apos;</span> + authenticity_token)
+        <span class="hljs-comment"># FormRequeset.from_response&#x662F;Scrapy&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;, &#x7528;&#x4E8E;post&#x8868;&#x5355;</span>
+        <span class="hljs-comment"># &#x767B;&#x9646;&#x6210;&#x529F;&#x540E;, &#x4F1A;&#x8C03;&#x7528;after_login&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C;url&#x8DDF;Request&#x9875;&#x9762;&#x7684;&#x4E00;&#x6837;&#x5C31;&#x7701;&#x7565;&#x6389;</span>
+        <span class="hljs-keyword">return</span> [FormRequest.from_response(response,
+                                          url=<span class="hljs-string">&apos;https://github.com/session&apos;</span>,
+                                          meta={<span class="hljs-string">&apos;cookiejar&apos;</span>: response.meta[<span class="hljs-string">&apos;cookiejar&apos;</span>]},
+                                          headers=self.post_headers,  <span class="hljs-comment"># &#x6CE8;&#x610F;&#x6B64;&#x5904;&#x7684;headers</span>
+                                          formdata={
+                                              <span class="hljs-string">&apos;utf8&apos;</span>: <span class="hljs-string">&apos;&#x2713;&apos;</span>,
+                                              <span class="hljs-string">&apos;login&apos;</span>: <span class="hljs-string">&apos;yidao620c&apos;</span>,
+                                              <span class="hljs-string">&apos;password&apos;</span>: <span class="hljs-string">&apos;******&apos;</span>,
+                                              <span class="hljs-string">&apos;authenticity_token&apos;</span>: authenticity_token
+                                          },
+                                          callback=self.after_login,
+                                          dont_filter=<span class="hljs-keyword">True</span>
+                                          )]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_login</span><span class="hljs-params">(self, response)</span>:</span>
+        <span class="hljs-keyword">for</span> url <span class="hljs-keyword">in</span> self.start_urls:
+            <span class="hljs-comment"># &#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x5B9A;&#x4E49;&#x4E86;Rule&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x7B80;&#x5355;&#x7684;&#x751F;&#x6210;&#x521D;&#x59CB;&#x722C;&#x53D6;Request&#x5373;&#x53EF;</span>
+            <span class="hljs-keyword">yield</span> Request(url, meta={<span class="hljs-string">&apos;cookiejar&apos;</span>: response.meta[<span class="hljs-string">&apos;cookiejar&apos;</span>]})
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse_page</span><span class="hljs-params">(self, response)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x8FD9;&#x4E2A;&#x662F;&#x4F7F;&#x7528;LinkExtractor&#x81EA;&#x52A8;&#x5904;&#x7406;&#x94FE;&#x63A5;&#x4EE5;&#x53CA;`&#x4E0B;&#x4E00;&#x9875;`&quot;&quot;&quot;</span>
+        logging.info(<span class="hljs-string">u&apos;--------------&#x6D88;&#x606F;&#x5206;&#x5272;&#x7EBF;-----------------&apos;</span>)
+        logging.info(response.url)
+        issue_title = response.xpath(
+            <span class="hljs-string">&apos;//span[@class=&quot;js-issue-title&quot;]/text()&apos;</span>).extract_first()
+        logging.info(<span class="hljs-string">u&apos;issue_title&#xFF1A;&apos;</span> + issue_title.encode(<span class="hljs-string">&apos;utf-8&apos;</span>))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_requests_to_follow</span><span class="hljs-params">(self, response)</span>:</span>
+        <span class="hljs-string">&quot;&quot;&quot;&#x91CD;&#x5199;&#x52A0;&#x5165;cookiejar&#x7684;&#x66F4;&#x65B0;&quot;&quot;&quot;</span>
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> isinstance(response, HtmlResponse):
+            <span class="hljs-keyword">return</span>
+        seen = set()
+        <span class="hljs-keyword">for</span> n, rule <span class="hljs-keyword">in</span> enumerate(self._rules):
+            links = [l <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> rule.link_extractor.extract_links(response) <span class="hljs-keyword">if</span> l <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> seen]
+            <span class="hljs-keyword">if</span> links <span class="hljs-keyword">and</span> rule.process_links:
+                links = rule.process_links(links)
+            <span class="hljs-keyword">for</span> link <span class="hljs-keyword">in</span> links:
+                seen.add(link)
+                r = Request(url=link.url, callback=self._response_downloaded)
+                <span class="hljs-comment"># &#x4E0B;&#x9762;&#x8FD9;&#x53E5;&#x662F;&#x6211;&#x91CD;&#x5199;&#x7684;</span>
+                r.meta.update(rule=n, link_text=link.text, cookiejar=response.meta[<span class="hljs-string">&apos;cookiejar&apos;</span>])
+                <span class="hljs-keyword">yield</span> rule.process_request(r)
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;<a href="https://github.com/yidao620c/core-scrapy" target="_blank">GitHub</a>&#x4E0A;&#x770B;&#x5230;&#x672C;&#x6587;&#x7684;&#x5B8C;&#x6574;&#x9879;&#x76EE;&#x6E90;&#x7801;&#xFF0C;&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x767B;&#x9646;iteye&#x7F51;&#x7AD9;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="scrapy-10.html" class="navigation navigation-prev " aria-label="Previous page: 动态配置爬虫">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="scrapy-12.html" class="navigation navigation-next " aria-label="Next page: 抓取动态网站">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"模拟登录","level":"3.2","depth":1,"next":{"title":"抓取动态网站","level":"3.3","depth":1,"path":"source/part4/scrapy-12.md","ref":"source/part4/scrapy-12.md","articles":[]},"previous":{"title":"动态配置爬虫","level":"3.1","depth":1,"path":"source/part4/scrapy-10.md","ref":"source/part4/scrapy-10.md","articles":[]},"dir":"ltr"},"config":{"plugins":["theme-gestalt","-theme-default","styles-sass-fix","multipart","toggle-chapters"],"styles":{"website":"website-1511972870691.css"},"pluginsConfig":{"styles-sass-fix":{},"theme-gestalt":{"showLevel":false,"styles":{"website":"styles/website.css"},"logo":"/assets/logo.png","favicon":"/assets/favicon.png","excludeDefaultStyles":true},"search":{},"multipart":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"toggle-chapters":{}},"theme":"default","author":"熊能 <yidao620@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Scrapy Cookbook2","language":"zh-hans","links":{"sidebar":{"我的博客":"https://www.xncoding.com"}},"gitbook":"*","description":"scrapy简明指南"},"file":{"path":"source/part4/scrapy-11.md","mtime":"2017-11-29T16:24:21.468Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-11-29T16:27:49.527Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
