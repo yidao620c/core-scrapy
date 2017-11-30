@@ -14,5 +14,5 @@
 
 <center>微信扫一扫，请博主喝杯咖啡</center>
 
-<center> ![](/source/images/weixin1.png) </center>
+![](/source/images/weixin1.png)
 
