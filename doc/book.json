@@ -21,12 +21,15 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": [ "theme-gestalt", "-theme-default", "styles-sass-fix", "multipart", "toggle-chapters" ],
+    "plugins": [ "theme-gestalt", "-theme-default", "styles-sass-fix", "multipart", "toggle-chapters", "disqus" ],
     "pluginsConfig": {
         "theme-gestalt": {
             "logo": "/core-scrapy/assets/logo.png",
             "favicon": "/core-scrapy/assets/favicon.png",
             "excludeDefaultStyles": true
+        },
+        "disqus": {
+            "shortName": "yidao620cgithubio"
         }
     },
     "styles": {
